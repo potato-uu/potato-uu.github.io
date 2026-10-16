@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Stan Lu — ChatGPT Ads 出海投放 · GEO 方法论</title>
+  <meta name="description" content="Stan Lu（鲁丙敖）的个人站：OpenAI 官方 ChatGPT Ads 更新的 48 小时解读，附官方出处；以及 AI 内容可发现性（GEO）的可复现方法论。">
+  <meta name="author" content="Stanlu">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Stan Lu — ChatGPT Ads 出海投放 · GEO 方法论">
+  <meta property="og:description" content="Stan Lu（鲁丙敖）的个人站：OpenAI 官方 ChatGPT Ads 更新的 48 小时解读，附官方出处；以及 AI 内容可发现性（GEO）的可复现方法论。">
+  <meta property="og:url" content="https://potato-uu.github.io/">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://potato-uu.github.io/">
+  <link rel="alternate" type="text/markdown" href="/index.md">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://potato-uu.github.io/",
+    "name": "Stan Lu — ChatGPT Ads 出海投放 · GEO 方法论",
+    "description": "Stan Lu（鲁丙敖）的个人站：OpenAI 官方 ChatGPT Ads 更新的 48 小时解读，附官方出处；以及 AI 内容可发现性（GEO）的可复现方法论。",
+    "author": {
+      "@type": "Person",
+      "name": "Stanlu",
+      "alternateName": "鲁丙敖",
+      "sameAs": [
+        "https://space.bilibili.com/<TBD-Stan-bilibili-uid>",
+        "https://www.zhihu.com/people/<TBD-Stan-zhihu-handle>"
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --fg: #1a1a1a;
+      --fg-dim: #555;
+      --bg: #fdfcf9;
+      --link: #0066cc;
+      --rule: #e8e6e0;
+      --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --fg: #e8e6e0; --fg-dim: #999; --bg: #1a1a1a; --link: #6cb6ff; --rule: #333; }
+    }
+    * { box-sizing: border-box; }
+    html { font-size: 16px; }
+    body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      line-height: 1.7;
+      color: var(--fg);
+      background: var(--bg);
+    }
+    h1 { font-size: 1.5rem; margin: 0 0 .25rem; letter-spacing: -.01em; }
+    .tagline { color: var(--fg-dim); font-size: .95rem; margin: 0 0 2rem; }
+    h2 { font-size: 1.1rem; margin: 2.5rem 0 .75rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+    a { color: var(--link); text-decoration: none; border-bottom: 1px solid currentColor; }
+    a:hover { opacity: .7; }
+    article.post-stub {
+      margin: 1.25rem 0;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    article.post-stub:last-child { border-bottom: 0; }
+    article.post-stub h3 { font-size: 1.05rem; margin: 0 0 .25rem; }
+    article.post-stub .meta { color: var(--fg-dim); font-size: .85rem; font-family: var(--mono); margin: 0 0 .5rem; }
+    article.post-stub p { margin: .5rem 0 0; color: var(--fg-dim); font-size: .95rem; }
+    .footnote { color: var(--fg-dim); font-size: .85rem; margin-top: 4rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+    code { font-family: var(--mono); font-size: .9em; background: rgba(127,127,127,.1); padding: .1em .3em; border-radius: 3px; }
+  </style>
+</head>
+<body>
+
+<h1>Stanlu</h1>
+<p class="tagline">ChatGPT Ads 官方更新解读 · GEO 可复现方法论 · 出处分三类：OpenAI 官方、媒体报道、我的判断。</p>
+
+<section>
+<p>
+做的事：用 audit 框架定位「内容在自家平台能被找到，但 LLM 联网搜不会引用」这种 isolated-platform discoverability 断裂——这是大多数客户做了内容投入后真正的痛点。
+</p>
+<p>
+方法：strict page-level 命中算法（18 个 pinned test case 锁口径）× 4 探针（site:URL / 纯 ID / 完整标题 / 作者+核心词）× 3 引擎（Google / Bing / 百度）× 6 AI 搜索（Perplexity / Kimi 联网 / 豆包 / 通义 / 秘塔 / 夸克）× query 三分类（品牌词 / 问题词 / 长尾精确词）。三轮独立 AI brutal review 撕过。
+</p>
+</section>
+
+<h2>近期文章</h2>
+
+<article class="post-stub" lang="zh-CN">
+  <h3><a href="/posts/2026-10-15-chatgpt-ads-visual-ads-measurement-update-zh/">ChatGPT 广告 10 月 5 日更新：改了什么、没改什么</a></h3>
+  <p class="meta">2026-10-15 · ChatGPT Ads 更新解读 · 中文</p>
+  <p>2026 年 10 月 5 日 ChatGPT 广告更新新增两项：视觉广告（美国测试）、首批第三方测量伙伴；谁能看广告、谁能投，没变。</p>
+</article>
+
+<article class="post-stub" lang="en">
+  <h3><a href="/posts/2026-10-15-chatgpt-ads-visual-ads-measurement-update/">ChatGPT Ads October 5, 2026 update: what changed</a></h3>
+  <p class="meta">2026-10-15 · ChatGPT Ads Update Explainer · English</p>
+  <p>OpenAI&#39;s October 5, 2026 ChatGPT Ads update changed two things: a visual ad format, tested in the US, and a first set of third-party measurement partners. It did not change who sees ads or who can buy.</p>
+</article>
+
+<article class="post-stub">
+  <h3><a href="/posts/2026-05-26-isolated-platform-discoverability-audit/">isolated-platform discoverability：B站 5/8 rank 1 vs Google/Bing 0/4 — 一种典型客户场景的诊断方法</a></h3>
+  <p class="meta">2026-05-26 · case study · GEO audit · isolated-platform</p>
+  <p>真实数据：同一条 AI 工作流视频在 B站 站内搜 8 个目标关键词命中 5 个 rank 1、6 个第一屏；同期在 Google 和 Bing 用 site:URL / 纯 ID / 完整标题 / 作者签名 4 个探针全部 MISS。这不是"做的内容没人看"，是 isolated-platform discoverability — 站内分发正常但跨引擎+AI 联网搜不被引用。本文给出可复现的诊断方法、4 块判定矩阵、对客户场景的 Sales Translation。</p>
+</article>
+
+<h2>About</h2>
+<p>
+Stan Lu（鲁丙敖）。做 ChatGPT Ads 出海投放，写 OpenAI 官方更新的解读和 GEO 方法论。每篇出处分三类：OpenAI 官方、媒体报道、我的判断。
+</p>
+
+<p class="footnote">
+本站不导流也不卖货——只发可复现的方法论 + 真数据 + 失败复盘。<br>
+robots.txt：<a href="/robots.txt">/robots.txt</a> · sitemap：<a href="/sitemap.xml">/sitemap.xml</a><br>
+联系：见 <code>About</code> 页（TBD）
+</p>
+
+</body>
+</html>

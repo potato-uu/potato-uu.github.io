@@ -1,0 +1,24 @@
+# Deploy artifacts (none for now — zero-build static site)
+.DS_Store
+*.swp
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# Drafts (private)
+_drafts/
+_notes/*.local.md
+
+# OS
+Thumbs.db
+
+# Future Astro / Node migration leaves these
+node_modules/
+dist/
+.astro/
+
+# browse skill artifacts (written when running browse from within project dirs)
+.gstack/
+.gstack-trash/
+

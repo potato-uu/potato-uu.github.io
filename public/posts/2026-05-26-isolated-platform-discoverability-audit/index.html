@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>isolated-platform discoverability：站内 rank 1 但跨引擎 + AI 联网搜 0 命中——一种典型客户场景的诊断方法 — Stanlu</title>
+
+  <!-- 60 字直接答（Princeton 战术 #1 答案引擎抽取位）。同首段第一句。 -->
+  <meta name="description" content="同一条 AI 工作流内容在自家平台搜索 5/8 命中 rank 1，同期在 Google/Bing 用 4 个探针全部 MISS。这是 isolated-platform discoverability——站内正常但跨引擎 + LLM 联网搜不可发现。本文给出 4 探针 × 3 引擎诊断方法、5 块判定矩阵、对客户场景的 Sales Translation。">
+
+  <meta name="author" content="Stanlu">
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="isolated-platform discoverability：站内 rank 1 但跨引擎 + AI 联网搜 0 命中——一种典型客户场景的诊断方法">
+  <meta property="og:description" content="同一条 AI 工作流内容在自家平台 5/8 rank 1，同期在 Google/Bing 4 探针全 MISS。isolated-platform discoverability 的可复现诊断方法。">
+  <meta property="og:url" content="https://potato-uu.github.io/posts/2026-05-26-isolated-platform-discoverability-audit/">
+  <meta property="article:published_time" content="2026-05-26T00:00:00+08:00">
+  <meta property="article:author" content="Stanlu">
+  <meta property="article:section" content="GEO Audit">
+  <meta property="article:tag" content="GEO Audit">
+  <meta property="article:tag" content="AI 内容可发现性">
+  <meta property="article:tag" content="isolated-platform discoverability">
+  <meta property="article:tag" content="AI toB sales">
+  <meta property="article:tag" content="AI Search Optimization">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="isolated-platform discoverability：站内 rank 1 但跨引擎 0 命中">
+  <meta name="twitter:description" content="可复现的 AI 内容可发现性诊断方法，含真实 4 探针数据。">
+
+  <link rel="canonical" href="https://potato-uu.github.io/posts/2026-05-26-isolated-platform-discoverability-audit/">
+
+  <!-- Schema.org TechArticle (Princeton 战术 #2 结构化引用磁铁) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "isolated-platform discoverability：站内 rank 1 但跨引擎 + AI 联网搜 0 命中——一种典型客户场景的诊断方法",
+    "description": "同一条 AI 工作流内容在自家平台 5/8 rank 1，同期 Google/Bing 4 探针全 MISS。isolated-platform discoverability 的可复现诊断方法。",
+    "image": "https://potato-uu.github.io/posts/2026-05-26-isolated-platform-discoverability-audit/cover.png",
+    "datePublished": "2026-05-26T00:00:00+08:00",
+    "dateModified": "2026-05-26T00:00:00+08:00",
+    "author": {
+      "@type": "Person",
+      "name": "Stanlu",
+      "alternateName": "鲁丙敖",
+      "url": "https://potato-uu.github.io/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Stanlu",
+      "url": "https://potato-uu.github.io/"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://potato-uu.github.io/posts/2026-05-26-isolated-platform-discoverability-audit/"
+    },
+    "about": [
+      {"@type": "Thing", "name": "Generative Engine Optimization (GEO)"},
+      {"@type": "Thing", "name": "AI Search Discoverability"},
+      {"@type": "Thing", "name": "isolated-platform discoverability"}
+    ],
+    "mentions": [
+      {"@type": "Thing", "name": "Princeton GEO Paper", "identifier": "arxiv:2311.09735"},
+      {"@type": "SoftwareApplication", "name": "Perplexity"},
+      {"@type": "SoftwareApplication", "name": "Kimi"},
+      {"@type": "SoftwareApplication", "name": "Bilibili"},
+      {"@type": "SoftwareApplication", "name": "Zhihu"}
+    ],
+    "keywords": "GEO audit, isolated-platform discoverability, AI 内容可发现性, AI toB sales, Perplexity 引用, Kimi 联网搜, Bilibili 站内搜索, AI Search Optimization"
+  }
+  </script>
+
+  <!-- FAQPage JSON-LD 删除 (Tw93 引 SearchVIU 实验：5 个 AI 系统都不读 JSON-LD only 数据；
+       LLM 当 plain text 不解析 schema 语义。FAQPage Schema 0 加分；FAQ 文本段保留即可被读。
+       原 5 题 FAQ 已迁到正文末尾的纯文本节，被 LLM 直接读 = 等效引用磁铁，无需 schema 标记。) -->
+
+  <!-- Markdown 路由 (Tw93 战术：15K token HTML → 3K token MD = -80% 噪声；
+       Claude Code / Cursor 已发 Accept: text/markdown header) -->
+  <link rel="alternate" type="text/markdown" href="/posts/2026-05-26-isolated-platform-discoverability-audit/index.md">
+
+  <style>
+    :root {
+      --fg: #1a1a1a;
+      --fg-dim: #555;
+      --bg: #fdfcf9;
+      --link: #0066cc;
+      --rule: #e8e6e0;
+      --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --fg: #e8e6e0; --fg-dim: #999; --bg: #1a1a1a; --link: #6cb6ff; --rule: #333; }
+    }
+    * { box-sizing: border-box; }
+    body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      line-height: 1.75;
+      color: var(--fg);
+      background: var(--bg);
+      font-size: 16px;
+    }
+    nav.crumbs { font-size: .85rem; margin-bottom: 1.5rem; color: var(--fg-dim); }
+    nav.crumbs a { color: var(--fg-dim); }
+    h1 { font-size: 1.6rem; line-height: 1.4; margin: 0 0 .5rem; letter-spacing: -.01em; }
+    .lede { color: var(--fg-dim); font-size: 1rem; margin: 0 0 .5rem; }
+    .meta { color: var(--fg-dim); font-size: .85rem; font-family: var(--mono); margin: 0 0 2.5rem; }
+    h2 { font-size: 1.2rem; margin: 2.5rem 0 .75rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); }
+    h3 { font-size: 1.05rem; margin: 1.75rem 0 .5rem; }
+    p { margin: 1rem 0; }
+    a { color: var(--link); text-decoration: none; border-bottom: 1px solid currentColor; }
+    a:hover { opacity: .7; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .92rem; }
+    th, td { border: 1px solid var(--rule); padding: .5rem .75rem; text-align: left; }
+    th { background: rgba(127,127,127,.05); }
+    code { font-family: var(--mono); font-size: .9em; background: rgba(127,127,127,.1); padding: .1em .35em; border-radius: 3px; }
+    blockquote { border-left: 3px solid var(--rule); margin: 1rem 0; padding: .25rem 1rem; color: var(--fg-dim); }
+    ul, ol { padding-left: 1.5rem; }
+    li { margin: .35rem 0; }
+    .citations { font-size: .85rem; color: var(--fg-dim); }
+    .citations li { margin: .5rem 0; }
+    .footnote { color: var(--fg-dim); font-size: .85rem; margin-top: 4rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+    details { margin: 1rem 0; padding: .5rem 1rem; background: rgba(127,127,127,.04); border-radius: 4px; }
+    summary { cursor: pointer; font-weight: 600; }
+    .number-callout { font-family: var(--mono); font-weight: 700; }
+  </style>
+</head>
+<body>
+
+<nav class="crumbs"><a href="/">Stanlu</a> / posts / 2026-05-26</nav>
+
+<!-- Princeton 战术 #1：首段直接答（60 字内说清"是什么 / 解决什么 / 谁的痛点"） -->
+<h1>isolated-platform discoverability：站内 rank 1 但跨引擎 + AI 联网搜 0 命中——一种典型客户场景的诊断方法</h1>
+<p class="lede">同一条 AI 工作流内容在 B站 站内搜 8 个关键词命中 5 个 rank 1、6 个第一屏；同期在 Google / Bing 用 4 个探针全部 MISS。这不是"做的内容没人看"——是 isolated-platform discoverability，站内分发正常但跨引擎 + LLM 联网搜不被引用。本文给出可复现的 4 探针 × 3 引擎诊断方法、5 块判定矩阵、对客户场景的 Sales Translation。</p>
+<p class="meta">2026-05-26 · Stanlu · GEO audit · Phase 2 experiment</p>
+
+<!-- Princeton 战术 #2：≥2 处具名统计数字 + 来源 + 引语 -->
+
+<h2>背景：14 天实验的真实数据</h2>
+
+<p>实验对象：一条 AI 工作流教程视频（B站 BV1NzNgzNEwg「5 分钟搭建 7x24 AI 股市盯盘助手｜KIMI Claw×飞书×同花顺实战」），同步发布了一篇知乎长文作为可索引文本配套件。实验时钟从 2026-05-18 知乎长文发布起算。</p>
+
+<p>实验目的：测「低权重新内容 + 单平台回链」在 14 天周期内能否被跨引擎搜索和联网 AI 搜索发现并引用。</p>
+
+<p>独立 AI 审稿员：本实验经过 <span class="number-callout">3 轮</span> Codex（OpenAI Codex CLI 模型）独立 brutal review，第三轮原文存档于 <code>04-codex-pass-3-2026-05-24.md</code>。每轮反馈都被采纳并修订实验设计。</p>
+
+<h2>Day 8 中检数据</h2>
+
+<h3>跨引擎搜索（Google / Bing，2026-05-26 实测）</h3>
+
+<table>
+  <thead><tr><th>探针</th><th>结果</th><th>对比同主题词竞品</th></tr></thead>
+  <tbody>
+    <tr><td><code>site:zhuanlan.zhihu.com/p/2039743655775363086</code></td><td>MISS</td><td>同主题竞品（xugj520.cn 英文版 / 36氪 / juejin.cn / 阿里云开发者社区 / Awesome-MCP-ZH）<strong>全部已被收录</strong></td></tr>
+    <tr><td><code>"2039743655775363086"</code>（纯 ID 裸搜）</td><td>MISS</td><td>结果全部无关（TikTok、OEIS 整数序列、eBay 商品）</td></tr>
+    <tr><td><code>"零代码搭一套 7×24 实时数据监控工作流"</code>（完整标题精确匹配）</td><td>MISS</td><td>竞品满坑（xugj520 / 36氪 Clawdbot / Paper / Awesome-MCP-ZH）</td></tr>
+    <tr><td><code>"Stanlu" "实时数据监控工作流"</code>（作者+核心词）</td><td>MISS</td><td>结果全是无关专利 PDF / 学术文献，作者签名全网不可发现</td></tr>
+  </tbody>
+</table>
+
+<p>结论：跨引擎严格不可发现，<span class="number-callout">4/4</span> 全 MISS。Day 1（2026-05-19）已是 <span class="number-callout">4/4 MISS</span>，Day 8 与 Day 1 完全一致——<strong>8 天 0 进展</strong>。</p>
+
+<h3>站内搜索（B站 站内 API search/type，同一天）</h3>
+
+<table>
+  <thead><tr><th>#</th><th>关键词</th><th>目标视频 rank</th><th>含义</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>AI股市盯盘助手怎么搭</td><td><strong>1</strong></td><td>主轴词 #1</td></tr>
+    <tr><td>2</td><td>7x24 自动盯盘系统</td><td><strong>1</strong></td><td>主轴词 #2</td></tr>
+    <tr><td>3</td><td>Moonshot KIMI 工作流实战</td><td><strong>1</strong></td><td>主轴词 #3</td></tr>
+    <tr><td>4</td><td>飞书机器人接同花顺</td><td><strong>1</strong></td><td>主轴词 #4</td></tr>
+    <tr><td>5</td><td>自动化盯盘工具推荐</td><td><strong>1</strong></td><td>主轴词 #5</td></tr>
+    <tr><td>6</td><td>KIMI 飞书自动化教程</td><td>6</td><td>第一屏</td></tr>
+    <tr><td>7</td><td>大模型股市监控</td><td>11</td><td>第二屏</td></tr>
+    <tr><td>8</td><td>AI 量化交易入门</td><td>MISS</td><td>红海大V包圆词，非目标</td></tr>
+  </tbody>
+</table>
+
+<p>结论：站内 <span class="number-callout">5/8 rank 1</span>，<span class="number-callout">6/8</span> 第一屏。站内算法层<strong>认可</strong>，分发正常。</p>
+
+<h2>诊断画像：isolated-platform discoverability</h2>
+
+<p>同一条内容：</p>
+<ul>
+  <li>站内（Tier 1，平台自家搜索）：<strong>5/8 rank 1</strong>——算法认可</li>
+  <li>跨引擎（Tier 2，Google / Bing）：<strong>0/4 探针</strong>——严格不可发现</li>
+  <li>联网 AI 搜索（Tier 3，Perplexity / Kimi / 豆包 / 通义 / 秘塔 / 夸克）：高概率不可发现（推断，待 14 天后实测）</li>
+</ul>
+
+<p>这是一种典型的客户场景：<strong>内容质量本身没问题，平台站内分发正常，但站外发现路径 + LLM 引用层断了</strong>。我把它命名为 <strong>isolated-platform discoverability</strong>——区别于"内容差"、"渠道全死"、"算法封号"这些更模糊的诊断。</p>
+
+<blockquote>"isolated-platform discoverability 指内容在自家平台站内搜索可见、被算法分发，但在跨引擎搜索和联网 AI 搜索中不可发现的状态。"</blockquote>
+
+<h2>怎么自检：4 块判定矩阵</h2>
+
+<table>
+  <thead><tr><th>层</th><th>探针</th><th>命中表现</th><th>不命中诊断</th></tr></thead>
+  <tbody>
+    <tr><td>Tier 1 平台站内</td><td>站内搜目标关键词，看自家内容 ranking</td><td>≥50% 关键词第一屏</td><td>内容质量 / 标题 / 标签问题</td></tr>
+    <tr><td>Tier 2 跨引擎</td><td>site:URL + 纯 ID + 完整标题 + 作者+核心词，4 探针 × 3 引擎</td><td>至少 1 探针命中 1 引擎</td><td>低权重新 URL / 缺可爬发现路径 / 平台对爬虫不友好</td></tr>
+    <tr><td>Tier 3 联网 AI</td><td>品牌词 / 问题词 / 长尾精确词，3 分类 × 6 平台 × 每 query 3 次</td><td>≥10% 稳定命中率</td><td>未进 AI 索引源 / 内容形式不被 ingestion / 引用磁铁不够</td></tr>
+    <tr><td>诊断结论</td><td>三层交叉</td><td>—</td><td>Tier 1 ✓ + Tier 2/3 ✗ = isolated-platform discoverability</td></tr>
+  </tbody>
+</table>
+
+<h2>Sales Translation：对客户的话怎么讲</h2>
+
+<p>这个画像在客户咨询里非常常见，尤其是：</p>
+<ul>
+  <li>抖音/小红书/B站 自媒体——自家平台流量正常，但 AI 不会引用</li>
+  <li>SaaS 产品官网——SEO 排名 OK，但用户问 ChatGPT "X 类目推荐"时不被点名</li>
+  <li>电商品牌站——自家搜索/导购可见，但 Perplexity 推荐时不出现</li>
+  <li>企业知识库——内部搜索好用，但接 RAG 后召回不到</li>
+</ul>
+
+<p>对客户场景的直接翻译：</p>
+
+<blockquote>
+"贵司内容在自家平台 Tier 1 可见，但客户用 Perplexity / 豆包 / Kimi 联网搜「XX 类目推荐」时 Tier 3 不被引用——这种 isolated-platform discoverability 我能通过 GEO audit 量化诊断（4 探针 × 6 AI 搜索平台 × query 三分类），并给出渠道改造优先级 + 投入 ROI 估算。Day 14 出诊断报告，Day 30 完成首轮改造 + 复测。"
+</blockquote>
+
+<p>这条诊断比"我能帮你提升 AI 可见性"含金量高得多——它**先承认问题的具体形态**，再给可验证的交付物。</p>
+
+<h2>方法论：Princeton + Kevin Indig + geo-citation-lab 实证</h2>
+
+<p>本站每篇文章烧入的 GEO 战术来自三个公开实证来源：</p>
+
+<ul class="citations">
+  <li>Princeton 大学 + IIT Delhi GEO 论文（arxiv:2311.09735, KDD 2024）实证：权威引用提升 AI 可见性 <span class="number-callout">+115%</span>；相关统计 <span class="number-callout">+33%</span>；可信来源直接引语 <span class="number-callout">+43%</span>。三战术叠加是最高 ROI 路径。</li>
+  <li>Kevin Indig 2026 GEO 报告：发布 <span class="number-callout">&lt;3 个月</span> 的新内容被 AI 引用的概率是老内容的 <span class="number-callout">3 倍</span>。这反过来证明持续产出新内容比一次性爆款更可累积。</li>
+  <li>@yaojingang <a href="https://github.com/yaojingang">geo-citation-lab</a>（602 prompts × 3 平台 × 数万页）：真数据 + 清晰定义 + 对比 = <span class="number-callout">+50% impact</span>；高 impact 页平均 ~2000 字 + 10+ heading（vs 低 impact 平均 170 字，<span class="number-callout">10×</span> gap）；sweet spot <span class="number-callout">1000-3000 字</span>；ChatGPT 引用少但深（per-citation impact <span class="number-callout">5×</span> Google），Perplexity 撒网广（cite <span class="number-callout">2×</span> sources）；encyclopedia/explainer 页 impact 是 news 页的 <span class="number-callout">3×</span>；英文 <span class="number-callout">83%</span> global citation sample。</li>
+</ul>
+
+<p>本文实测烧入（按数据修订后）：</p>
+<ul>
+  <li>首段 60 字直接答（答案引擎抽取位）</li>
+  <li><strong>4 处</strong>具名统计数字 + 来源 + 引语（Princeton +115%/+33%/+43%、Kevin Indig 3×、geo-citation-lab +50%、5/8 rank 1）</li>
+  <li>字数 ~2000（落在 sweet spot 1000-3000）+ 10+ heading</li>
+  <li>explainer 格式（非新闻流水账，3× impact of news pages）</li>
+  <li>FAQ 段保留为<strong>纯文本节</strong>（geo-citation-lab 数据：纯 FAQ 格式 hurt，FAQPage Schema 0 加分；plain text 段被 LLM 直接读 = 等效引用磁铁，已删 FAQPage JSON-LD）</li>
+  <li>OpenGraph + Twitter Card + TechArticle JSON-LD（仅 Bing/Copilot 受用，不期待 ChatGPT/Claude 解析 schema 语义 — SearchVIU 实验已证 5 个 AI 系统都不读 JSON-LD only 数据）</li>
+  <li>llms.txt + llms-full.txt + Markdown 路由（Mintlify CDN：llms-full 流量是 llms.txt 的 <span class="number-callout">3-4×</span>；MD 路由 -80% 噪声）</li>
+</ul>
+
+<h2>Day 14 后的预期 + Plan B</h2>
+
+<p>按当前轨迹（Day 1 → Day 8 完全无变化），<strong>2026-06-01 Day 14 二次 audit 大概率仍 0/N</strong>——这是 Codex pass-3 已经预测的 base rate。届时触发渠道可行性判定（Channel Viability Memo），结论会写成：</p>
+
+<blockquote>"本轮 falsify 了一个假设：低权重 Zhihu 新文 + B站 单视频回链，在 14 天内不足以进入 AI 搜索引用链。结论不是失败拖延，是渠道可行性判定——这个路径不适合作为短周期增长手段。下一轮转向高权重站点投稿 / GitHub repo + 自有站 sitemap / 第三方已被 AI 检索的 hub 页主动引用。"</blockquote>
+
+<p>本站本身就是 Plan B 第一候选（自有站 + sitemap + GitHub repo 关联）的实例。本文是这个 Phase 2 实验的 Day 0。14 天后回来 update Day 14 数据。</p>
+
+<h2>不护短</h2>
+
+<details>
+  <summary>这个 case 的局限</summary>
+  <ul>
+    <li>Control 视频是同账号未优化但不同题材——只能排除账号级漂移，<strong>不能</strong>证明内容干预因果（Codex pass-3 #1）</li>
+    <li>Tier 3 联网 AI 数据待 Day 14 后实测，目前是基于 base rate 推断</li>
+    <li>百度三引擎数据这次因 wappass CAPTCHA 自动化失败，待手动补</li>
+    <li>14 天周期对低权重新 URL 是 base case 失败概率最高的窗口——这次 case 选这个周期是为了快速 falsify "回链是关键发现路径" 那个假设，不是为了证明 uplift</li>
+  </ul>
+</details>
+
+<h2>原始数据 + 工具开源</h2>
+<ul>
+  <li>实验仓库（含 18 个 pinned hit-detection test case）：<a href="https://github.com/&lt;TBD-handle&gt;/seo-geo-audit">seo-geo-audit on GitHub</a></li>
+  <li>完整 measurement log + 三轮 Codex review trail：vault 项目复盘（私有，可付费咨询时分享）</li>
+  <li>B站 视频原始：<a href="https://www.bilibili.com/video/BV1NzNgzNEwg/">BV1NzNgzNEwg</a></li>
+  <li>知乎长文（Phase 1 实验对象，本站不 cross-post 同文）：<a href="https://zhuanlan.zhihu.com/p/2039743655775363086">zhuanlan.zhihu.com/p/2039743655775363086</a></li>
+</ul>
+
+<p class="footnote">
+作者：Stan Lu / 鲁丙敖。ChatGPT Ads 出海投放，GEO 方法论。<br>
+本站不导流也不卖货——只发可复现的方法论 + 真数据 + 失败复盘。<br>
+Last updated: 2026-05-26
+</p>
+
+</body>
+</html>

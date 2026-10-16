@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ChatGPT 广告 10 月 5 日更新：改了什么、没改什么 — Stan Lu</title>
+
+  <!-- 直接答（答案引擎抽取位），与正文第一段一致 -->
+  <meta name="description" content="2026 年 10 月 5 日 ChatGPT 广告更新新增两项：视觉广告（美国测试）、首批第三方测量伙伴；谁能看广告、谁能投，没变。">
+
+  <meta name="author" content="Stan Lu（鲁丙敖）">
+  <!-- 站点红线 #2：每篇带 experiment_phase: 2 -->
+  <meta name="experiment_phase" content="2">
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="ChatGPT 广告 10 月 5 日更新：改了什么、没改什么">
+  <meta property="og:description" content="新增视觉广告（美国测试）和首批第三方测量伙伴；谁能看到广告、谁能投，没有变。">
+  <meta property="og:url" content="https://potato-uu.github.io/posts/2026-10-15-chatgpt-ads-visual-ads-measurement-update-zh/">
+  <meta property="og:image" content="https://potato-uu.github.io/posts/2026-10-15-chatgpt-ads-visual-ads-measurement-update-zh/openai-blog-hero-heirloom-visual-ads.png">
+  <meta property="og:image:alt" content="OpenAI 官方博客配图：ChatGPT 中带广告标注的视觉广告示意，来源 openai.com，2026-10-05 发布，2026-10-15 抓取">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="article:published_time" content="2026-10-15T00:00:00+08:00">
+  <meta property="article:modified_time" content="2026-10-15T00:00:00+08:00">
+  <meta property="article:author" content="Stan Lu（鲁丙敖）">
+  <meta property="article:section" content="ChatGPT Ads 更新解读">
+  <meta property="article:tag" content="ChatGPT 广告">
+  <meta property="article:tag" content="ChatGPT Ads">
+  <meta property="article:tag" content="视觉广告">
+  <meta property="article:tag" content="效果测量">
+  <meta property="article:tag" content="出海投放">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ChatGPT 广告 10 月 5 日更新：改了什么、没改什么">
+  <meta name="twitter:description" content="新增：视觉广告（美国测试）、测量伙伴。不变：谁能看到广告、谁能投。">
+  <meta name="twitter:image" content="https://potato-uu.github.io/posts/2026-10-15-chatgpt-ads-visual-ads-measurement-update-zh/openai-blog-hero-heirloom-visual-ads.png">
+
+  <link rel="canonical" href="https://potato-uu.github.io/posts/2026-10-15-chatgpt-ads-visual-ads-measurement-update-zh/">
+  <link rel="alternate" hreflang="en" href="https://potato-uu.github.io/posts/2026-10-15-chatgpt-ads-visual-ads-measurement-update/">
+  <link rel="alternate" hreflang="zh-CN" href="https://potato-uu.github.io/posts/2026-10-15-chatgpt-ads-visual-ads-measurement-update-zh/">
+  <link rel="alternate" hreflang="x-default" href="https://potato-uu.github.io/posts/2026-10-15-chatgpt-ads-visual-ads-measurement-update/">
+
+  <!-- Schema.org TechArticle。不加 FAQ 结构化标记（站点红线 #3：FAQ 保持纯文本） -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "ChatGPT 广告 10 月 5 日更新：改了什么、没改什么",
+    "description": "2026 年 10 月 5 日 ChatGPT 广告更新新增两项：视觉广告（美国测试）、首批第三方测量伙伴；谁能看广告、谁能投，没变。",
+    "inLanguage": "zh-CN",
+    "image": [
+      "https://potato-uu.github.io/posts/2026-10-15-chatgpt-ads-visual-ads-measurement-update-zh/openai-blog-hero-heirloom-visual-ads.png",
+      "https://potato-uu.github.io/posts/2026-10-15-chatgpt-ads-visual-ads-measurement-update-zh/ads-blog-hero-measurement-partners.png"
+    ],
+    "datePublished": "2026-10-15",
+    "dateModified": "2026-10-15",
+    "author": {
+      "@type": "Person",
+      "name": "Stan Lu",
+      "alternateName": ["鲁丙敖", "Stanlu"],
+      "url": "https://potato-uu.github.io/"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Stan Lu",
+      "url": "https://potato-uu.github.io/"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://potato-uu.github.io/posts/2026-10-15-chatgpt-ads-visual-ads-measurement-update-zh/"
+    },
+    "isPartOf": {
+      "@type": "CreativeWorkSeries",
+      "name": "ChatGPT Ads 更新解读"
+    },
+    "translationOfWork": {
+      "@type": "TechArticle",
+      "@id": "https://potato-uu.github.io/posts/2026-10-15-chatgpt-ads-visual-ads-measurement-update/"
+    },
+    "isBasedOn": [
+      "https://openai.com/index/new-chatgpt-ads-format-and-measurement/",
+      "https://ads.openai.com/blog/more-ways-to-measure"
+    ],
+    "about": [
+      {"@type": "Thing", "name": "ChatGPT 广告（ChatGPT Ads）"},
+      {"@type": "Thing", "name": "ChatGPT 视觉广告"},
+      {"@type": "Thing", "name": "广告效果测量与归因"}
+    ],
+    "mentions": [
+      {"@type": "Organization", "name": "OpenAI", "url": "https://openai.com/"},
+      {"@type": "Product", "name": "ChatGPT Ads", "url": "https://ads.openai.com/"},
+      {"@type": "SoftwareApplication", "name": "ChatGPT"}
+    ],
+    "keywords": "ChatGPT 广告, ChatGPT Ads, OpenAI 广告更新 2026 年 10 月, 视觉广告, 测量伙伴, 归因窗口, 一日浏览归因, 事件质量分 EQS, 自助开户可用国家, 出海投放"
+  }
+  </script>
+
+  <style>
+    :root {
+      --fg: #1a1a1a;
+      --fg-dim: #555;
+      --bg: #fdfcf9;
+      --link: #0066cc;
+      --rule: #e8e6e0;
+      --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --fg: #e8e6e0; --fg-dim: #999; --bg: #1a1a1a; --link: #6cb6ff; --rule: #333; }
+    }
+    * { box-sizing: border-box; }
+    body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", sans-serif;
+      line-height: 1.75;
+      color: var(--fg);
+      background: var(--bg);
+      font-size: 16px;
+    }
+    nav.crumbs { font-size: .85rem; margin-bottom: 1.5rem; color: var(--fg-dim); }
+    nav.crumbs a { color: var(--fg-dim); }
+    h1 { font-size: 1.6rem; line-height: 1.4; margin: 0 0 .5rem; letter-spacing: -.01em; }
+    .lede { font-size: 1.05rem; margin: 0 0 1rem; }
+    .tldr { margin: 1rem 0; padding: .5rem 1rem; border-left: 3px solid var(--rule); background: rgba(127,127,127,.04); }
+    .tldr p { margin: .25rem 0; font-weight: 600; }
+    .tldr ul { margin: .25rem 0 .5rem; }
+    .meta { color: var(--fg-dim); font-size: .85rem; font-family: var(--mono); margin: 1rem 0 2.5rem; }
+    h2 { font-size: 1.2rem; margin: 2.5rem 0 .75rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); }
+    h3 { font-size: 1.05rem; margin: 1.75rem 0 .5rem; }
+    p { margin: 1rem 0; }
+    a { color: var(--link); text-decoration: none; border-bottom: 1px solid currentColor; overflow-wrap: anywhere; }
+    a:hover { opacity: .7; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .92rem; }
+    th, td { border: 1px solid var(--rule); padding: .5rem .75rem; text-align: left; vertical-align: top; }
+    th { background: rgba(127,127,127,.05); }
+    .table-note { color: var(--fg-dim); font-size: .85rem; margin-top: -.25rem; }
+    code { font-family: var(--mono); font-size: .9em; background: rgba(127,127,127,.1); padding: .1em .35em; border-radius: 3px; }
+    blockquote { border-left: 3px solid var(--rule); margin: 1rem 0; padding: .25rem 1rem; color: var(--fg-dim); }
+    blockquote p { margin: .5rem 0; }
+    ul, ol { padding-left: 1.5rem; }
+    li { margin: .35rem 0; }
+    figure { margin: 1.5rem 0; }
+    figure img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); }
+    figcaption { color: var(--fg-dim); font-size: .85rem; margin-top: .5rem; }
+    .citations { font-size: .9rem; }
+    .citations li { margin: .5rem 0; }
+    .footnote { color: var(--fg-dim); font-size: .85rem; margin-top: 4rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+    .number-callout { font-family: var(--mono); font-weight: 700; }
+  </style>
+</head>
+<body>
+
+<nav class="crumbs"><a href="/">Stanlu</a> / posts / 2026-10-15 · <a href="/posts/2026-10-15-chatgpt-ads-visual-ads-measurement-update/" hreflang="en" lang="en">English</a></nav>
+
+<h1>ChatGPT 广告 10 月 5 日更新：改了什么、没改什么</h1>
+
+<p class="lede">2026 年 10 月 5 日 ChatGPT 广告更新新增两项：视觉广告（美国测试）、首批第三方测量伙伴；谁能看广告、谁能投，没变。</p>
+
+<div class="tldr">
+  <p>三句话版</p>
+  <ul>
+    <li>10 月 5 日的更新改了广告形式（视觉广告，美国测试）和效果测量（首批第三方伙伴），没改谁能看到广告、谁能投。</li>
+    <li>中国出海主体能不能投，仍由帮助中心的自助开户国家表决定，这张表没变。</li>
+    <li>已在投的先接转化数据、设归因窗口；准备投的核对国家表；观望的等。</li>
+  </ul>
+</div>
+
+<p class="meta">2026-10-15 · Stan Lu（鲁丙敖）· ChatGPT Ads 更新解读 · 官方页面 2026-10-13 抓取</p>
+
+<h2>10 月 5 日改了什么</h2>
+
+<p>2026 年 10 月 5 日，OpenAI 同一天发了两篇：OpenAI 官方博客的<a href="https://openai.com/index/new-chatgpt-ads-format-and-measurement/">《Building advertising for the way people use AI》</a>，和 OpenAI Ads Blog 的<a href="https://ads.openai.com/blog/more-ways-to-measure">《More ways to measure ChatGPT Ads》</a>。两篇合起来加了三样东西：一种新广告形式、一批测量伙伴、新的品牌适配工具。</p>
+
+<h3>1. 视觉广告：在用户生成图片时出现</h3>
+
+<p>新形式出现在用户用 ChatGPT 生成图片的过程中，用图片展示产品、使用场景或体验。它有三重限定：先在美国测试、只对 Free 和 Go 两档用户、首批是一组指定广告主。官方原文：</p>
+
+<blockquote>
+  <p>原文：“Testing will begin later this month in the US with an initial group of advertisers.”</p>
+  <p>译：本月晚些时候先在美国开始测试，首批是一组广告主。</p>
+  <p>— OpenAI 官方博客《Building advertising for the way people use AI》，2026-10-05</p>
+</blockquote>
+
+<p>广告有标注，和用户正在生成的图片分开。同一篇里重申了所有 ChatGPT 广告形式都适用的一条规则，原文是 “advertising does not influence the answers ChatGPT provides”（广告不影响 ChatGPT 给出的回答）。</p>
+
+<figure>
+  <img src="openai-blog-hero-heirloom-visual-ads.png" width="2400" height="1200" alt="OpenAI 官方博客配图：两部手机上的 ChatGPT 界面，在生成图片的过程中各出现一张带“Ad”标注的示例食品零售广告卡，含食物照片和“Learn more”按钮。来源 openai.com，2026-10-05 发布，2026-10-15 抓取。">
+  <figcaption>OpenAI 官方博客配图，原图未改。来源：<a href="https://openai.com/index/new-chatgpt-ads-format-and-measurement/">openai.com/index/new-chatgpt-ads-format-and-measurement</a>，2026-10-05 发布，2026-10-15 抓取。</figcaption>
+</figure>
+
+<p>谁现在该动：如果你的品类会出现在“让 ChatGPT 画一张图”的场景里，比如家居、服饰、旅行、食品，可以先把图片素材准备起来；不在这类场景里的，等。美国以外什么时候开放，官方没有给时间表。</p>
+
+<h3>2. 首批第三方测量伙伴</h3>
+
+<p>测量这一侧把 ChatGPT 广告接进了广告主已经在用的工具。Ads Blog 的说法是 “our first set of third-party partners”（首批第三方伙伴），覆盖信号、归因、增量和品牌测量四类。三家数据平台（Hightouch、Tealium、LiveRamp）可以把现有系统里的转化数据送进来，十家归因伙伴覆盖网页和 App。完整分组见下文“怎么测”一节。</p>
+
+<h3>3. 品牌适配：Negative Phrases 和两家评估试点</h3>
+
+<p>符合条件的广告主现在可以设置 Negative Phrases，把广告排除在与自家品牌政策冲突的对话语境之外。DoubleVerify 和 Integral Ad Science（IAS）两家第三方在做品牌适配评估试点：在受控测试环境里评估平台护栏的执行效果，不接触用户的私人对话。</p>
+
+<h2>没改什么</h2>
+
+<p>10 月 5 日有两件事没变：谁能看到广告、谁能投。形式和测量的新闻，不会挪动这两条线。下表按五个维度对照更新前后。</p>
+
+<table>
+  <thead><tr><th>维度</th><th>10 月 5 日前</th><th>10 月 5 日起</th></tr></thead>
+  <tbody>
+    <tr><td>广告形式</td><td>文字广告卡，出现在回答下方</td><td>新增视觉广告，在图片生成时出现；先美国测试、首批广告主</td></tr>
+    <tr><td>展示给谁</td><td>Free、Go 用户；Plus、Pro、Business 和未成年账号不展示</td><td>不变；视觉广告同样只对 Free、Go</td></tr>
+    <tr><td>可投地区</td><td>9 月 23 日起超过 60 个国家；自助开户表见帮助中心（10-13 抓取）</td><td>不变</td></tr>
+    <tr><td>效果测量</td><td>像素、Conversions API、后台报表</td><td>新增首批第三方伙伴：三家数据导入、十家归因、增量和品牌测量</td></tr>
+    <tr><td>品牌安全</td><td>平台护栏、广告政策</td><td>新增 Negative Phrases（符合条件的广告主）；DoubleVerify、IAS 两家评估试点</td></tr>
+  </tbody>
+</table>
+<p class="table-note">来源：官方博客、Ads Blog（均 2026-10-05 发布），帮助中心 basics 页与可投国家表；均为 2026-10-13 抓取。</p>
+
+<p>下面两节分别展开没变的两件事：先说谁能投，再说谁能看到。</p>
+
+<h2>谁能投</h2>
+
+<h3>看帮助中心的自助开户国家表</h3>
+
+<p>能不能自助开户，由帮助中心一张页面决定：<a href="https://help.openai.com/en/articles/20001245-ads-manager-availability">《Ads Manager Availability》</a>。2026 年 10 月 13 日抓取时，表里列了 <span class="number-callout">63</span> 个国家和地区，全部标为 Available。规则就一句：</p>
+
+<blockquote>
+  <p>原文：“To use self-service Ads Manager, the legal entity that will advertise and be billed must be based in a country listed as available below.”</p>
+  <p>译：要使用自助式 Ads Manager，投放并被开票的法律主体必须设在下表列为可用的国家。</p>
+  <p>— OpenAI 帮助中心《Ads Manager Availability》，2026-10-13 抓取</p>
+</blockquote>
+
+<p>判断标准是“投放并被开票的法律主体”的所在国。10 月 5 日的两篇都没有改这张表。另外，OpenAI <a href="https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan/">9 月 23 日的扩展公告</a>写的是：加入印度尼西亚、马来西亚、菲律宾、新加坡、泰国、越南和台湾后，ChatGPT 广告已覆盖 “more than 60 countries”（超过 60 个国家）。</p>
+
+<h3>主体不在表里怎么办</h3>
+
+<p>官方页面给了两条路：可以先在 ads.openai.com 注册，自助开户在你的国家开放时会收到通知；需求更复杂的大广告主可以联系 OpenAI 广告团队。9 月 23 日那篇还列了另外几条通路：OpenAI Ads Solutions 团队、代理伙伴（点名 dentsu、Havas Media、Omnicom Media、Publicis Groupe、WPP）和技术伙伴。经代理开展，是官方自己列出的路径之一。</p>
+
+<h3>对中国出海主体意味着什么</h3>
+
+<p>视觉广告和能不能投是两件事。一个在美国测试的新形式，不改变哪些主体能自助开户。从中国做海外投放的，先拿主体注册地去核对国家表，再排预算。这就是“三句话版”里“准备投的”那一步。</p>
+
+<h2>谁能看到</h2>
+
+<p>广告只展示给 Free 和 Go 两档用户。帮助中心<a href="https://help.openai.com/en/articles/20001207-ads-in-chatgpt-the-basics">《Ads in ChatGPT: The Basics》</a>写明：Plus、Pro 和任何 Business 套餐用户不展示广告，被识别为未满 18 岁的账号也不展示。视觉广告同样只对 Free 和 Go。</p>
+
+<h3>12 亿周活不是广告受众</h3>
+
+<p>10 月 5 日两篇开头用的是同一个数字，原文 “ChatGPT reaches 1.2 billion people each week”（ChatGPT 每周触达 12 亿人）。这是 ChatGPT 的全部用户。付费档和未成年账号不展示广告，视觉广告又只在美国测试、只对 Free 和 Go；官方没有公布可触达人数。看到谁给出 ChatGPT 广告的受众规模，都是估的，不是 OpenAI 的数字。</p>
+
+<h3>广告出现在哪</h3>
+
+<p>常规的 ChatGPT 广告出现在回答下方。按帮助中心的说明，每条广告展示广告主名称、网站图标（广告主标志）、标题、文案、落地页和一张图片素材。视觉广告多了一个位置：图片生成过程中，目前只对美国的测试人群。</p>
+
+<h2>怎么测</h2>
+
+<h3>先接像素和 Conversions API</h3>
+
+<p>基础是 ChatGPT 广告像素或 Conversions API（CAPI）。按 Ads Blog 的说法，它们测量购买、线索、安装、注册这类动作，同一组信号也用于投放优化。没有接入转化事件，报表和伙伴都无数可读。</p>
+
+<h3>归因窗口与一日浏览归因</h3>
+
+<p>报表里可以按购买周期选一个点击归因窗口，另外可以打开一日浏览归因，统计看过广告、没有点击、一天内转化的用户。官方把这些设置的作用范围写得很清楚：</p>
+
+<blockquote>
+  <p>原文：“These settings control attribution in reports; they do not change how campaigns optimize.”</p>
+  <p>译：这些设置只控制报表里的归因，不改变广告系列的优化方式。</p>
+  <p>— OpenAI Ads Blog《More ways to measure ChatGPT Ads》，2026-10-05</p>
+</blockquote>
+
+<p>为什么要开浏览归因，官方给了一个数字：在对一批以深层转化为目标的全球广告系列的早期分析中，<span class="number-callout">52.7%</span> 的合格一日浏览转化发生在匹配广告展示后一小时内。这是 OpenAI 全球样本的数字，不是某个账户的数字。实际情况是，很多人在 ChatGPT 里问完，直接去搜品牌、下单，不点广告；只看点击，会低估这条路径。</p>
+
+<h3>事件质量分（EQS）</h3>
+
+<p>每个接入的转化事件都有一个事件质量分（Event Quality Score，EQS），用来判断信号够不够测量和优化用。分低就先修数据，再加预算。Ads Blog 没有说归因窗口、浏览归因和 EQS 是 10 月 5 日新上的，只是和伙伴新闻一起写明了。</p>
+
+<h3>测量伙伴分三组</h3>
+
+<table>
+  <thead><tr><th>分组</th><th>伙伴</th><th>作用</th></tr></thead>
+  <tbody>
+    <tr><td>数据导入（<span class="number-callout">3</span> 家）</td><td>Hightouch、Tealium、LiveRamp</td><td>把现有系统的转化数据送进 ChatGPT 广告</td></tr>
+    <tr><td>归因（<span class="number-callout">10</span> 家）</td><td>AppsFlyer、Adjust、Branch、Singular、Kochava、Airbridge、Tenjin、Triple Whale、DV Rockerbox、Northbeam</td><td>Conversions API、报表和点击归因，覆盖网页和 App</td></tr>
+    <tr><td>增量与品牌（早期）</td><td>Haus、Measured、WorkMagic；Kantar、Cint</td><td>基于地区的增量实验；品牌指标的早期测试</td></tr>
+  </tbody>
+</table>
+<p class="table-note">来源：OpenAI 官方博客与 Ads Blog，2026-10-05 发布，2026-10-13 抓取。</p>
+
+<figure>
+  <img src="ads-blog-hero-measurement-partners.png" width="2240" height="1260" loading="lazy" alt="OpenAI Ads Blog 配图：ChatGPT 广告测量伙伴的标志墙，包括 Hightouch、Tealium、LiveRamp、AppsFlyer、Triple Whale、Adjust、Branch、Singular 等。来源 ads.openai.com，2026-10-05 发布，2026-10-15 抓取。">
+  <figcaption>OpenAI Ads Blog 配图，原图未改。来源：<a href="https://ads.openai.com/blog/more-ways-to-measure">ads.openai.com/blog/more-ways-to-measure</a>，2026-10-05 发布，2026-10-15 抓取。</figcaption>
+</figure>
+
+<p>对 App 和游戏团队，归因这一行最要紧。AppsFlyer、Adjust、Branch、Singular 是很多团队已经在用的工具，ChatGPT 广告从此可以和其他渠道用同一套数字比较。</p>
+
+<h3>伙伴数据是伙伴测的</h3>
+
+<p>官方稿里引了几家测量伙伴对个别广告主的测量结果。它们说明的是“测得出来”，不是“你也会这样”。</p>
+
+<h3>已经在投的：三步</h3>
+
+<ol>
+  <li>接上像素或 Conversions API。没接的话，后面所有优化都是盲投。</li>
+  <li>选一个和购买周期匹配的点击归因窗口，并在报表里打开一日浏览归因。</li>
+  <li>看一眼 EQS。分低就先修数据，再加预算。</li>
+</ol>
+
+<h2>2026 年官方时间线</h2>
+
+<p>2026 年 OpenAI 关于 ChatGPT 广告的八个官方节点，按发布日期排。只放 OpenAI 自己发布的内容，不放媒体报道。</p>
+
+<table>
+  <thead><tr><th>日期</th><th>OpenAI 原文标题</th><th>内容</th></tr></thead>
+  <tbody>
+    <tr><td>2026-01-16</td><td>Our approach to advertising and expanding access to ChatGPT</td><td>广告原则与扩大免费使用</td></tr>
+    <tr><td>2026-02-09</td><td>Testing ads in ChatGPT</td><td>ChatGPT 开始测试广告</td></tr>
+    <tr><td>2026-05-05</td><td>New ways to buy ChatGPT ads</td><td>新的购买方式</td></tr>
+    <tr><td>2026-08-18</td><td>ChatGPT Ads expands across Europe</td><td>扩展到欧洲</td></tr>
+    <tr><td>2026-08-31</td><td>A milestone in expanding access to AI</td><td>扩大访问的节点</td></tr>
+    <tr><td>2026-09-16</td><td>Reimagining advertising with AI</td><td>用 AI 重新设计广告</td></tr>
+    <tr><td>2026-09-23</td><td>ChatGPT Ads expands to Southeast Asia and Taiwan</td><td>东南亚六国和台湾；超过 60 个国家</td></tr>
+    <tr><td>2026-10-05</td><td>Building advertising for the way people use AI；More ways to measure ChatGPT Ads</td><td>视觉广告、测量伙伴、品牌适配试点</td></tr>
+  </tbody>
+</table>
+<p class="table-note">日期取自 openai.com 新闻源和 ads.openai.com/blog 索引，2026-10-13 抓取。02-09 是 Ads Blog 索引上的日期；openai.com 上同名文章显示 08-11。</p>
+
+<h2>常见问题</h2>
+
+<h3>ChatGPT 广告 10 月 5 日更新改了什么？</h3>
+<p>改了两处：新增视觉广告（用户生成图片时出现，先在美国测试，只对 Free 和 Go 用户，首批一组广告主），新增一批效果测量伙伴（3 家数据导入、10 家归因、增量和品牌测量）。品牌适配加了 Negative Phrases 和两家第三方评估试点。可投地区和展示人群没有变。</p>
+
+<h3>中国主体现在能投 ChatGPT 广告吗？</h3>
+<p>由 OpenAI 帮助中心的“Ads Manager 自助开户可用国家”表决定，这次更新没有改这张表。主体注册地在表内的可以直接自助开户；不在表内的，官方说法是可以先注册、开放时通知，规模较大的广告主也可以通过 OpenAI 广告团队或代理伙伴。</p>
+
+<h3>视觉广告什么时候对美国以外开放？</h3>
+<p>官方没有给时间表。现在是美国、Free 和 Go 用户、首批广告主三重限定。</p>
+
+<h3>ChatGPT 广告会展示给谁？</h3>
+<p>Free 和 Go 两档用户。Plus、Pro、Business 用户和未成年账号不展示；视觉广告同样只对 Free 和 Go。</p>
+
+<h3>ChatGPT 广告的效果怎么测？</h3>
+<p>像素或 Conversions API 是基础；报表里可以自己选点击归因窗口，另外可以打开一日浏览归因；每个接入的转化事件有一个事件质量分（EQS）。10 月 5 日起，Hightouch、Tealium、LiveRamp 可以导入转化数据，AppsFlyer、Adjust、Branch、Singular 等十家归因伙伴覆盖网页和 App。</p>
+
+<h3>12 亿周活是 ChatGPT 广告的受众吗？</h3>
+<p>不是。付费档和未成年账号不展示广告，视觉广告只对 Free 和 Go；官方没有公布可触达人数。</p>
+
+<h2>出处</h2>
+
+<h3>官方（均 2026-10-13 抓取）</h3>
+<ul class="citations">
+  <li>OpenAI 官方博客《Building advertising for the way people use AI》，2026-10-05 发布：<a href="https://openai.com/index/new-chatgpt-ads-format-and-measurement/">https://openai.com/index/new-chatgpt-ads-format-and-measurement/</a></li>
+  <li>OpenAI Ads Blog《More ways to measure ChatGPT Ads》，2026-10-05 发布：<a href="https://ads.openai.com/blog/more-ways-to-measure">https://ads.openai.com/blog/more-ways-to-measure</a></li>
+  <li>OpenAI 官方博客《ChatGPT Ads expands to Southeast Asia and Taiwan》，2026-09-23 发布：<a href="https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan/">https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan/</a></li>
+  <li>OpenAI 帮助中心《Ads in ChatGPT: The Basics》（2026-10-13 页面标注“Updated: 3 days ago”）：<a href="https://help.openai.com/en/articles/20001207-ads-in-chatgpt-the-basics">https://help.openai.com/en/articles/20001207-ads-in-chatgpt-the-basics</a></li>
+  <li>OpenAI 帮助中心《Ads Manager Availability》（2026-10-13 页面标注“Updated: 18 days ago”）：<a href="https://help.openai.com/en/articles/20001245-ads-manager-availability">https://help.openai.com/en/articles/20001245-ads-manager-availability</a></li>
+  <li>时间线：openai.com 新闻源与 ads.openai.com/blog 索引，2026-10-13 抓取。本页两张图均为 OpenAI 官方原图，未改，2026-10-15 抓取。</li>
+</ul>
+
+<h3>报道</h3>
+<ul class="citations">
+  <li>Morketing，2026-10-13 发布的一篇关于 OpenAI 广告与 12 亿用户的报道。只作为“大家在说什么”的参照，数据未采用。</li>
+</ul>
+
+<h3>推断</h3>
+<ul class="citations">
+  <li>首段判断、分阶段建议、App 和游戏团队那一段、三条边界（能不能投、12 亿这个数字、伙伴数据），是我的判断，不是官方表述。</li>
+</ul>
+
+<p class="footnote">
+Stan Lu（鲁丙敖）· ChatGPT Ads 出海投放。写 ChatGPT 广告官方更新的中文解读，只用官方原文、报道、推断三栏出处。<br>
+栏目：ChatGPT Ads 更新解读 · <a href="/posts/2026-10-15-chatgpt-ads-visual-ads-measurement-update/" hreflang="en" lang="en">English version</a><br>
+发布 2026-10-15 · Last updated: 2026-10-15
+</p>
+
+</body>
+</html>

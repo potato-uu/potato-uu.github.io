@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ChatGPT Ads October 5, 2026 update: what changed — Stan Lu</title>
+
+  <!-- Direct answer (answer-engine extraction slot). Same as the first paragraph. -->
+  <meta name="description" content="OpenAI's October 5, 2026 ChatGPT Ads update changed two things: a visual ad format, tested in the US, and a first set of third-party measurement partners. It did not change who sees ads or who can buy.">
+
+  <meta name="author" content="Stan Lu">
+  <!-- Site rule (CLAUDE.md red line #2): every post carries experiment_phase: 2 -->
+  <meta name="experiment_phase" content="2">
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="ChatGPT Ads October 5, 2026 update: what changed">
+  <meta property="og:description" content="Visual ads (US test) and a first set of measurement partners are new. Who sees ads and who can buy did not change.">
+  <meta property="og:url" content="https://potato-uu.github.io/posts/2026-10-15-chatgpt-ads-visual-ads-measurement-update/">
+  <meta property="og:image" content="https://potato-uu.github.io/posts/2026-10-15-chatgpt-ads-visual-ads-measurement-update/openai-blog-hero-heirloom-visual-ads.png">
+  <meta property="og:image:alt" content="OpenAI blog image of a labeled visual ad in ChatGPT, openai.com, published 2026-10-05, captured 2026-10-15">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="zh_CN">
+  <meta property="article:published_time" content="2026-10-15T00:00:00+08:00">
+  <meta property="article:modified_time" content="2026-10-15T00:00:00+08:00">
+  <meta property="article:author" content="Stan Lu">
+  <meta property="article:section" content="ChatGPT Ads Update Explainer">
+  <meta property="article:tag" content="ChatGPT Ads">
+  <meta property="article:tag" content="OpenAI advertising">
+  <meta property="article:tag" content="Visual ads">
+  <meta property="article:tag" content="Ad measurement">
+  <meta property="article:tag" content="Attribution">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ChatGPT Ads October 5, 2026 update: what changed">
+  <meta name="twitter:description" content="New: visual ads (US test) and measurement partners. Unchanged: who sees ads and who can buy.">
+  <meta name="twitter:image" content="https://potato-uu.github.io/posts/2026-10-15-chatgpt-ads-visual-ads-measurement-update/openai-blog-hero-heirloom-visual-ads.png">
+
+  <link rel="canonical" href="https://potato-uu.github.io/posts/2026-10-15-chatgpt-ads-visual-ads-measurement-update/">
+  <link rel="alternate" hreflang="en" href="https://potato-uu.github.io/posts/2026-10-15-chatgpt-ads-visual-ads-measurement-update/">
+  <link rel="alternate" hreflang="zh-CN" href="https://potato-uu.github.io/posts/2026-10-15-chatgpt-ads-visual-ads-measurement-update-zh/">
+  <link rel="alternate" hreflang="x-default" href="https://potato-uu.github.io/posts/2026-10-15-chatgpt-ads-visual-ads-measurement-update/">
+
+  <!-- Schema.org TechArticle. No FAQ structured data (site red line #3: FAQ stays plain text). -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "ChatGPT Ads October 5, 2026 update: what changed",
+    "description": "OpenAI's October 5, 2026 ChatGPT Ads update changed two things: a visual ad format, tested in the US, and a first set of third-party measurement partners. It did not change who sees ads or who can buy.",
+    "inLanguage": "en",
+    "image": [
+      "https://potato-uu.github.io/posts/2026-10-15-chatgpt-ads-visual-ads-measurement-update/openai-blog-hero-heirloom-visual-ads.png",
+      "https://potato-uu.github.io/posts/2026-10-15-chatgpt-ads-visual-ads-measurement-update/ads-blog-hero-measurement-partners.png"
+    ],
+    "datePublished": "2026-10-15",
+    "dateModified": "2026-10-15",
+    "author": {
+      "@type": "Person",
+      "name": "Stan Lu",
+      "alternateName": ["鲁丙敖", "Stanlu"],
+      "url": "https://potato-uu.github.io/"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Stan Lu",
+      "url": "https://potato-uu.github.io/"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://potato-uu.github.io/posts/2026-10-15-chatgpt-ads-visual-ads-measurement-update/"
+    },
+    "isPartOf": {
+      "@type": "CreativeWorkSeries",
+      "name": "ChatGPT Ads Update Explainer"
+    },
+    "isBasedOn": [
+      "https://openai.com/index/new-chatgpt-ads-format-and-measurement/",
+      "https://ads.openai.com/blog/more-ways-to-measure"
+    ],
+    "about": [
+      {"@type": "Thing", "name": "ChatGPT Ads"},
+      {"@type": "Thing", "name": "Visual ads in ChatGPT"},
+      {"@type": "Thing", "name": "Advertising measurement and attribution"}
+    ],
+    "mentions": [
+      {"@type": "Organization", "name": "OpenAI", "url": "https://openai.com/"},
+      {"@type": "Product", "name": "ChatGPT Ads", "url": "https://ads.openai.com/"},
+      {"@type": "SoftwareApplication", "name": "ChatGPT"}
+    ],
+    "keywords": "ChatGPT Ads, OpenAI ads update October 2026, visual ads, measurement partners, attribution window, one-day view-through, Event Quality Score, Ads Manager availability"
+  }
+  </script>
+
+  <style>
+    :root {
+      --fg: #1a1a1a;
+      --fg-dim: #555;
+      --bg: #fdfcf9;
+      --link: #0066cc;
+      --rule: #e8e6e0;
+      --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --fg: #e8e6e0; --fg-dim: #999; --bg: #1a1a1a; --link: #6cb6ff; --rule: #333; }
+    }
+    * { box-sizing: border-box; }
+    body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+      line-height: 1.75;
+      color: var(--fg);
+      background: var(--bg);
+      font-size: 16px;
+    }
+    nav.crumbs { font-size: .85rem; margin-bottom: 1.5rem; color: var(--fg-dim); }
+    nav.crumbs a { color: var(--fg-dim); }
+    h1 { font-size: 1.6rem; line-height: 1.4; margin: 0 0 .5rem; letter-spacing: -.01em; }
+    .lede { font-size: 1.05rem; margin: 0 0 1rem; }
+    .tldr { margin: 1rem 0; padding: .5rem 1rem; border-left: 3px solid var(--rule); background: rgba(127,127,127,.04); }
+    .tldr p { margin: .25rem 0; font-weight: 600; }
+    .tldr ul { margin: .25rem 0 .5rem; }
+    .meta { color: var(--fg-dim); font-size: .85rem; font-family: var(--mono); margin: 1rem 0 2.5rem; }
+    h2 { font-size: 1.2rem; margin: 2.5rem 0 .75rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); }
+    h3 { font-size: 1.05rem; margin: 1.75rem 0 .5rem; }
+    p { margin: 1rem 0; }
+    a { color: var(--link); text-decoration: none; border-bottom: 1px solid currentColor; overflow-wrap: anywhere; }
+    a:hover { opacity: .7; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .92rem; }
+    th, td { border: 1px solid var(--rule); padding: .5rem .75rem; text-align: left; vertical-align: top; }
+    th { background: rgba(127,127,127,.05); }
+    .table-note { color: var(--fg-dim); font-size: .85rem; margin-top: -.25rem; }
+    code { font-family: var(--mono); font-size: .9em; background: rgba(127,127,127,.1); padding: .1em .35em; border-radius: 3px; }
+    blockquote { border-left: 3px solid var(--rule); margin: 1rem 0; padding: .25rem 1rem; color: var(--fg-dim); }
+    blockquote p { margin: .5rem 0; }
+    ul, ol { padding-left: 1.5rem; }
+    li { margin: .35rem 0; }
+    figure { margin: 1.5rem 0; }
+    figure img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); }
+    figcaption { color: var(--fg-dim); font-size: .85rem; margin-top: .5rem; }
+    .citations { font-size: .9rem; }
+    .citations li { margin: .5rem 0; }
+    .footnote { color: var(--fg-dim); font-size: .85rem; margin-top: 4rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+    .number-callout { font-family: var(--mono); font-weight: 700; }
+  </style>
+</head>
+<body>
+
+<nav class="crumbs"><a href="/">Stanlu</a> / posts / 2026-10-15 · <a href="/posts/2026-10-15-chatgpt-ads-visual-ads-measurement-update-zh/" hreflang="zh-CN" lang="zh-CN">中文版</a></nav>
+
+<h1>ChatGPT Ads October 5, 2026 update: what changed</h1>
+
+<p class="lede">OpenAI's October 5, 2026 ChatGPT Ads update changed two things: a visual ad format, tested in the US, and a first set of third-party measurement partners. It did not change who sees ads or who can buy.</p>
+
+<div class="tldr">
+  <p>TL;DR</p>
+  <ul>
+    <li>The October 5 update changed the ad format (visual ads, US test) and measurement (first third-party partners). It did not change who sees ads or who can buy.</li>
+    <li>Whether a China-based entity can advertise still follows the Help Center self-serve country list, which did not change.</li>
+    <li>Already spending: connect conversion data and set an attribution window. Getting ready: check the country list. Watching: wait.</li>
+  </ul>
+</div>
+
+<p class="meta">2026-10-15 · Stan Lu · ChatGPT Ads Update Explainer · OpenAI pages captured 2026-10-13</p>
+
+<h2>What changed on October 5, 2026</h2>
+
+<p>OpenAI published two posts on October 5, 2026: <a href="https://openai.com/index/new-chatgpt-ads-format-and-measurement/">“Building advertising for the way people use AI”</a> on the OpenAI blog, and <a href="https://ads.openai.com/blog/more-ways-to-measure">“More ways to measure ChatGPT Ads”</a> on the OpenAI Ads Blog. Together they add three things: a new ad format, a measurement partner ecosystem, and new brand suitability controls.</p>
+
+<h3>1. Visual ads during image generation</h3>
+
+<p>The new visual ad format appears while a user generates an image in ChatGPT. The ad uses images to show a product, how it is used, or the experience it makes possible. The test has three limits: it runs in the US, it reaches only users on the Free and Go plans, and it starts with an initial group of advertisers. In OpenAI's words:</p>
+
+<blockquote>
+  <p>“Testing will begin later this month in the US with an initial group of advertisers.”</p>
+  <p>— OpenAI blog, “Building advertising for the way people use AI”, October 5, 2026</p>
+</blockquote>
+
+<p>Ads are labeled and kept separate from the image being created. The same post repeats a rule that applies to every ChatGPT ad format: “advertising does not influence the answers ChatGPT provides.”</p>
+
+<figure>
+  <img src="openai-blog-hero-heirloom-visual-ads.png" width="2400" height="1200" alt="OpenAI blog image: two ChatGPT phone screens, each showing a labeled Ad card from an example grocery advertiser with food photos and a Learn more button, shown while an image is being generated. Source: openai.com, published 2026-10-05, captured 2026-10-15.">
+  <figcaption>OpenAI's own blog image, unedited. Source: <a href="https://openai.com/index/new-chatgpt-ads-format-and-measurement/">openai.com/index/new-chatgpt-ads-format-and-measurement</a>, published 2026-10-05, captured 2026-10-15.</figcaption>
+</figure>
+
+<p>Who should act on this now: categories that come up when people ask ChatGPT to make an image, such as home, apparel, travel or food, can start preparing image creative. Everyone else can wait. OpenAI has given no timeline for markets outside the US.</p>
+
+<h3>2. A first set of third-party measurement partners</h3>
+
+<p>The measurement update connects ChatGPT Ads to tools advertisers already run. The Ads Blog calls it “our first set of third-party partners” across signals, attribution, incrementality and brand measurement. Three platforms (Hightouch, Tealium, LiveRamp) can now send conversion data from existing systems, and ten attribution partners cover web and app. The full list, grouped, is in the measurement section below.</p>
+
+<h3>3. Brand suitability: Negative Phrases and two evaluation pilots</h3>
+
+<p>Qualifying advertisers can now set Negative Phrases to keep ads out of conversation contexts that conflict with their own brand policies. DoubleVerify and Integral Ad Science (IAS) are running brand suitability evaluation pilots. They assess how OpenAI applies its safeguards in a controlled testing environment, without access to private user conversations.</p>
+
+<h2>What did not change</h2>
+
+<p>Two things stayed the same on October 5: who sees ads, and who can buy them. The format and measurement news does not move either line. The table compares five dimensions before and after the update.</p>
+
+<table>
+  <thead><tr><th>Dimension</th><th>Before October 5</th><th>From October 5</th></tr></thead>
+  <tbody>
+    <tr><td>Ad format</td><td>Text ad card below the answer</td><td>Adds visual ads during image generation. US test first, initial group of advertisers</td></tr>
+    <tr><td>Who sees ads</td><td>Free and Go users. No ads for Plus, Pro, Business or minors</td><td>Unchanged. Visual ads also Free and Go only</td></tr>
+    <tr><td>Where to buy</td><td>More than 60 countries since September 23. Self-serve list on the Help Center (captured 2026-10-13)</td><td>Unchanged</td></tr>
+    <tr><td>Measurement</td><td>Pixel, Conversions API, in-platform reports</td><td>First third-party partners: 3 data integrations, 10 attribution, incrementality and brand measurement</td></tr>
+    <tr><td>Brand safety</td><td>Platform safeguards, ad policies</td><td>Negative Phrases (qualifying advertisers). DoubleVerify and IAS evaluation pilots</td></tr>
+  </tbody>
+</table>
+<p class="table-note">Sources: OpenAI blog and Ads Blog (2026-10-05), Help Center basics and availability pages. All captured 2026-10-13.</p>
+
+<p>The next two sections take the unchanged items in turn: who can buy, then who sees ads.</p>
+
+<h2>Who can buy ChatGPT Ads</h2>
+
+<h3>The self-serve country list decides</h3>
+
+<p>Self-serve access to Ads Manager depends on one Help Center page, <a href="https://help.openai.com/en/articles/20001245-ads-manager-availability">“Ads Manager Availability”</a>. On October 13, 2026 it listed <span class="number-callout">63</span> markets, all marked Available. The page sets the rule in one sentence:</p>
+
+<blockquote>
+  <p>“To use self-service Ads Manager, the legal entity that will advertise and be billed must be based in a country listed as available below.”</p>
+  <p>— OpenAI Help Center, “Ads Manager Availability”, captured 2026-10-13</p>
+</blockquote>
+
+<p>The test is the registration country of the legal entity that advertises and is billed. The October 5 posts did not change this page. Separately, OpenAI's <a href="https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan/">September 23, 2026 expansion post</a> says ChatGPT Ads is available in “more than 60 countries” after adding Indonesia, Malaysia, the Philippines, Singapore, Thailand, Vietnam and Taiwan.</p>
+
+<h3>If your entity is not on the list</h3>
+
+<p>OpenAI's page gives two routes. You can still sign up at ads.openai.com, and OpenAI says it will notify you when self-serve opens in your country. Larger advertisers with more complex needs can contact the OpenAI Ads team. The September 23 post also names access through the OpenAI Ads Solutions team, agency partners including dentsu, Havas Media, Omnicom Media, Publicis Groupe and WPP, and technology partners. Working through an agency is one of the routes OpenAI itself lists.</p>
+
+<h3>What this means for China-based advertisers</h3>
+
+<p>Visual ads and eligibility are separate questions. A new format in a US test does not change which entities can open a self-serve account. If you advertise from China into overseas markets, check where your advertising entity is registered against the country list before planning budget. That is the “getting ready” step in the TL;DR.</p>
+
+<h2>Who sees ChatGPT Ads</h2>
+
+<p>Ads show to users on the Free and Go plans. The Help Center page <a href="https://help.openai.com/en/articles/20001207-ads-in-chatgpt-the-basics">“Ads in ChatGPT: The Basics”</a> says OpenAI does not show ads to users on Plus, Pro or any Business plan, or to accounts identified as belonging to users under 18. Visual ads follow the same rule: Free and Go only.</p>
+
+<h3>1.2 billion weekly users is not the ad audience</h3>
+
+<p>Both October 5 posts open with the same figure: “ChatGPT reaches 1.2 billion people each week.” That number counts all ChatGPT users. Paid tiers and minors see no ads, visual ads are limited to Free and Go users in a US test, and OpenAI has not published a reachable-audience number. Any audience size you see quoted for ChatGPT Ads is an estimate, not an OpenAI figure.</p>
+
+<h3>Where ads appear</h3>
+
+<p>Standard ChatGPT ads appear below ChatGPT responses. Per the Help Center, each ad shows the advertiser name, favicon, title, copy, landing page and an image asset. The visual format adds a second placement, during image generation, for the US test group only.</p>
+
+<h2>How ChatGPT Ads performance is measured</h2>
+
+<h3>Pixel and Conversions API come first</h3>
+
+<p>The base layer is the ChatGPT Ads pixel or the Conversions API (CAPI). Per the Ads Blog, they measure actions such as purchases, leads, installs and sign-ups, and the same signals feed campaign optimization. Without a connected conversion event, there is nothing for reports or partners to read.</p>
+
+<h3>Attribution windows and one-day view-through</h3>
+
+<p>In reports, advertisers pick a click-through attribution window that fits their buying cycle, and can add a one-day view-through window that counts conversions after an impression without a click. OpenAI states the scope of these settings plainly:</p>
+
+<blockquote>
+  <p>“These settings control attribution in reports; they do not change how campaigns optimize.”</p>
+  <p>— OpenAI Ads Blog, “More ways to measure ChatGPT Ads”, October 5, 2026</p>
+</blockquote>
+
+<p>OpenAI gives one data point for why view-through matters. In an early analysis of global campaigns optimized for deeper-funnel outcomes, <span class="number-callout">52.7%</span> of eligible one-day view-through conversions occurred within an hour of the matched ad impression. The figure describes OpenAI's sample of global campaigns, not any single account. In practice, many people ask ChatGPT, then search the brand and buy without clicking the ad. Click-only reporting undercounts that path.</p>
+
+<h3>Event Quality Score (EQS)</h3>
+
+<p>Each connected conversion event gets an Event Quality Score. EQS tells you whether the signal is good enough for measurement and optimization to work with. If the score is low, fix the data before adding budget. The Ads Blog does not call the attribution window, view-through or EQS new on October 5; it spells them out alongside the partner news.</p>
+
+<h3>Measurement partners, in three groups</h3>
+
+<table>
+  <thead><tr><th>Group</th><th>Partners</th><th>Role</th></tr></thead>
+  <tbody>
+    <tr><td>Data import (<span class="number-callout">3</span>)</td><td>Hightouch, Tealium, LiveRamp</td><td>Send conversion data from existing systems to ChatGPT Ads</td></tr>
+    <tr><td>Attribution (<span class="number-callout">10</span>)</td><td>AppsFlyer, Adjust, Branch, Singular, Kochava, Airbridge, Tenjin, Triple Whale, DV Rockerbox, Northbeam</td><td>Conversions API, reporting and click attribution across web and app</td></tr>
+    <tr><td>Incrementality and brand (early stage)</td><td>Haus, Measured, WorkMagic; Kantar, Cint</td><td>Geo-based experiments on causal impact; early testing on brand resonance metrics</td></tr>
+  </tbody>
+</table>
+<p class="table-note">Source: OpenAI blog and Ads Blog, 2026-10-05, captured 2026-10-13.</p>
+
+<figure>
+  <img src="ads-blog-hero-measurement-partners.png" width="2240" height="1260" loading="lazy" alt="OpenAI Ads Blog image: rows of measurement partner logos for ChatGPT Ads, including Hightouch, Tealium, LiveRamp, AppsFlyer, Triple Whale, Adjust, Branch and Singular. Source: ads.openai.com, published 2026-10-05, captured 2026-10-15.">
+  <figcaption>OpenAI Ads Blog image, unedited. Source: <a href="https://ads.openai.com/blog/more-ways-to-measure">ads.openai.com/blog/more-ways-to-measure</a>, published 2026-10-05, captured 2026-10-15.</figcaption>
+</figure>
+
+<p>For app and game teams, the attribution row matters most. AppsFlyer, Adjust, Branch and Singular are tools many of these teams already run, so ChatGPT Ads can now be judged with the same numbers used for every other channel.</p>
+
+<h3>Partner results are partner-measured</h3>
+
+<p>OpenAI's posts cite results that measurement partners measured for specific advertisers. They show the effect can be measured. They do not show another account will get the same result.</p>
+
+<h3>If you already spend: three steps</h3>
+
+<ol>
+  <li>Connect the pixel or Conversions API. Without it, every optimization after this is guesswork.</li>
+  <li>Pick a click window that matches your buying cycle, and turn on one-day view-through in reports.</li>
+  <li>Check EQS. If the score is low, fix the data before you add budget.</li>
+</ol>
+
+<h2>2026 official timeline</h2>
+
+<p>Eight OpenAI announcements on ChatGPT Ads in 2026, by publish date. OpenAI's own posts only; press coverage is left out.</p>
+
+<table>
+  <thead><tr><th>Date</th><th>OpenAI post</th><th>What it covered</th></tr></thead>
+  <tbody>
+    <tr><td>2026-01-16</td><td>Our approach to advertising and expanding access to ChatGPT</td><td>Ad principles and wider free access</td></tr>
+    <tr><td>2026-02-09</td><td>Testing ads in ChatGPT</td><td>Ads testing begins in ChatGPT</td></tr>
+    <tr><td>2026-05-05</td><td>New ways to buy ChatGPT ads</td><td>New ways to buy</td></tr>
+    <tr><td>2026-08-18</td><td>ChatGPT Ads expands across Europe</td><td>Expansion across Europe</td></tr>
+    <tr><td>2026-08-31</td><td>A milestone in expanding access to AI</td><td>Access milestone</td></tr>
+    <tr><td>2026-09-16</td><td>Reimagining advertising with AI</td><td>Advertising, reimagined with AI</td></tr>
+    <tr><td>2026-09-23</td><td>ChatGPT Ads expands to Southeast Asia and Taiwan</td><td>Six Southeast Asian markets and Taiwan; more than 60 countries</td></tr>
+    <tr><td>2026-10-05</td><td>Building advertising for the way people use AI; More ways to measure ChatGPT Ads</td><td>Visual ad format, measurement partners, brand suitability pilots</td></tr>
+  </tbody>
+</table>
+<p class="table-note">Dates from the openai.com news feed and the ads.openai.com/blog index, captured 2026-10-13. The 02-09 date is the Ads Blog index date; the openai.com post with the same title shows 08-11.</p>
+
+<h2>FAQ</h2>
+
+<h3>What changed in the October 5, 2026 ChatGPT Ads update?</h3>
+<p>Two things. Visual ads appear while a user generates an image, in a US test, for Free and Go users, with an initial group of advertisers. A first set of measurement partners went live: three data-import platforms, ten attribution partners, and early incrementality and brand measurement. Brand suitability gained Negative Phrases and two third-party evaluation pilots. Eligibility and ad audience did not change.</p>
+
+<h3>Can a China-based company buy ChatGPT Ads?</h3>
+<p>It depends on OpenAI's Help Center list of countries where Ads Manager self-serve is available, and that list did not change on October 5. If the advertising entity is registered in a listed country, it can sign up directly. If not, OpenAI says it can still sign up and be notified when self-serve opens, and larger advertisers can work through the OpenAI Ads Solutions team or agency partners.</p>
+
+<h3>When will visual ads open outside the US?</h3>
+<p>OpenAI gave no timeline. The format is limited to the US, Free and Go users, and an initial group of advertisers.</p>
+
+<h3>Who sees ChatGPT Ads?</h3>
+<p>Free and Go users. Plus, Pro, Business users and minors see no ads. Visual ads also reach Free and Go only.</p>
+
+<h3>How is ChatGPT Ads performance measured?</h3>
+<p>The pixel or Conversions API is the base. In reports you choose a click-through attribution window and can add a one-day view-through window. Each connected conversion event gets an Event Quality Score (EQS). From October 5, Hightouch, Tealium and LiveRamp can import conversion data, and ten attribution partners including AppsFlyer, Adjust, Branch and Singular cover web and app.</p>
+
+<h3>Are 1.2 billion weekly users the ad audience?</h3>
+<p>No. Paid tiers and minors see no ads, and visual ads reach Free and Go only. OpenAI has not published a reachable-audience number.</p>
+
+<h2>Sources</h2>
+
+<h3>OpenAI (captured 2026-10-13)</h3>
+<ul class="citations">
+  <li>OpenAI blog, “Building advertising for the way people use AI”, published 2026-10-05: <a href="https://openai.com/index/new-chatgpt-ads-format-and-measurement/">https://openai.com/index/new-chatgpt-ads-format-and-measurement/</a></li>
+  <li>OpenAI Ads Blog, “More ways to measure ChatGPT Ads”, published 2026-10-05: <a href="https://ads.openai.com/blog/more-ways-to-measure">https://ads.openai.com/blog/more-ways-to-measure</a></li>
+  <li>OpenAI blog, “ChatGPT Ads expands to Southeast Asia and Taiwan”, published 2026-09-23: <a href="https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan/">https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan/</a></li>
+  <li>OpenAI Help Center, “Ads in ChatGPT: The Basics” (page showed “Updated: 3 days ago” on 2026-10-13): <a href="https://help.openai.com/en/articles/20001207-ads-in-chatgpt-the-basics">https://help.openai.com/en/articles/20001207-ads-in-chatgpt-the-basics</a></li>
+  <li>OpenAI Help Center, “Ads Manager Availability” (page showed “Updated: 18 days ago” on 2026-10-13): <a href="https://help.openai.com/en/articles/20001245-ads-manager-availability">https://help.openai.com/en/articles/20001245-ads-manager-availability</a></li>
+  <li>Timeline: openai.com news feed and ads.openai.com/blog index, captured 2026-10-13. The two images on this page are OpenAI's own, unedited, captured 2026-10-15.</li>
+</ul>
+
+<h3>Coverage</h3>
+<ul class="citations">
+  <li>Chinese-language WeChat articles on the October 5 update, read 2026-10-15. Used only to pick which misreadings to address. No figures taken from them.</li>
+</ul>
+
+<h3>My reading</h3>
+<ul class="citations">
+  <li>The opening judgment, the advice by stage, the partner-list point for app and game teams, and the three limits (eligibility, the 1.2 billion figure, partner results) are my reading, not OpenAI's wording.</li>
+</ul>
+
+<p class="footnote">
+Stan Lu · ChatGPT Ads · Going Global. I write explainers on official ChatGPT Ads updates, with sources split into OpenAI, coverage, and my own reading.<br>
+Series: ChatGPT Ads Update Explainer · <a href="/posts/2026-10-15-chatgpt-ads-visual-ads-measurement-update-zh/" hreflang="zh-CN" lang="zh-CN">中文版</a><br>
+Published 2026-10-15 · Last updated: 2026-10-15
+</p>
+
+</body>
+</html>
