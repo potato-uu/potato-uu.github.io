@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ChatGPT Ads attribution windows and Event Quality Score — Stan Lu</title>
+
+  <meta name="description" content="In ChatGPT Ads Manager, the attribution window changes only what reports count, not optimization, bidding or billing. Billing shapes delivery. The Event Quality Score checks conversion data and does not forecast results.">
+
+  <meta name="author" content="Stan Lu">
+  <meta name="experiment_phase" content="2">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="ChatGPT Ads attribution windows and Event Quality Score">
+  <meta property="og:description" content="The attribution window changes the report, not the campaign. Billing changes delivery. EQS checks your data, not your results.">
+  <meta property="og:url" content="https://potato-uu.github.io/posts/2026-10-22-chatgpt-ads-attribution-window-event-quality/">
+  <meta property="og:image" content="https://potato-uu.github.io/posts/2026-10-22-chatgpt-ads-attribution-window-event-quality/cover-linkedin-1920x1080.png">
+  <meta property="og:image:alt" content="Cover: The window changes the report, not the campaign. ChatGPT Ads attribution windows and Event Quality Score, by Stan Lu">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="zh_CN">
+  <meta property="article:published_time" content="2026-10-22T00:00:00+08:00">
+  <meta property="article:modified_time" content="2026-10-22T00:00:00+08:00">
+  <meta property="article:author" content="Stan Lu">
+  <meta property="article:section" content="ChatGPT Ads Update Explainer">
+  <meta property="article:tag" content="ChatGPT Ads">
+  <meta property="article:tag" content="Attribution window">
+  <meta property="article:tag" content="View-through attribution">
+  <meta property="article:tag" content="Event Quality Score">
+  <meta property="article:tag" content="Conversions API">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ChatGPT Ads attribution windows and Event Quality Score">
+  <meta name="twitter:description" content="Attribution windows change reports only. Billing changes delivery. EQS checks data, not results.">
+  <meta name="twitter:image" content="https://potato-uu.github.io/posts/2026-10-22-chatgpt-ads-attribution-window-event-quality/cover-linkedin-1920x1080.png">
+
+  <link rel="canonical" href="https://potato-uu.github.io/posts/2026-10-22-chatgpt-ads-attribution-window-event-quality/">
+  <link rel="alternate" hreflang="en" href="https://potato-uu.github.io/posts/2026-10-22-chatgpt-ads-attribution-window-event-quality/">
+  <link rel="alternate" hreflang="zh-CN" href="https://potato-uu.github.io/posts/2026-10-22-chatgpt-ads-attribution-window-event-quality-zh/">
+  <link rel="alternate" hreflang="x-default" href="https://potato-uu.github.io/posts/2026-10-22-chatgpt-ads-attribution-window-event-quality/">
+
+  <!-- Schema.org TechArticle. No FAQ structured data (site red line #3). -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "ChatGPT Ads attribution windows and Event Quality Score",
+    "description": "In ChatGPT Ads Manager, the attribution window changes only what reports count, not optimization, bidding or billing. Billing shapes delivery. The Event Quality Score checks conversion data and does not forecast results.",
+    "inLanguage": "en",
+    "image": ["https://potato-uu.github.io/posts/2026-10-22-chatgpt-ads-attribution-window-event-quality/cover-linkedin-1920x1080.png", "https://potato-uu.github.io/posts/2026-10-22-chatgpt-ads-attribution-window-event-quality/help-event-quality-modal.png"],
+    "datePublished": "2026-10-22",
+    "dateModified": "2026-10-22",
+    "author": {"@type": "Person", "name": "Stan Lu", "alternateName": ["鲁丙敖", "Stanlu"], "url": "https://potato-uu.github.io/"},
+    "publisher": {"@type": "Person", "name": "Stan Lu", "url": "https://potato-uu.github.io/"},
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://potato-uu.github.io/posts/2026-10-22-chatgpt-ads-attribution-window-event-quality/"},
+    "isPartOf": {"@type": "CreativeWorkSeries", "name": "ChatGPT Ads Update Explainer"},
+    "workTranslation": {"@type": "TechArticle", "@id": "https://potato-uu.github.io/posts/2026-10-22-chatgpt-ads-attribution-window-event-quality-zh/", "inLanguage": "zh-CN"},
+    "isBasedOn": [
+      "https://help.openai.com/en/articles/20001214-measure-results",
+      "https://help.openai.com/en/articles/20001409-conversion-measurement",
+      "https://help.openai.com/en/articles/20001604-troubleshooting-conversion-tracking-for-chatgpt-ads",
+      "https://help.openai.com/en/articles/20001513-understand-and-improve-event-quality",
+      "https://help.openai.com/en/articles/20001412-conversion-optimized-campaigns",
+      "https://ads.openai.com/blog/more-ways-to-measure"
+    ],
+    "about": [
+      {"@type": "Thing", "name": "ChatGPT Ads"},
+      {"@type": "Thing", "name": "Advertising attribution windows"},
+      {"@type": "Thing", "name": "Event Quality Score"}
+    ],
+    "mentions": [
+      {"@type": "Organization", "name": "OpenAI", "url": "https://openai.com/"},
+      {"@type": "Product", "name": "ChatGPT Ads", "url": "https://ads.openai.com/"}
+    ],
+    "keywords": "ChatGPT Ads attribution window, view-through attribution, Event Quality Score, EQS, Conversions API, impression billing, click billing, Ads Manager reporting delay"
+  }
+  </script>
+
+  <style>
+    :root {
+      --fg: #1a1a1a;
+      --fg-dim: #555;
+      --bg: #fdfcf9;
+      --link: #0066cc;
+      --rule: #e8e6e0;
+      --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --fg: #e8e6e0; --fg-dim: #999; --bg: #1a1a1a; --link: #6cb6ff; --rule: #333; }
+    }
+    * { box-sizing: border-box; }
+    body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+      line-height: 1.75;
+      color: var(--fg);
+      background: var(--bg);
+      font-size: 16px;
+    }
+    nav.crumbs { font-size: .85rem; margin-bottom: 1.5rem; color: var(--fg-dim); }
+    nav.crumbs a { color: var(--fg-dim); }
+    h1 { font-size: 1.6rem; line-height: 1.4; margin: 0 0 .5rem; letter-spacing: -.01em; }
+    .lede { font-size: 1.05rem; margin: 0 0 1rem; }
+    .tldr { margin: 1rem 0; padding: .5rem 1rem; border-left: 3px solid var(--rule); background: rgba(127,127,127,.04); }
+    .tldr p { margin: .25rem 0; font-weight: 600; }
+    .tldr ul { margin: .25rem 0 .5rem; }
+    .meta { color: var(--fg-dim); font-size: .85rem; font-family: var(--mono); margin: 1rem 0 2.5rem; }
+    h2 { font-size: 1.2rem; margin: 2.5rem 0 .75rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); }
+    h3 { font-size: 1.05rem; margin: 1.75rem 0 .5rem; }
+    p { margin: 1rem 0; }
+    a { color: var(--link); text-decoration: none; border-bottom: 1px solid currentColor; overflow-wrap: anywhere; }
+    a:hover { opacity: .7; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .92rem; }
+    th, td { border: 1px solid var(--rule); padding: .5rem .75rem; text-align: left; vertical-align: top; }
+    th { background: rgba(127,127,127,.05); }
+    .table-note { color: var(--fg-dim); font-size: .85rem; margin-top: -.25rem; }
+    code { font-family: var(--mono); font-size: .9em; background: rgba(127,127,127,.1); padding: .1em .35em; border-radius: 3px; }
+    blockquote { border-left: 3px solid var(--rule); margin: 1rem 0; padding: .25rem 1rem; color: var(--fg-dim); }
+    blockquote p { margin: .5rem 0; }
+    ul, ol { padding-left: 1.5rem; }
+    li { margin: .35rem 0; }
+    figure { margin: 1.5rem 0; }
+    figure img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); }
+    figcaption { color: var(--fg-dim); font-size: .85rem; margin-top: .5rem; }
+    .citations { font-size: .9rem; }
+    .citations li { margin: .5rem 0; }
+    .footnote { color: var(--fg-dim); font-size: .85rem; margin-top: 4rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+    .number-callout { font-family: var(--mono); font-weight: 700; }
+  </style>
+</head>
+<body>
+
+<nav class="crumbs"><a href="/">Stanlu</a> / posts / 2026-10-22 · <a href="/posts/2026-10-22-chatgpt-ads-attribution-window-event-quality-zh/" hreflang="zh-CN" lang="zh-CN">中文版</a></nav>
+
+<h1>ChatGPT Ads attribution windows and Event Quality Score</h1>
+
+<p class="lede">In ChatGPT Ads Manager, the attribution window (7, 14 or 30 days after a click, plus an optional one-day view-through window) changes only what reports count. It does not change optimization, bidding or billing. The billing option shapes delivery. The Event Quality Score is a daily check of your conversion data, not a forecast.</p>
+
+<div class="tldr">
+  <p>TL;DR</p>
+  <ul>
+    <li>Reports can use a 7-, 14- or 30-day click window, with view-through off or at one day. OpenAI says this changes reporting only, not optimization, bidding or billing.</li>
+    <li>Billing changes delivery. Impression billing optimizes toward conversions from views and clicks. Click billing optimizes toward post-click conversions only. It cannot be changed after the campaign is created.</li>
+    <li>The Event Quality Score (EQS) checks the conversion data you send, per data source. It does not forecast results, and a low score does not by itself mean tracking is broken.</li>
+  </ul>
+</div>
+
+<p class="meta">2026-10-22 · Stan Lu · ChatGPT Ads Update Explainer · OpenAI Help Center pages captured 2026-10-19</p>
+
+<p>This page follows the <a href="/posts/2026-10-15-chatgpt-ads-visual-ads-measurement-update/">October 5, 2026 update explainer</a>, which named the attribution window and EQS without explaining them. Between October 2 and October 17, OpenAI updated five Help Center pages on ChatGPT Ads measurement. Every fact below comes from those pages or from the OpenAI Ads Blog, linked where used.</p>
+
+<h2>What attribution settings ChatGPT Ads has</h2>
+
+<p>The Help Center page <a href="https://help.openai.com/en/articles/20001214-measure-results">“Measure Results”</a> lists the settings that decide what appears in the Conversions column. The billing option, from <a href="https://help.openai.com/en/articles/20001412-conversion-optimized-campaigns">“Conversion-optimized Campaigns”</a>, is added because it is the one that changes delivery.</p>
+
+<table>
+  <thead><tr><th>Setting</th><th>Options</th><th>What it changes</th></tr></thead>
+  <tbody>
+    <tr><td>Click-through window</td><td>7, 14 or 30 days</td><td>Reporting only</td></tr>
+    <tr><td>View-through window</td><td>0 days (off) or 1 day</td><td>Reporting only. Counts a view only when no click qualifies</td></tr>
+    <tr><td>Date basis</td><td>Ad time (default) or conversion time</td><td>Which day a conversion is reported on</td></tr>
+    <tr><td>Attribution model</td><td>Last touch, fixed</td><td>A click beats a view. Not multi-touch</td></tr>
+    <tr><td>Billing option</td><td>Impressions or clicks, fixed after creation</td><td>Delivery: what the campaign optimizes toward</td></tr>
+  </tbody>
+</table>
+<p class="table-note">Sources: Measure Results (updated about 2026-10-17) and Conversion-optimized Campaigns (about 2026-10-02), captured 2026-10-19.</p>
+
+<figure>
+  <img src="fig1-window-settings.png" width="2400" height="2118" alt="Chart: five ChatGPT Ads attribution and billing settings, their options, and what each changes. Only billing changes delivery. Built from OpenAI Help Center pages captured 2026-10-19.">
+  <figcaption>Summary chart of the table above. Built by Stan Lu from OpenAI Help Center pages, captured 2026-10-19.</figcaption>
+</figure>
+
+<h3>Click-through and view-through windows</h3>
+
+<p>A click-through window counts conversions that happen within 7, 14 or 30 days of an ad click. A one-day view-through window adds conversions within a day of an ad impression, but only when no click qualifies. With view-through at zero, the total is clicks only. The setting applies to every conversion column in the report and sits under Edit columns, Conversion Events, Attribution windows.</p>
+
+<h3>Last touch, with the click first</h3>
+
+<p>OpenAI states that the feature “uses OpenAI’s existing last-touch attribution logic and is not multi-touch attribution.” When a view and a click both qualify for one conversion, the click takes the credit.</p>
+
+<h3>Ad time or conversion time</h3>
+
+<p>By default a conversion is dated to the click or impression that earned it. Choosing “Conversions (by conv. time)” in Edit columns dates it to the day the conversion happened instead. This matters most when you compare Ads Manager with a CRM.</p>
+
+<h2>Does the attribution window change delivery?</h2>
+
+<p>No. Measure Results says so in one sentence:</p>
+
+<blockquote>
+  <p>“Changing the reporting window affects reporting only; it does not change campaign optimization, bidding, or billing.”</p>
+  <p>— OpenAI Help Center, “Measure Results”, captured 2026-10-19</p>
+</blockquote>
+
+<p>A 30-day window will show more conversions than a 7-day window on the same campaign, because it counts further back. A jump after a window change is a settings effect, not a performance change.</p>
+
+<h3>Impression billing versus click billing</h3>
+
+<p>For conversion-optimized campaigns, delivery follows billing. Impression billing charges for impressions and optimizes toward conversions driven by ad views and clicks. Click billing charges for valid clicks and optimizes toward conversions after a click. OpenAI's own summary is “Selecting Clicks will lower your conversions.” Read that as OpenAI's view of its system, to be tested in your account.</p>
+
+<h3>What is fixed once a campaign exists</h3>
+
+<ul>
+  <li>The objective, billing option and conversion event cannot be edited after creation. Moving from click to impression billing means cloning the campaign; other changes mean a new one.</li>
+  <li>Custom events cannot be an optimization goal. Use a supported standard event such as a purchase, sign-up or lead.</li>
+  <li>Bid Cap is the most you will bid for a conversion, not what you pay. OpenAI gives no recommended bid amount.</li>
+</ul>
+
+<h2>Why view-through matters on ChatGPT</h2>
+
+<p>A common path is to ask ChatGPT about a product, leave, and buy later through search or a direct visit. Click-only reporting misses it. The <a href="https://ads.openai.com/blog/more-ways-to-measure">OpenAI Ads Blog</a> gave one figure on October 5, 2026: in an early analysis of global campaigns optimized for deeper-funnel outcomes, <span class="number-callout">52.7%</span> of eligible one-day view-through conversions occurred within an hour of the matched ad impression. That describes OpenAI's sample, not any one account.</p>
+
+<h2>How long ChatGPT Ads reporting takes</h2>
+
+<table>
+  <thead><tr><th>Metric</th><th>Typical delay</th></tr></thead>
+  <tbody>
+    <tr><td>Impressions and clicks</td><td>About every <span class="number-callout">15</span> minutes</td></tr>
+    <tr><td>Spend</td><td>About <span class="number-callout">7–8</span> hours behind; clicks can appear before their cost</td></tr>
+    <tr><td>Attributed conversions</td><td>About <span class="number-callout">24–48</span> hours; recent totals can still change</td></tr>
+  </tbody>
+</table>
+<p class="table-note">Source: Measure Results, captured 2026-10-19.</p>
+
+<h2>What the Event Quality Score is</h2>
+
+<p>EQS is a per-data-source check of the conversion information you send, set out on <a href="https://help.openai.com/en/articles/20001513-understand-and-improve-event-quality">“Understand and improve event quality”</a>. Each pixel or data source gets its own score, shown out of 10 in OpenAI's example, with warnings, recent event volume and identifier coverage.</p>
+
+<figure>
+  <img src="help-event-quality-modal.png" width="1416" height="1197" loading="lazy" alt="OpenAI Help Center image: Event quality modal for an example account showing a score of 8 out of 10, a warnings count, events in the last 24 hours and coverage by matching field. Source: help.openai.com, page updated about 2026-10-02, captured 2026-10-19.">
+  <figcaption>OpenAI Help Center image, unedited; the account shown is OpenAI's example. Source: <a href="https://help.openai.com/en/articles/20001513-understand-and-improve-event-quality">help.openai.com/en/articles/20001513</a>, page updated about 2026-10-02, captured 2026-10-19.</figcaption>
+</figure>
+
+<ul>
+  <li><strong>Refresh.</strong> “Event quality refreshes daily using seven complete calendar days.” A fix shows up gradually as older days leave the window.</li>
+  <li><strong>Scope.</strong> It reviews your setup. OpenAI says it does not predict campaign performance or whether a given conversion will match an ad.</li>
+  <li><strong>No score is not zero.</strong> “Unavailable” can mean too little recent activity or attribution evidence, and OpenAI says this is different from a score of zero.</li>
+</ul>
+
+<h3>Does a low score mean tracking is broken?</h3>
+
+<p>The <a href="https://help.openai.com/en/articles/20001604-troubleshooting-conversion-tracking-for-chatgpt-ads">troubleshooting page</a> asks exactly this, and answers: “Not by itself.” Check that recent real actions are recorded, then work through the warnings. OpenAI also says not to send extra events, invent identifiers or change event times to raise the score.</p>
+
+<h2>The nine event quality warnings, by fix</h2>
+
+<table>
+  <thead><tr><th>Warning (OpenAI's name)</th><th>Fix group</th></tr></thead>
+  <tbody>
+    <tr><td>Limited email or customer ID information</td><td>Identifiers</td></tr>
+    <tr><td>Limited additional matching information</td><td>Identifiers</td></tr>
+    <tr><td>Ad click information is missing or cannot be connected</td><td>Click parameter (oppref)</td></tr>
+    <tr><td>Conversions API events are delayed</td><td>Timing</td></tr>
+    <tr><td>Conversion matches need review</td><td>Dedup and coverage</td></tr>
+    <tr><td>Many conversions are linked to the same ad interaction</td><td>Dedup and coverage</td></tr>
+    <tr><td>Limited event types observed</td><td>Dedup and coverage</td></tr>
+    <tr><td>Limited Pixel and Conversions API activity</td><td>Dedup and coverage</td></tr>
+    <tr><td>Limited activity for a configured conversion goal</td><td>Dedup and coverage</td></tr>
+  </tbody>
+</table>
+<p class="table-note">Warning names from “Understand and improve event quality”, captured 2026-10-19. The four fix groups are my grouping.</p>
+
+<ul>
+  <li><strong>Identifiers.</strong> Send an email or a stable customer ID; where allowed, add phone, name, postal code and country. Server events should forward the real client IP and user agent.</li>
+  <li><strong>Click parameter.</strong> Keep the oppref parameter through redirects and checkout, and include it in server events.</li>
+  <li><strong>Timing.</strong> The check looks for server events received within one hour of the action. Keep the original event time on retries.</li>
+  <li><strong>Dedup and coverage.</strong> Give the browser and server copies of one action the same event ID, and confirm each configured goal really fires.</li>
+</ul>
+
+<h3>The Conversions API submission limit</h3>
+
+<p>The Conversions API accepts an event only if it is “within the last 7 days and no more than 10 minutes in the future.” OpenAI adds: “This submission limit is separate from the attribution window.” A 30-day window does not let you upload a 20-day-old order.</p>
+
+<h2>Why Ads Manager and a CRM disagree</h2>
+
+<p>The <a href="https://help.openai.com/en/articles/20001409-conversion-measurement">“Conversion Measurement”</a> page says: “A difference does not necessarily indicate an error.” Align five things before comparing:</p>
+
+<table>
+  <thead><tr><th>Align</th><th>Why</th></tr></thead>
+  <tbody>
+    <tr><td>Click and view windows</td><td>A one-day view window adds conversions a click-only tool will not show</td></tr>
+    <tr><td>Date basis</td><td>Ads Manager dates to the ad interaction by default; a CRM dates to the order</td></tr>
+    <tr><td>Time zone and date range</td><td>Day boundaries shift totals</td></tr>
+    <tr><td>Event</td><td>Order Created Sales and ROAS use only order_created events</td></tr>
+    <tr><td>Scope</td><td>Imported Google Analytics 4 totals include all traffic sources and are not attributed conversions</td></tr>
+  </tbody>
+</table>
+
+<p>Teams that also use a mobile or web attribution partner should set the ChatGPT Ads window to match that partner's window, so both tools apply the same rule.</p>
+
+<h2>What these settings do not mean</h2>
+
+<ul>
+  <li>A longer window does not mean better performance. It counts more of the same activity.</li>
+  <li>A high EQS does not mean a campaign will work. It means the data is complete enough to match.</li>
+  <li>View-through credit is narrow. It counts only when no click qualifies, and only within a day.</li>
+</ul>
+
+<h2>What to do, by stage</h2>
+
+<ol>
+  <li><strong>Already spending.</strong> Set the click window to your buying cycle and turn on one-day view-through in reports; write the setting down. Open event quality for each data source and fix warnings, starting with oppref and event IDs. Align window, date basis and time zone before comparing with a CRM.</li>
+  <li><strong>Getting ready.</strong> Choose billing before you build, since it cannot be changed later. Pick one standard conversion event. Install the Pixel and the Conversions API together with shared event IDs.</li>
+  <li><strong>Watching.</strong> Nothing yet. When you start, decide billing first.</li>
+</ol>
+
+<h2>FAQ</h2>
+
+<h3>What attribution windows does ChatGPT Ads offer?</h3>
+<p>A 7-, 14- or 30-day click-through window, and a view-through window of 0 days (off) or 1 day. Any combination works. The setting applies to every conversion column in the report.</p>
+
+<h3>Does changing the attribution window change how my campaign optimizes?</h3>
+<p>No. OpenAI says the window affects reporting only, not optimization, bidding or billing. Delivery is shaped by the billing option. Impression billing optimizes toward view and click conversions. Click billing optimizes toward post-click conversions.</p>
+
+<h3>Is ChatGPT Ads attribution multi-touch?</h3>
+<p>No. It is last-touch. If both a click and a view qualify for the same conversion, the click gets the credit.</p>
+
+<h3>What is the Event Quality Score in ChatGPT Ads?</h3>
+<p>A per-data-source check of the conversion information you send, shown out of 10, refreshed daily over seven complete days. It lists warnings to fix. It does not forecast campaign results.</p>
+
+<h3>Does a low Event Quality Score mean my tracking is broken?</h3>
+<p>Not by itself, according to OpenAI. Check that recent real actions are captured, then work through the warnings. Do not send extra events or invented identifiers to raise the score.</p>
+
+<h3>How long do ChatGPT Ads conversions take to show up?</h3>
+<p>About 24 to 48 hours, and recent totals can still change. Impressions and clicks refresh about every 15 minutes. Spend lags about 7 to 8 hours.</p>
+
+<h2>Sources</h2>
+
+<h3>OpenAI (Help Center pages captured 2026-10-19)</h3>
+<ul class="citations">
+  <li>Help Center, “Measure Results” (updated about 2026-10-17): <a href="https://help.openai.com/en/articles/20001214-measure-results">https://help.openai.com/en/articles/20001214-measure-results</a></li>
+  <li>Help Center, “Conversion Measurement” (about 2026-10-16): <a href="https://help.openai.com/en/articles/20001409-conversion-measurement">https://help.openai.com/en/articles/20001409-conversion-measurement</a></li>
+  <li>Help Center, “Troubleshooting conversion tracking for ChatGPT Ads” (about 2026-10-15): <a href="https://help.openai.com/en/articles/20001604-troubleshooting-conversion-tracking-for-chatgpt-ads">https://help.openai.com/en/articles/20001604-troubleshooting-conversion-tracking-for-chatgpt-ads</a></li>
+  <li>Help Center, “Understand and improve event quality” (about 2026-10-02): <a href="https://help.openai.com/en/articles/20001513-understand-and-improve-event-quality">https://help.openai.com/en/articles/20001513-understand-and-improve-event-quality</a></li>
+  <li>Help Center, “Conversion-optimized Campaigns” (about 2026-10-02): <a href="https://help.openai.com/en/articles/20001412-conversion-optimized-campaigns">https://help.openai.com/en/articles/20001412-conversion-optimized-campaigns</a></li>
+  <li>OpenAI Ads Blog, “More ways to measure ChatGPT Ads”, published 2026-10-05, captured 2026-10-13, for the 52.7% figure: <a href="https://ads.openai.com/blog/more-ways-to-measure">https://ads.openai.com/blog/more-ways-to-measure</a></li>
+</ul>
+
+<h3>Coverage</h3>
+<ul class="citations">
+  <li>Not used for any fact on this page.</li>
+</ul>
+
+<h3>My reading</h3>
+<ul class="citations">
+  <li>The opening judgment, the four warning groups, the advice by stage and the “do not mean” points are my reading, not OpenAI's wording.</li>
+</ul>
+
+<p class="footnote">
+Stan Lu · ChatGPT Ads · Going Global. I write explainers on official ChatGPT Ads updates, with sources split into OpenAI, coverage, and my own reading.<br>
+Series: ChatGPT Ads Update Explainer · Previous: <a href="/posts/2026-10-15-chatgpt-ads-visual-ads-measurement-update/">October 5, 2026 update</a> · <a href="/posts/2026-10-22-chatgpt-ads-attribution-window-event-quality-zh/" hreflang="zh-CN" lang="zh-CN">中文版</a><br>
+Published 2026-10-22 · Last updated: 2026-10-22
+</p>
+
+<script data-goatcounter="https://potato-uu.goatcounter.com/count" async src="/js/count.js"></script>
+</body>
+</html>

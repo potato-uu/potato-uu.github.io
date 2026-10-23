@@ -54,6 +54,31 @@ This is `isolated-platform discoverability` — a far more common client diagnos
 
 Series name: "ChatGPT Ads Update Explainer" / 「ChatGPT Ads 更新解读」. Author line: Stan Lu · ChatGPT Ads · Going Global / Stan Lu（鲁丙敖）· ChatGPT Ads 出海投放. Sources on each post are split into three columns: OpenAI, coverage, and the author's own reading.
 
+### 2026-10-22: ChatGPT Ads attribution windows and Event Quality Score
+
+URL (English, x-default): https://potato-uu.github.io/posts/2026-10-22-chatgpt-ads-attribution-window-event-quality/
+URL (中文): https://potato-uu.github.io/posts/2026-10-22-chatgpt-ads-attribution-window-event-quality-zh/
+
+**Direct answer**: In ChatGPT Ads Manager, the attribution window changes only what reports count, not optimization, bidding or billing. Billing shapes delivery. The Event Quality Score checks conversion data and does not forecast results.
+
+**Key facts (all from OpenAI Help Center pages, captured 2026-10-19)**:
+- Click-through window 7, 14 or 30 days; view-through window 0 or 1 day; applies to every conversion column (Measure Results).
+- "Changing the reporting window affects reporting only; it does not change campaign optimization, bidding, or billing." (Measure Results)
+- Last-touch attribution, not multi-touch; a qualifying click takes credit over a view (Measure Results).
+- Impression billing optimizes toward view and click conversions; click billing toward post-click conversions; objective, billing and conversion event cannot be changed after creation (Conversion-optimized Campaigns).
+- Reporting delay: impressions and clicks about every 15 minutes; spend about 7-8 hours; attributed conversions about 24-48 hours (Measure Results).
+- Event Quality Score: per pixel or data source, refreshed daily over seven complete calendar days; does not predict campaign performance; nine named warnings (Understand and improve event quality).
+- Conversions API accepts events within the last 7 days and no more than 10 minutes in the future; this limit is separate from the attribution window (Troubleshooting conversion tracking).
+- 52.7% of eligible one-day view-through conversions occurred within an hour of the matched ad impression (OpenAI Ads Blog, 2026-10-05).
+
+**Primary sources**:
+- https://help.openai.com/en/articles/20001214-measure-results
+- https://help.openai.com/en/articles/20001409-conversion-measurement
+- https://help.openai.com/en/articles/20001604-troubleshooting-conversion-tracking-for-chatgpt-ads
+- https://help.openai.com/en/articles/20001513-understand-and-improve-event-quality
+- https://help.openai.com/en/articles/20001412-conversion-optimized-campaigns
+- https://ads.openai.com/blog/more-ways-to-measure (2026-10-05)
+
 ### 2026-10-15: ChatGPT Ads October 5, 2026 update — what changed, what did not
 
 URL (English, x-default): https://potato-uu.github.io/posts/2026-10-15-chatgpt-ads-visual-ads-measurement-update/

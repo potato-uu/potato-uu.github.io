@@ -14,6 +14,8 @@ AI 内容可发现性审计（GEO Audit）方法论站。专注 isolated-platfor
 
 ## 近期文章
 
+- [2026-10-22 — ChatGPT 广告归因窗口与事件质量分（EQS）](https://potato-uu.github.io/posts/2026-10-22-chatgpt-ads-attribution-window-event-quality-zh/) — 中文；窗口只改报表，计费方式才改投放；EQS 不预测效果
+- [2026-10-22 — ChatGPT Ads attribution windows and Event Quality Score](https://potato-uu.github.io/posts/2026-10-22-chatgpt-ads-attribution-window-event-quality/) — English; windows change reports only, billing changes delivery, EQS checks data not results
 - [2026-10-15 — ChatGPT 广告 10 月 5 日更新：改了什么、没改什么](https://potato-uu.github.io/posts/2026-10-15-chatgpt-ads-visual-ads-measurement-update-zh/) — 中文；视觉广告（美国测试）、首批第三方测量伙伴；谁能看、谁能投没变
 - [2026-10-15 — ChatGPT Ads October 5, 2026 update: what changed](https://potato-uu.github.io/posts/2026-10-15-chatgpt-ads-visual-ads-measurement-update/) — English; visual ads (US test), first measurement partners; who sees ads and who can buy unchanged
 - [2026-05-26 — isolated-platform discoverability：B站 5/8 rank 1 vs Google/Bing 0/4](https://potato-uu.github.io/posts/2026-05-26-isolated-platform-discoverability-audit/) — case study + GEO audit 框架 + Sales Translation
