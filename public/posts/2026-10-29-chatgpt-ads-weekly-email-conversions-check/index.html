@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ChatGPT Ads weekly performance emails and the new Conversions overview — Stan Lu</title>
+
+  <meta name="description" content="Advertisers with active ChatGPT Ads campaigns now get a weekly performance email, and Ads Manager has a new Conversions overview with event volume, conversion-optimization share and warnings linked to Diagnostics. Treat the email as a prompt for a 10-minute check, not a verdict.">
+
+  <meta name="author" content="Stan Lu">
+  <meta name="experiment_phase" content="2">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="ChatGPT Ads weekly performance emails and the new Conversions overview">
+  <meta property="og:description" content="The weekly email is a prompt, not a verdict. What the new Conversions overview shows, and a 10-minute weekly check.">
+  <meta property="og:url" content="https://potato-uu.github.io/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check/">
+  <meta property="og:image" content="https://potato-uu.github.io/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check/cover-linkedin-1920x1080.png">
+  <meta property="og:image:alt" content="Cover: The weekly email is a prompt, not a verdict. The new Conversions overview and a 10-minute weekly check, by Stan Lu">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="zh_CN">
+  <meta property="article:published_time" content="2026-10-29T00:00:00+08:00">
+  <meta property="article:modified_time" content="2026-10-29T00:00:00+08:00">
+  <meta property="article:author" content="Stan Lu">
+  <meta property="article:section" content="ChatGPT Ads Update Explainer">
+  <meta property="article:tag" content="ChatGPT Ads">
+  <meta property="article:tag" content="Weekly performance email">
+  <meta property="article:tag" content="Conversions overview">
+  <meta property="article:tag" content="Diagnostics">
+  <meta property="article:tag" content="Ads Manager plugin">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ChatGPT Ads weekly performance emails and the new Conversions overview">
+  <meta name="twitter:description" content="The weekly email is a prompt, not a verdict. A 10-minute weekly check for ChatGPT Ads.">
+  <meta name="twitter:image" content="https://potato-uu.github.io/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check/cover-linkedin-1920x1080.png">
+
+  <link rel="canonical" href="https://potato-uu.github.io/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check/">
+  <link rel="alternate" hreflang="en" href="https://potato-uu.github.io/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check/">
+  <link rel="alternate" hreflang="zh-CN" href="https://potato-uu.github.io/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check-zh/">
+  <link rel="alternate" hreflang="x-default" href="https://potato-uu.github.io/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check/">
+
+  <!-- Schema.org TechArticle. No FAQ structured data (site red line #3). -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "ChatGPT Ads weekly performance emails and the new Conversions overview",
+    "description": "Advertisers with active ChatGPT Ads campaigns now get a weekly performance email, and Ads Manager has a new Conversions overview with event volume, conversion-optimization share and warnings linked to Diagnostics. Treat the email as a prompt for a 10-minute check, not a verdict.",
+    "inLanguage": "en",
+    "image": ["https://potato-uu.github.io/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check/cover-linkedin-1920x1080.png", "https://potato-uu.github.io/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check/fig2-weekly-check.png"],
+    "datePublished": "2026-10-29",
+    "dateModified": "2026-10-29",
+    "author": {"@type": "Person", "name": "Stan Lu", "alternateName": ["鲁丙敖", "Stanlu"], "url": "https://potato-uu.github.io/"},
+    "publisher": {"@type": "Person", "name": "Stan Lu", "url": "https://potato-uu.github.io/"},
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://potato-uu.github.io/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check/"},
+    "isPartOf": {"@type": "CreativeWorkSeries", "name": "ChatGPT Ads Update Explainer"},
+    "workTranslation": {"@type": "TechArticle", "@id": "https://potato-uu.github.io/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check-zh/", "inLanguage": "zh-CN"},
+    "isBasedOn": [
+      "https://help.openai.com/en/articles/20001214-measure-results",
+      "https://help.openai.com/en/articles/20001513-understand-and-improve-event-quality",
+      "https://help.openai.com/en/articles/20001604-troubleshooting-conversion-tracking-for-chatgpt-ads",
+      "https://help.openai.com/en/articles/20001217",
+      "https://help.openai.com/en/articles/20001558-use-the-chatgpt-ads-manager-plugin",
+      "https://www.seroundtable.com/openai-chatgpt-ads-updates-42321.html"
+    ],
+    "about": [
+      {"@type": "Thing", "name": "ChatGPT Ads"},
+      {"@type": "Thing", "name": "Advertising performance reporting"},
+      {"@type": "Thing", "name": "Conversion tracking"}
+    ],
+    "mentions": [
+      {"@type": "Organization", "name": "OpenAI", "url": "https://openai.com/"},
+      {"@type": "Product", "name": "ChatGPT Ads", "url": "https://ads.openai.com/"}
+    ],
+    "keywords": "ChatGPT Ads weekly performance email, Conversions overview, Diagnostics tab, conversion event shows 0, Ads Manager feedback, Ads Manager plugin weekly review, reporting delay"
+  }
+  </script>
+
+  <style>
+    :root {
+      --fg: #1a1a1a;
+      --fg-dim: #555;
+      --bg: #fdfcf9;
+      --link: #0066cc;
+      --rule: #e8e6e0;
+      --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --fg: #e8e6e0; --fg-dim: #999; --bg: #1a1a1a; --link: #6cb6ff; --rule: #333; }
+    }
+    * { box-sizing: border-box; }
+    body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+      line-height: 1.75;
+      color: var(--fg);
+      background: var(--bg);
+      font-size: 16px;
+    }
+    nav.crumbs { font-size: .85rem; margin-bottom: 1.5rem; color: var(--fg-dim); }
+    nav.crumbs a { color: var(--fg-dim); }
+    h1 { font-size: 1.6rem; line-height: 1.4; margin: 0 0 .5rem; letter-spacing: -.01em; }
+    .lede { font-size: 1.05rem; margin: 0 0 1rem; }
+    .tldr { margin: 1rem 0; padding: .5rem 1rem; border-left: 3px solid var(--rule); background: rgba(127,127,127,.04); }
+    .tldr p { margin: .25rem 0; font-weight: 600; }
+    .tldr ul { margin: .25rem 0 .5rem; }
+    .meta { color: var(--fg-dim); font-size: .85rem; font-family: var(--mono); margin: 1rem 0 2.5rem; }
+    h2 { font-size: 1.2rem; margin: 2.5rem 0 .75rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); }
+    h3 { font-size: 1.05rem; margin: 1.75rem 0 .5rem; }
+    p { margin: 1rem 0; }
+    a { color: var(--link); text-decoration: none; border-bottom: 1px solid currentColor; overflow-wrap: anywhere; }
+    a:hover { opacity: .7; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .92rem; }
+    th, td { border: 1px solid var(--rule); padding: .5rem .75rem; text-align: left; vertical-align: top; }
+    th { background: rgba(127,127,127,.05); }
+    .table-note { color: var(--fg-dim); font-size: .85rem; margin-top: -.25rem; }
+    code { font-family: var(--mono); font-size: .9em; background: rgba(127,127,127,.1); padding: .1em .35em; border-radius: 3px; }
+    blockquote { border-left: 3px solid var(--rule); margin: 1rem 0; padding: .25rem 1rem; color: var(--fg-dim); }
+    blockquote p { margin: .5rem 0; }
+    ul, ol { padding-left: 1.5rem; }
+    li { margin: .35rem 0; }
+    figure { margin: 1.5rem 0; }
+    figure img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); }
+    figcaption { color: var(--fg-dim); font-size: .85rem; margin-top: .5rem; }
+    .citations { font-size: .9rem; }
+    .citations li { margin: .5rem 0; }
+    .footnote { color: var(--fg-dim); font-size: .85rem; margin-top: 4rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+    .number-callout { font-family: var(--mono); font-weight: 700; }
+  </style>
+</head>
+<body>
+
+<nav class="crumbs"><a href="/">Stanlu</a> / posts / 2026-10-29 · <a href="/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check-zh/" hreflang="zh-CN" lang="zh-CN">中文版</a></nav>
+
+<h1>ChatGPT Ads weekly performance emails and the new Conversions overview</h1>
+
+<div class="tldr">
+  <p>TL;DR</p>
+  <ul>
+    <li>Advertisers with active ChatGPT Ads campaigns now get a weekly performance email with week-over-week changes. Ads Manager's Conversions page also has a new overview: event volume and trends, the share of active campaigns optimizing for conversions, and active warnings linked to a Diagnostics tab.</li>
+    <li>The email tells you what moved. It does not tell you why. Recent conversions can take 24 to 48 hours to land, so the last two days of any week are still filling in.</li>
+    <li>Use the email as the start of a 10-minute check: read the change, open the Conversions overview, clear warnings, confirm delivery, and write one line down.</li>
+  </ul>
+</div>
+
+<p class="meta">2026-10-29 · Stan Lu · ChatGPT Ads Update Explainer · OpenAI email of 2026-10-16 and Help Center pages captured 2026-10-20</p>
+
+<p class="lede">The weekly email from ChatGPT Ads is a prompt to look, not a result to forward. Read it, then spend ten minutes in Ads Manager before you decide anything.</p>
+
+<p>Last week I covered <a href="/posts/2026-10-22-chatgpt-ads-attribution-window-event-quality/">attribution windows and the Event Quality Score</a>. This week OpenAI added the place where you will see both every week. On October 16 it emailed advertisers about a redesigned Conversions page, weekly performance emails and a feedback button inside Ads Manager. This piece uses that email and OpenAI's Help Center, captured October 20. It does not use numbers from our own account.</p>
+
+<p>If you already spend on ChatGPT Ads, this gives you a routine for the day the email arrives. If you are getting ready, it tells you what the first weeks should look like.</p>
+
+<h2>What OpenAI announced</h2>
+
+<figure>
+  <img src="openai-advertiser-email-1016.png" width="1248" height="2154" alt="OpenAI email to advertisers titled ChatGPT Ads Product Update, sent around 2026-10-16: redesigned Conversions page with a new overview, weekly performance emails, in-product feedback, new measurement partners and tests of larger visual ad formats.">
+  <figcaption>OpenAI's ChatGPT Ads Product Update email to advertisers, unedited. Sent around 2026-10-16; image as republished by Search Engine Roundtable on 2026-10-19.</figcaption>
+</figure>
+
+<p>Five items are in the email. Three of them change what you do each week.</p>
+
+<ul>
+  <li><strong>Redesigned Conversions page.</strong> In OpenAI's words, the new overview "stays visible across the Conversions tabs." It brings together event volume and trends, the share of active campaigns optimizing for conversions, and active warnings linked to the Diagnostics tab.</li>
+  <li><strong>Weekly performance emails.</strong> Advertisers with active campaigns get "a weekly summary of account performance, including week-over-week changes," with a link to full results.</li>
+  <li><strong>Feedback inside Ads Manager.</strong> Open the account menu in the bottom left corner and choose Bug report or Product feedback.</li>
+</ul>
+<p>The other two are new measurement partners (Northbeam, DV Rockerbox and INCRMNTAL, plus mobile partners Kochava, Tenjin and Airbridge) and tests of larger visual ad formats. OpenAI says the visual tests "use existing campaigns and creative, with no action required from advertisers."</p>
+
+<h2>Why the email is not the answer</h2>
+
+<p>A week-over-week change is a fact about two numbers. Three things can move those numbers without anything changing in the market.</p>
+
+<ul>
+  <li><strong>Lag.</strong> OpenAI's Measure Results page says attributed conversions take about 24 to 48 hours to appear, and recent totals can still change. Spend lags about 7 to 8 hours. The last two days of any week are still filling in.</li>
+  <li><strong>Settings.</strong> A wider attribution window counts further back. If someone changed the click window or turned view-through on between the two weeks, the totals are not comparable. OpenAI says the window changes reporting only, not delivery.</li>
+  <li><strong>Date basis.</strong> By default, conversions are dated to the ad click or impression that earned them, not to the day of the order. A slow week of ads can still show strong conversions from the week before.</li>
+</ul>
+<p>So when the email shows a big swing, the first question is whether the two weeks were measured the same way.</p>
+
+<h2>The 10-minute weekly check</h2>
+
+<p>OpenAI does not publish a weekly routine. This is mine, built from the email and the Help Center pages. The minutes are a guide.</p>
+
+<figure>
+  <img src="fig2-weekly-check.png" width="2400" height="2076" loading="lazy" alt="Flowchart: the 10-minute weekly check. Read the email (2 min), open the Conversions overview (3 min), clear warnings and zero-count events (3 min), confirm delivery (1 min), write one line (1 min). Built from OpenAI&#x27;s 2026-10-16 email and Help Center pages captured 2026-10-20.">
+  <figcaption>My weekly routine, drawn from OpenAI's 2026-10-16 email and Help Center pages captured 2026-10-20.</figcaption>
+</figure>
+
+<p><strong>1. Read the email (2 minutes).</strong> Note the two or three biggest week-over-week changes. Ask whether the attribution window, the date basis or the campaign mix changed between the weeks. If they did, stop comparing and note it.</p>
+
+<p><strong>2. Open the Conversions overview (3 minutes).</strong> Go to Ads Manager, then Conversions. Look at three things the email says the overview shows.</p>
+
+<ul>
+  <li>Event volume and trend. A sudden drop to zero for one event usually points to the setup, not to demand.</li>
+  <li>The share of active campaigns optimizing for conversions. Check that it matches your plan. A campaign you meant to run on conversions may be running on clicks.</li>
+  <li>Active warnings. If there are any, open them. They link to the Diagnostics tab.</li>
+</ul>
+<p><strong>3. Clear warnings and zeros (3 minutes, or hand off).</strong> Two cases are common.</p>
+
+<ul>
+  <li><em>A warning is showing.</em> OpenAI's Event Quality page groups the fixes. Most come down to identifiers, the oppref click reference, timely server events, and one shared event ID for browser and server copies of the same action. OpenAI says a low score does not by itself mean tracking is broken.</li>
+  <li><em>An event is arriving but shows 0.</em> OpenAI's answer is usually a mismatch. The event you send must match the campaign's conversion setting. For custom events the name must match exactly; a matching display label is not enough. Fixes apply to new traffic only. "Historical events from the mismatched setup will not backfill."</li>
+</ul>
+<p><strong>4. Confirm delivery (1 minute).</strong> Check that ads show Serving. If you use daily budgets, look at spend for the current weekly period too. OpenAI's troubleshooting page warns that "using the weekly allowance early can stop delivery later in the week."</p>
+
+<p><strong>5. Write one line (1 minute).</strong> Date, attribution setting, the two numbers that moved, and what you changed. Next week's email will only make sense against this line.</p>
+
+<h2>Where things go when they break</h2>
+
+<p>Ads Manager now has two routes, and they do different jobs.</p>
+
+<ul>
+  <li><strong>Bug report or Product feedback</strong>, from the account menu in the bottom left. Use it for a product problem or an idea. It is the fastest way to tell OpenAI something is wrong with the tool.</li>
+  <li><strong>Support</strong>, at ads-support@openai.com or the widget on the Help Center. Use it when your account or your numbers need someone to look at them.</li>
+</ul>
+<p>OpenAI lists what to send support about reporting: ad account ID, campaign and ad names, date range and time zone, an Ads Manager CSV export, and your analytics comparison. For conversion questions, add the event names and example timestamps. Do not send API keys.</p>
+
+<p>If the issue looks larger than one campaign, OpenAI asks you to say so and give a few concrete examples.</p>
+
+<h2>If you use the Ads Manager plugin</h2>
+
+<p>OpenAI's plugin for ChatGPT and Codex can run a weekly review for you. Its Help Center page says you can "schedule daily or weekly reviews," and that reviews give evidence and next steps but "never change your account."</p>
+
+<p>Two limits are worth knowing. By default the plugin looks at the trailing seven completed days in the account's time zone. Its raw event check covers only the latest 50 events from the previous 15 minutes, so it is a live test, not a history. It also does not receive conversion value, so it will not report revenue or ROAS.</p>
+
+<p>The plugin can save you step 1. It does not replace step 5. Someone still needs to write down what changed and why.</p>
+
+<h2>Three things this update does not mean</h2>
+
+<p><strong>The weekly email is not a report to forward.</strong> It is a summary. Recent days are incomplete, and it does not show which settings produced the numbers.</p>
+
+<p><strong>A warning is not a broken campaign.</strong> It points to the data you send. Check that real actions are being captured before you change anything.</p>
+
+<p><strong>More campaigns on conversion optimization is not a goal in itself.</strong> The share in the overview should match your plan. A campaign without enough conversion signal can do better on another objective. That is my reading, not OpenAI's.</p>
+
+<h2>What to do, by stage</h2>
+
+<p><strong>Already spending.</strong> Start this week:</p>
+
+<ol>
+  <li>Decide who reads the weekly email and who owns each step of the check. Put 10 minutes on the calendar for the day it arrives.</li>
+  <li>Fix the attribution window and write it down, so week-over-week changes compare like with like.</li>
+  <li>Open the Conversions overview now and clear any warnings before the next email comes.</li>
+</ol>
+<p><strong>Getting ready.</strong> The email only arrives once you have active campaigns. Before launch, set up the Pixel and the Conversions API with shared event IDs, and attach the right conversion to each campaign before traffic starts. Then the first email reflects real setup, not gaps.</p>
+
+<p><strong>Watching.</strong> Nothing to do yet. Know that ChatGPT Ads now reports to you every week. When you start, plan the routine at the same time as the campaign.</p>
+
+<h2>One thing to do this week</h2>
+
+<p>Open Ads Manager, go to Conversions, and look at the new overview. Note whether any warning is showing and what share of active campaigns optimize for conversions.</p>
+
+<p>A question for the comments: which number would you want first in a weekly email, spend, conversions or cost per conversion? Tell me your category and I will compare what different categories watch in a later piece.</p>
+
+<h2>FAQ</h2>
+
+<h3>Does ChatGPT Ads send a weekly performance email?</h3>
+<p>Yes. Since mid-October 2026, advertisers with active campaigns receive a weekly summary of account performance, with week-over-week changes and a link to full results in Ads Manager.</p>
+
+<h3>What does the new Conversions overview in ChatGPT Ads Manager show?</h3>
+<p>According to OpenAI, event volume and trends, the share of active campaigns optimizing for conversions, and active warnings linked to the Diagnostics tab. It stays visible across the Conversions tabs.</p>
+
+<h3>Why does the weekly email show a big change in conversions?</h3>
+<p>Check three things first: the last 24 to 48 hours are still processing, the attribution window may differ between weeks, and conversions are dated to the ad interaction by default. If all three match, the change is real activity.</p>
+
+<h3>Why does my ChatGPT Ads conversion event show 0?</h3>
+<p>Usually because the event you send does not match the conversion configured for the campaign. Custom event names must match exactly. Fixes apply to new traffic only and do not backfill.</p>
+
+<h3>How do I report a bug in ChatGPT Ads Manager?</h3>
+<p>Open the account menu in the bottom left corner of Ads Manager and choose Bug report or Product feedback. For account or reporting issues, contact ads-support@openai.com with your account ID, campaign names, date range, time zone and a CSV export.</p>
+
+<h3>Can the ChatGPT Ads Manager plugin review my campaigns every week?</h3>
+<p>Yes. You can schedule daily or weekly recommendation-only reviews. They do not change your account. By default they cover the trailing seven completed days.</p>
+
+<h2>Sources</h2>
+
+<h3>OpenAI email</h3>
+
+<ul class="citations">
+  <li>ChatGPT Ads Product Update, sent to advertisers around 2026-10-16. Image as republished by Search Engine Roundtable, <a href="https://www.seroundtable.com/openai-chatgpt-ads-updates-42321.html">seroundtable.com</a>, 2026-10-19.</li>
+</ul>
+<h3>OpenAI Help Center (all captured 2026-10-20)</h3>
+
+<ul class="citations">
+  <li>Measure Results: <a href="https://help.openai.com/en/articles/20001214-measure-results">https://help.openai.com/en/articles/20001214-measure-results</a></li>
+  <li>Understand and improve event quality: <a href="https://help.openai.com/en/articles/20001513-understand-and-improve-event-quality">https://help.openai.com/en/articles/20001513-understand-and-improve-event-quality</a></li>
+  <li>Troubleshooting conversion tracking: <a href="https://help.openai.com/en/articles/20001604-troubleshooting-conversion-tracking-for-chatgpt-ads">https://help.openai.com/en/articles/20001604-troubleshooting-conversion-tracking-for-chatgpt-ads</a></li>
+  <li>Troubleshooting Common Issues: <a href="https://help.openai.com/en/articles/20001217">https://help.openai.com/en/articles/20001217</a></li>
+  <li>Use the ChatGPT Ads Manager plugin: <a href="https://help.openai.com/en/articles/20001558-use-the-chatgpt-ads-manager-plugin">https://help.openai.com/en/articles/20001558-use-the-chatgpt-ads-manager-plugin</a></li>
+</ul>
+<h3>My reading</h3>
+
+<ul class="citations">
+  <li>The opening judgment, the 10-minute routine and its timings, the advice by stage and the three "does not mean" points are my reading, not OpenAI's wording. The Help Center did not yet document the Diagnostics tab when captured.</li>
+</ul>
+
+<p class="footnote">
+Stan Lu · ChatGPT Ads · Going Global. I write explainers on official ChatGPT Ads updates, with sources split into OpenAI, coverage, and my own reading.<br>
+Series: ChatGPT Ads Update Explainer · Previous: <a href="/posts/2026-10-22-chatgpt-ads-attribution-window-event-quality/">Attribution windows and Event Quality Score</a> · <a href="/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check-zh/" hreflang="zh-CN" lang="zh-CN">中文版</a><br>
+Published 2026-10-29 · Last updated: 2026-10-29
+</p>
+
+<script data-goatcounter="https://potato-uu.goatcounter.com/count" async src="/js/count.js"></script>
+</body>
+</html>

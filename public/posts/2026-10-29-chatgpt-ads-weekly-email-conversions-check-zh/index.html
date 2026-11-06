@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ChatGPT 广告每周表现邮件与 Conversions 总览 — Stan Lu</title>
+
+  <meta name="description" content="ChatGPT Ads 开始给有在投活动的广告主发每周表现邮件，后台 Conversions 页新增总览：事件量和趋势、按转化优化的活动占比、链接到 Diagnostics 的警告。把邮件当成每周 10 分钟体检的起点，不是结论。">
+
+  <meta name="author" content="Stan Lu（鲁丙敖）">
+  <meta name="experiment_phase" content="2">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="ChatGPT 广告每周表现邮件与 Conversions 总览">
+  <meta property="og:description" content="每周邮件只是提醒，不是结论。Conversions 新总览看什么，以及每周 10 分钟体检。">
+  <meta property="og:url" content="https://potato-uu.github.io/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check-zh/">
+  <meta property="og:image" content="https://potato-uu.github.io/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check-zh/fig2-weekly-check-zh.png">
+  <meta property="og:image:alt" content="流程图：ChatGPT Ads 每周 10 分钟体检五步，依据 OpenAI 邮件与帮助中心整理">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="article:published_time" content="2026-10-29T00:00:00+08:00">
+  <meta property="article:modified_time" content="2026-10-29T00:00:00+08:00">
+  <meta property="article:author" content="Stan Lu（鲁丙敖）">
+  <meta property="article:section" content="ChatGPT Ads 更新解读">
+  <meta property="article:tag" content="ChatGPT 广告">
+  <meta property="article:tag" content="ChatGPT Ads">
+  <meta property="article:tag" content="每周表现邮件">
+  <meta property="article:tag" content="Conversions 总览">
+  <meta property="article:tag" content="转化追踪">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ChatGPT 广告每周表现邮件与 Conversions 总览">
+  <meta name="twitter:description" content="每周邮件只是提醒，不是结论。ChatGPT Ads 每周 10 分钟体检。">
+  <meta name="twitter:image" content="https://potato-uu.github.io/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check-zh/fig2-weekly-check-zh.png">
+
+  <link rel="canonical" href="https://potato-uu.github.io/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check-zh/">
+  <link rel="alternate" hreflang="en" href="https://potato-uu.github.io/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check/">
+  <link rel="alternate" hreflang="zh-CN" href="https://potato-uu.github.io/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check-zh/">
+  <link rel="alternate" hreflang="x-default" href="https://potato-uu.github.io/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check/">
+
+  <!-- Schema.org TechArticle. No FAQ structured data (site red line #3). -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "ChatGPT 广告每周表现邮件与 Conversions 总览",
+    "description": "ChatGPT Ads 开始给有在投活动的广告主发每周表现邮件，后台 Conversions 页新增总览：事件量和趋势、按转化优化的活动占比、链接到 Diagnostics 的警告。把邮件当成每周 10 分钟体检的起点，不是结论。",
+    "inLanguage": "zh-CN",
+    "image": ["https://potato-uu.github.io/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check-zh/fig2-weekly-check-zh.png", "https://potato-uu.github.io/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check-zh/fig2-weekly-check-zh.png"],
+    "datePublished": "2026-10-29",
+    "dateModified": "2026-10-29",
+    "author": {"@type": "Person", "name": "Stan Lu", "alternateName": ["鲁丙敖", "Stanlu"], "url": "https://potato-uu.github.io/"},
+    "publisher": {"@type": "Person", "name": "Stan Lu", "url": "https://potato-uu.github.io/"},
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://potato-uu.github.io/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check-zh/"},
+    "isPartOf": {"@type": "CreativeWorkSeries", "name": "ChatGPT Ads Update Explainer"},
+    "workTranslation": {"@type": "TechArticle", "@id": "https://potato-uu.github.io/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check/", "inLanguage": "en"},
+    "isBasedOn": [
+      "https://help.openai.com/en/articles/20001214-measure-results",
+      "https://help.openai.com/en/articles/20001513-understand-and-improve-event-quality",
+      "https://help.openai.com/en/articles/20001604-troubleshooting-conversion-tracking-for-chatgpt-ads",
+      "https://help.openai.com/en/articles/20001217",
+      "https://help.openai.com/en/articles/20001558-use-the-chatgpt-ads-manager-plugin",
+      "https://www.seroundtable.com/openai-chatgpt-ads-updates-42321.html"
+    ],
+    "about": [
+      {"@type": "Thing", "name": "ChatGPT 广告"},
+      {"@type": "Thing", "name": "广告效果报表"},
+      {"@type": "Thing", "name": "转化追踪"}
+    ],
+    "mentions": [
+      {"@type": "Organization", "name": "OpenAI", "url": "https://openai.com/"},
+      {"@type": "Product", "name": "ChatGPT Ads", "url": "https://ads.openai.com/"}
+    ],
+    "keywords": "ChatGPT 广告 每周表现邮件, Conversions 总览, Diagnostics, 转化事件显示 0, 后台反馈, Ads Manager 插件 每周复盘, 报表延迟"
+  }
+  </script>
+
+  <style>
+    :root {
+      --fg: #1a1a1a;
+      --fg-dim: #555;
+      --bg: #fdfcf9;
+      --link: #0066cc;
+      --rule: #e8e6e0;
+      --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --fg: #e8e6e0; --fg-dim: #999; --bg: #1a1a1a; --link: #6cb6ff; --rule: #333; }
+    }
+    * { box-sizing: border-box; }
+    body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+      line-height: 1.75;
+      color: var(--fg);
+      background: var(--bg);
+      font-size: 16px;
+    }
+    nav.crumbs { font-size: .85rem; margin-bottom: 1.5rem; color: var(--fg-dim); }
+    nav.crumbs a { color: var(--fg-dim); }
+    h1 { font-size: 1.6rem; line-height: 1.4; margin: 0 0 .5rem; letter-spacing: -.01em; }
+    .lede { font-size: 1.05rem; margin: 0 0 1rem; }
+    .tldr { margin: 1rem 0; padding: .5rem 1rem; border-left: 3px solid var(--rule); background: rgba(127,127,127,.04); }
+    .tldr p { margin: .25rem 0; font-weight: 600; }
+    .tldr ul { margin: .25rem 0 .5rem; }
+    .meta { color: var(--fg-dim); font-size: .85rem; font-family: var(--mono); margin: 1rem 0 2.5rem; }
+    h2 { font-size: 1.2rem; margin: 2.5rem 0 .75rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); }
+    h3 { font-size: 1.05rem; margin: 1.75rem 0 .5rem; }
+    p { margin: 1rem 0; }
+    a { color: var(--link); text-decoration: none; border-bottom: 1px solid currentColor; overflow-wrap: anywhere; }
+    a:hover { opacity: .7; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .92rem; }
+    th, td { border: 1px solid var(--rule); padding: .5rem .75rem; text-align: left; vertical-align: top; }
+    th { background: rgba(127,127,127,.05); }
+    .table-note { color: var(--fg-dim); font-size: .85rem; margin-top: -.25rem; }
+    code { font-family: var(--mono); font-size: .9em; background: rgba(127,127,127,.1); padding: .1em .35em; border-radius: 3px; }
+    blockquote { border-left: 3px solid var(--rule); margin: 1rem 0; padding: .25rem 1rem; color: var(--fg-dim); }
+    blockquote p { margin: .5rem 0; }
+    ul, ol { padding-left: 1.5rem; }
+    li { margin: .35rem 0; }
+    figure { margin: 1.5rem 0; }
+    figure img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); }
+    figcaption { color: var(--fg-dim); font-size: .85rem; margin-top: .5rem; }
+    .citations { font-size: .9rem; }
+    .citations li { margin: .5rem 0; }
+    .footnote { color: var(--fg-dim); font-size: .85rem; margin-top: 4rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+    .number-callout { font-family: var(--mono); font-weight: 700; }
+  </style>
+</head>
+<body>
+
+<nav class="crumbs"><a href="/">Stanlu</a> / posts / 2026-10-29 · <a href="/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check/" hreflang="en" lang="en">English</a></nav>
+
+<h1>ChatGPT 广告每周表现邮件与 Conversions 总览</h1>
+
+<div class="tldr">
+  <p>三句话版</p>
+  <ul>
+    <li>ChatGPT Ads 开始给有在投活动的广告主发每周表现邮件，带周环比。后台 Conversions 页也加了总览：事件量和趋势、在投活动里有多大比例按转化优化、当前警告（可点进 Diagnostics 页）。</li>
+    <li>邮件只告诉你"什么变了"，不告诉你"为什么"。归因转化要 24–48 小时才进报表，每周最后两天的数还在往里填。</li>
+    <li>把邮件当成每周 10 分钟体检的起点：看变化、开总览、清警告、查投放、记一行。</li>
+  </ul>
+</div>
+
+<p class="meta">2026-10-29 · Stan Lu（鲁丙敖）· ChatGPT Ads 更新解读 · OpenAI 2026-10-16 邮件与 2026-10-20 抓取的帮助中心页面</p>
+
+<p class="lede">ChatGPT Ads 的每周邮件是提醒你去看，不是可以直接转发的结论。收到后先花十分钟进后台，再决定动不动。</p>
+
+<p>上周第二篇讲了<a href="/posts/2026-10-22-chatgpt-ads-attribution-window-event-quality-zh/">归因窗口和事件质量分</a>。这周 OpenAI 加了每周都会看到这两样东西的地方：10 月 16 日它给广告主发了一封更新邮件，内容是 Conversions 页改版、每周表现邮件、后台内的反馈入口。本文只用这封邮件和 10 月 20 日抓取的帮助中心原文，不用我们自己账户的数字。</p>
+
+<p>已在投的，看完有一套收到邮件当天就能跑的流程；准备投的，知道头几周后台应该是什么样。</p>
+
+<figure>
+  <img src="openai-advertiser-email-1016.png" width="1248" height="2154" alt="OpenAI 约 2026-10-16 发给广告主的「ChatGPT Ads Product Update」邮件原图：Conversions 页改版与新总览、每周表现邮件、后台内反馈、新测量伙伴、更大图视觉广告测试。">
+  <figcaption>OpenAI 发给广告主的「ChatGPT Ads Product Update」邮件原图，未改。约 2026-10-16 发出；图片取自 Search Engine Roundtable 2026-10-19 转载。</figcaption>
+</figure>
+
+<h2>一、这次官方宣布了什么</h2>
+
+<p>邮件里有五项，其中三项改变你每周要做的事：</p>
+
+<ul>
+  <li><strong>Conversions 页改版。</strong> 官方原话，新总览"stays visible across the Conversions tabs"。上面汇总事件量和趋势、在投活动中按转化优化的占比，以及链接到 Diagnostics 页的当前警告。</li>
+  <li><strong>每周表现邮件。</strong> 有在投活动的广告主每周收到一份账户表现摘要，含周环比变化，附一个跳到后台完整结果的链接。</li>
+  <li><strong>后台内反馈。</strong> 左下角账户菜单里选 Bug report 或 Product feedback。</li>
+</ul>
+<p>另外两项：测量伙伴新增 Northbeam、DV Rockerbox、INCRMNTAL，移动测量伙伴新增 Kochava、Tenjin、Airbridge；以及更大图的视觉广告形式测试。官方说视觉测试"use existing campaigns and creative, with no action required from advertisers"，不用你动。</p>
+
+<h2>二、为什么邮件不是答案</h2>
+
+<p>周环比是两个数字之间的事实。下面三件事能让这两个数变，而市场本身没变：</p>
+
+<ul>
+  <li><strong>延迟。</strong> 《Measure Results》写明，归因转化大约 <strong>24–48 小时</strong>才出现，近期总数还会变；花费滞后约 <strong>7–8 小时</strong>。每周最后两天的数都还没填满。</li>
+  <li><strong>设置。</strong> 归因窗口开宽，就往回数得更远。如果两周之间有人改过点击窗口或打开了浏览归因，两个总数不可比。官方说窗口只改报表，不改投放。</li>
+  <li><strong>日期口径。</strong> 默认按带来转化的那次点击或曝光记日期，不按下单日。广告平淡的一周，也可能显示上一周带来的强转化。</li>
+</ul>
+<p>所以邮件里看到大起大落，第一个问题是：两周是不是按同一套规则量的。</p>
+
+<h2>三、每周 10 分钟体检</h2>
+
+<p>OpenAI 没有发布每周流程。下面是我按邮件和帮助中心整理的，时间只是参考。</p>
+
+<figure>
+  <img src="fig2-weekly-check-zh.png" width="2400" height="1692" loading="lazy" alt="流程图：每周 10 分钟体检。看邮件 2 分、打开 Conversions 总览 3 分、清警告和显示为 0 的事件 3 分、确认在投 1 分、记一行 1 分。依据 OpenAI 2026-10-16 邮件与 2026-10-20 抓取的帮助中心页面。">
+  <figcaption>我的每周流程，依据 OpenAI 2026-10-16 邮件与 2026-10-20 抓取的帮助中心页面。</figcaption>
+</figure>
+
+<p><strong>1. 看邮件（2 分钟）。</strong> 记下周环比变化最大的两三项。问一句：两周之间归因窗口、日期口径、活动组合有没有变？变了就别比，记一笔。</p>
+
+<p><strong>2. 打开 Conversions 总览（3 分钟）。</strong> 后台 → Conversions，看邮件里说总览上有的三样：</p>
+
+<ul>
+  <li>事件量和趋势。某个事件突然掉到零，多半是设置问题，不是需求问题。</li>
+  <li>在投活动里按转化优化的占比。和你的计划对一下，本该按转化跑的活动可能在按点击跑。</li>
+  <li>当前警告。有就点开，它链接到 Diagnostics 页。</li>
+</ul>
+<p><strong>3. 清警告、查零（3 分钟，或转给技术同事）。</strong> 常见两种情况：</p>
+
+<ul>
+  <li><em>有警告。</em> 事件质量页把修法分好了，大多落在四件事：身份信息、oppref 点击参数、服务端事件及时发、同一动作的浏览器和服务端副本用同一个事件 ID。官方说分低"本身不代表"追踪坏了。</li>
+  <li><em>事件在收，但显示 0。</em> 官方给的原因多半是不匹配：你发的事件必须和活动配置的转化一致；自定义事件名要完全一致，显示名一样不算。修好只对新流量生效，官方原话："Historical events from the mismatched setup will not backfill."</li>
+</ul>
+<p><strong>4. 确认在投（1 分钟）。</strong> 广告状态是 Serving。用日预算的，再看本周累计花费。排障文档原话："Using the weekly allowance early can stop delivery later in the week." 前几天花太快，后半周会停。</p>
+
+<p><strong>5. 记一行（1 分钟）。</strong> 日期、归因设置、变化最大的两个数、你改了什么。下周的邮件只有对着这一行才看得懂。</p>
+
+<h2>四、出问题往哪儿报</h2>
+
+<p>后台现在有两条路，管的事不一样：</p>
+
+<ul>
+  <li><strong>Bug report / Product feedback</strong>，在左下角账户菜单。工具本身的问题或建议走这里，是告诉 OpenAI"产品有毛病"最快的路。</li>
+  <li><strong>客服</strong>，ads-support@openai.com 或帮助中心右下角的窗口。账户或数据需要人来看时走这里。</li>
+</ul>
+<p>官方列了报表问题要带的材料：广告账户 ID、活动和广告名、日期范围和时区、后台导出的 CSV、你的分析工具对照。转化问题再加事件名和几条转化时间样例。不要发 API key。</p>
+
+<p>如果问题不止一个活动，官方请你直接说明，并给几个具体例子。</p>
+
+<h2>五、用 Ads Manager 插件的话</h2>
+
+<p>OpenAI 给 ChatGPT 和 Codex 出的 Ads Manager 插件可以替你做每周复盘。帮助中心原话：可以"schedule daily or weekly reviews"，复盘给证据和下一步，但"never change your account"。</p>
+
+<p>两个限制要知道：默认看账户时区下<strong>过去七个完整日</strong>；原始事件诊断只看<strong>最近 15 分钟的 50 条</strong>，是现场测试，不是历史报表。它也拿不到转化金额，所以不报收入和 ROAS。</p>
+
+<p>插件能替你做第 1 步，替不了第 5 步。改了什么、为什么改，还是得有人记下来。</p>
+
+<h2>六、这次不意味着的三件事</h2>
+
+<p><strong>每周邮件不是可以直接转发的报表。</strong> 它是摘要，最近几天不完整，也不显示数字是按什么设置算的。</p>
+
+<p><strong>有警告不等于活动坏了。</strong> 它指的是你回传的数据。先确认真实动作有没有被记录，再动设置。</p>
+
+<p><strong>按转化优化的活动越多越好，不成立。</strong> 总览里的占比应该和你的计划一致。转化信号不够的活动，换个目标可能跑得更好。这条是我的判断，不是官方说法。</p>
+
+<h2>七、按阶段该做什么</h2>
+
+<p><strong>已在投的，这周开始：</strong></p>
+
+<ol>
+  <li>定下谁看每周邮件、体检每一步谁负责，在邮件到达那天的日历上占 10 分钟。</li>
+  <li>把归因窗口定下来并记下，周环比才是同口径比较。</li>
+  <li>现在就打开 Conversions 总览，在下一封邮件到之前把警告清掉。</li>
+</ol>
+<p><strong>准备投的：</strong> 有在投活动才会收到邮件。上线前把像素和 Conversions API 装好、共用事件 ID，流量进来前把正确的转化挂到每个活动上。这样第一封邮件反映的是真实设置，不是漏洞。</p>
+
+<p><strong>观望的：</strong> 现在不用动。只需知道 ChatGPT Ads 现在每周会给你报一次数，开始投时把体检流程和活动一起规划。</p>
+
+<h2>常见问题</h2>
+
+<h3>ChatGPT Ads 会发每周表现邮件吗？</h3>
+<p>会。2026 年 10 月中起，有在投活动的广告主每周收到账户表现摘要，含周环比变化和跳到后台完整结果的链接。</p>
+
+<h3>ChatGPT Ads 后台新的 Conversions 总览显示什么？</h3>
+<p>按官方说法：事件量和趋势、在投活动中按转化优化的占比、链接到 Diagnostics 页的当前警告。总览在 Conversions 各个标签页都可见。</p>
+
+<h3>每周邮件里转化大起大落，先查什么？</h3>
+<p>先查三样：最近 24–48 小时的数还在处理、两周的归因窗口是否一致、转化默认按广告互动日记。三样都一致，变化才是真实的。</p>
+
+<h3>ChatGPT Ads 的转化事件为什么显示 0？</h3>
+<p>通常是你发的事件和活动配置的转化不匹配，自定义事件名必须完全一致。修好只对新流量生效，历史数据不会补回。</p>
+
+<h3>ChatGPT Ads 后台怎么报 bug？</h3>
+<p>后台左下角账户菜单选 Bug report 或 Product feedback。账户或报表问题发 ads-support@openai.com，附账户 ID、活动名、日期范围、时区和 CSV 导出。</p>
+
+<h3>ChatGPT Ads Manager 插件能每周帮我复盘吗？</h3>
+<p>能。可设每日或每周的复盘，只给建议，不改账户，默认看过去七个完整日。</p>
+
+<h2>出处</h2>
+
+<h3>OpenAI 邮件</h3>
+
+<ul class="citations">
+  <li>ChatGPT Ads Product Update，约 2026-10-16 发给广告主。图片取自 Search Engine Roundtable（<a href="https://www.seroundtable.com/openai-chatgpt-ads-updates-42321.html">seroundtable.com</a>）2026-10-19 转载。</li>
+</ul>
+<h3>OpenAI 帮助中心（均为 2026-10-20 抓取）</h3>
+
+<ul class="citations">
+  <li>Measure Results：<a href="https://help.openai.com/en/articles/20001214-measure-results">https://help.openai.com/en/articles/20001214-measure-results</a></li>
+  <li>Understand and improve event quality：<a href="https://help.openai.com/en/articles/20001513-understand-and-improve-event-quality">https://help.openai.com/en/articles/20001513-understand-and-improve-event-quality</a></li>
+  <li>Troubleshooting conversion tracking：<a href="https://help.openai.com/en/articles/20001604-troubleshooting-conversion-tracking-for-chatgpt-ads">https://help.openai.com/en/articles/20001604-troubleshooting-conversion-tracking-for-chatgpt-ads</a></li>
+  <li>Troubleshooting Common Issues：<a href="https://help.openai.com/en/articles/20001217">https://help.openai.com/en/articles/20001217</a></li>
+  <li>Use the ChatGPT Ads Manager plugin：<a href="https://help.openai.com/en/articles/20001558-use-the-chatgpt-ads-manager-plugin">https://help.openai.com/en/articles/20001558-use-the-chatgpt-ads-manager-plugin</a></li>
+</ul>
+<h3>推断</h3>
+
+<ul class="citations">
+  <li>开头的判断、10 分钟流程及各步用时、分阶段建议、三个"不意味着"是我的解读，不是 OpenAI 原文。抓取时帮助中心还没有关于 Diagnostics 页的说明。</li>
+</ul>
+
+<p class="footnote">
+Stan Lu（鲁丙敖）· ChatGPT Ads 出海投放。写 ChatGPT 广告官方更新的中文解读，只用官方原文、报道、推断三栏出处。<br>
+栏目：ChatGPT Ads 更新解读 · 上一篇：<a href="/posts/2026-10-22-chatgpt-ads-attribution-window-event-quality-zh/">归因窗口与事件质量分</a> · <a href="/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check/" hreflang="en" lang="en">English</a><br>
+发布 2026-10-29 · 最后更新：2026-10-29
+</p>
+
+<script data-goatcounter="https://potato-uu.goatcounter.com/count" async src="/js/count.js"></script>
+</body>
+</html>

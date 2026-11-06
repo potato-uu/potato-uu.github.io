@@ -54,6 +54,30 @@ This is `isolated-platform discoverability` — a far more common client diagnos
 
 Series name: "ChatGPT Ads Update Explainer" / 「ChatGPT Ads 更新解读」. Author line: Stan Lu · ChatGPT Ads · Going Global / Stan Lu（鲁丙敖）· ChatGPT Ads 出海投放. Sources on each post are split into three columns: OpenAI, coverage, and the author's own reading.
 
+### 2026-10-29: ChatGPT Ads weekly performance emails and the new Conversions overview
+
+URL (English, x-default): https://potato-uu.github.io/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check/
+URL (中文): https://potato-uu.github.io/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check-zh/
+
+**Direct answer**: Advertisers with active ChatGPT Ads campaigns now get a weekly performance email with week-over-week changes, and Ads Manager's Conversions page has a new overview. The email tells you what moved, not why; treat it as a prompt for a 10-minute check, not a verdict.
+
+**Key facts (OpenAI email of about 2026-10-16; Help Center pages captured 2026-10-20)**:
+- The new Conversions overview "stays visible across the Conversions tabs" and shows event volume and trends, the share of active campaigns optimizing for conversions, and active warnings linked to the Diagnostics tab (OpenAI email).
+- Advertisers with active campaigns get a weekly summary of account performance, including week-over-week changes, with a link to full results (OpenAI email).
+- Bug report and Product feedback are in the account menu in the bottom left corner of Ads Manager (OpenAI email).
+- Attributed conversions take about 24-48 hours to appear; spend lags about 7-8 hours (Measure Results).
+- An event that arrives but shows 0 is usually a mismatch with the campaign's conversion setting; custom event names must match exactly; "Historical events from the mismatched setup will not backfill." (Troubleshooting conversion tracking).
+- "Using the weekly allowance early can stop delivery later in the week." (Troubleshooting Common Issues).
+- The Ads Manager plugin can "schedule daily or weekly reviews" that "never change your account"; default window is the trailing seven completed days (Use the ChatGPT Ads Manager plugin).
+
+**Primary sources**:
+- https://help.openai.com/en/articles/20001214-measure-results
+- https://help.openai.com/en/articles/20001513-understand-and-improve-event-quality
+- https://help.openai.com/en/articles/20001604-troubleshooting-conversion-tracking-for-chatgpt-ads
+- https://help.openai.com/en/articles/20001217
+- https://help.openai.com/en/articles/20001558-use-the-chatgpt-ads-manager-plugin
+- https://www.seroundtable.com/openai-chatgpt-ads-updates-42321.html (coverage, 2026-10-19; source of the email image)
+
 ### 2026-10-22: ChatGPT Ads attribution windows and Event Quality Score
 
 URL (English, x-default): https://potato-uu.github.io/posts/2026-10-22-chatgpt-ads-attribution-window-event-quality/
