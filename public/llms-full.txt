@@ -97,6 +97,28 @@ URL (中文): https://potato-uu.github.io/posts/2026-11-12-chatgpt-ads-holiday-w
 - https://goldcast.ondemand.goldcast.io/on-demand/980c8f7c-cd51-44ff-b18d-43003253b728 (session replay and automatic captions)
 - https://ads.openai.com/holiday (holiday page; Chinese version https://ads.openai.com/zh-CN/holiday; measurement periods in footnotes 1-4)
 
+### 2026-11-12: ChatGPT Ads account setup: 3 settings you can't change after signup
+
+URL (English, x-default): https://potato-uu.github.io/posts/2026-11-12-chatgpt-ads-account-setup-fixed-settings/
+URL (中文): https://potato-uu.github.io/posts/2026-11-12-chatgpt-ads-account-setup-fixed-settings-zh/
+
+**Direct answer**: In ChatGPT Ads, the country or region, currency and time zone chosen at signup cannot be changed after the account is created. The advertiser name entered at signup fills the account name, brand name and legal name; after signup they can be changed separately in Settings, General, at different costs. Self-serve access depends on where the legal entity that will advertise and be billed is based, not on the target market.
+
+**Key facts (OpenAI Help Center captured 2026-10-26; OpenAI blog of 2026-10-21)**:
+- "These three settings cannot be changed after account creation": country or region, currency and time zone (Ads Manager Account Setup).
+- Account name identifies the account inside Ads Manager; changing it triggers no review. Brand name is "the public name shown alongside your ads in ChatGPT"; changing it triggers brand review and ads pause until the new name is approved. Legal name is used for billing and business verification; changing it restarts business review and may pause ads (Ads Manager Account Setup).
+- One account per advertiser; once a user belongs to 10 or more ad accounts they cannot create another themselves but can still be invited (Ads Manager Account Setup).
+- "the legal entity that will advertise and be billed must be based in a country listed as available"; account creation and self-serve availability are separate. On 2026-10-26 the list had 89 countries and regions, without mainland China or Hong Kong (Ads Manager Availability).
+- The daily budget is "an average daily amount over the Sunday–Saturday budget week in your ad account's timezone" (Budget pacing).
+- On 2026-10-21 OpenAI added 26 countries, 89 in total, and said over 100,000 advertisers have used the platform (OpenAI blog).
+- Author's advice, not OpenAI's wording: match the country or region to the paying entity, pick the time zone of the team that owns the budget, check the three names before the first ad runs.
+
+**Primary sources**:
+- https://help.openai.com/en/articles/20001213-ads-manager-account-setup
+- https://help.openai.com/en/articles/20001245-ads-manager-availability
+- https://help.openai.com/en/articles/20001515
+- https://openai.com/index/chatgpt-ads-expands-26-new-countries/
+
 ### 2026-11-05: ChatGPT Ads product feed campaigns: 5 checks before you upload
 
 URL (English, x-default): https://potato-uu.github.io/posts/2026-11-05-chatgpt-ads-product-feed-checklist/
