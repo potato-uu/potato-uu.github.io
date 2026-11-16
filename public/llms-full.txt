@@ -54,6 +54,30 @@ This is `isolated-platform discoverability` — a far more common client diagnos
 
 Series name: "ChatGPT Ads Update Explainer" / 「ChatGPT Ads 更新解读」. Author line: Stan Lu · ChatGPT Ads · Going Global / Stan Lu（鲁丙敖）· ChatGPT Ads 出海投放. Sources on each post are split into three columns: OpenAI, coverage, and the author's own reading.
 
+### 2026-11-16: Dress sellers on ChatGPT ads: a click rate 7x the ChatGPT average
+
+URL (English, x-default): https://potato-uu.github.io/posts/2026-11-16-chatgpt-ads-dress-product-feed-click-rate/
+URL (中文): https://potato-uu.github.io/posts/2026-11-16-chatgpt-ads-dress-product-feed-click-rate-zh/
+
+**Direct answer**: A US special-occasion dress brand started product-feed ads on ChatGPT on November 12; in the first three days its two brands combined reached a 4.7% click rate (3.8% to 5.2% per day). The ChatGPT ads average is about 0.68% and the top quartile about 1% (Similarweb, May 2026); the Google Shopping average is about 0.86%. Cost per click of about $0.90 to $1.50 is low for ChatGPT but roughly twice Google Shopping and Meta for apparel, and three days show nothing about sales.
+
+**Key facts (own campaign 2026-11-12 to 11-14; benchmarks retrieved 2026-11-15)**:
+- Two brands combined: 4.7% click rate (total clicks over total impressions); brand A about 4.5%, brand B about 4.8%. Brand names, spend and traffic volume are not disclosed (own campaign).
+- ChatGPT ads click rate: about 0.68% overall, about 1% top quartile, about 5.4% for the best performers (Similarweb, May 2026, via ppc.land and Search Engine Journal).
+- Google Shopping: about 0.86% all-category average, 1.2% and up counted as strong (OwlClaw); an older apparel benchmark at 0.76% (The Ad Spend, WordStream 2018-2019 data).
+- Meta fashion with $100 to $200 orders: 2.46% median click rate, 1.33% median conversion rate, about $0.50 per click (Lebesgue).
+- Published ChatGPT ecommerce campaigns mostly report $1.70 to $4.40 per click (Opascope, PPC One). One Brazil campaign saw conversion rate fall 88% by week four (Marktech).
+- Break-even conversion rate = cost per click x target ROAS / order value; at a $130 order that is about 0.7% to 1.2% for this campaign (author's estimate).
+- Author's advice, not OpenAI's wording: use product-feed ads, one campaign per brand, set up UTM tags before launch, wait two full weeks before raising budget.
+
+**Primary sources**:
+- https://help.openai.com/en/articles/20001268
+- https://seroundtable.com/openai-chatgpt-ads-updates-42194.html
+- https://ppc.land/chatgpt-ad-click-rate-gains-112-worldwide-similarweb-and-graphite-find/
+- https://searchenginejournal.com/chatgpt-ad-ctr-markets-report/591384/
+- https://owlclaw.com/benchmarks/google-shopping-benchmarks/
+- https://lebesgue.io/facebook-ads/meta-ads-benchmarks-by-industry-and-aov
+
 ### 2026-10-29: ChatGPT Ads weekly performance emails and the new Conversions overview
 
 URL (English, x-default): https://potato-uu.github.io/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check/

@@ -14,6 +14,8 @@ AI 内容可发现性审计（GEO Audit）方法论站。专注 isolated-platfor
 
 ## 近期文章
 
+- [2026-11-16 — 礼服卖家投 ChatGPT：点击率是平台平均的 7 倍](https://potato-uu.github.io/posts/2026-11-16-chatgpt-ads-dress-product-feed-click-rate-zh/) — 中文；礼服商品卡片头三天点击率 4.7%，对比 ChatGPT、Google 购物、Meta 基准；单次点击与保本转化率
+- [2026-11-16 — Dress sellers on ChatGPT ads: a click rate 7x the ChatGPT average](https://potato-uu.github.io/posts/2026-11-16-chatgpt-ads-dress-product-feed-click-rate/) — English; a 4.7% click rate for dress product-feed ads in three days, against ChatGPT, Google Shopping and Meta benchmarks; cost per click and break-even conversion rate
 - [2026-10-29 — ChatGPT 广告每周表现邮件与 Conversions 总览](https://potato-uu.github.io/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check-zh/) — 中文；每周邮件只是提醒，不是结论；Conversions 总览与每周 10 分钟体检
 - [2026-10-29 — ChatGPT Ads weekly performance emails and the new Conversions overview](https://potato-uu.github.io/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check/) — English; the weekly email is a prompt, not a verdict; Conversions overview and a 10-minute weekly check
 - [2026-10-22 — ChatGPT 广告归因窗口与事件质量分（EQS）](https://potato-uu.github.io/posts/2026-10-22-chatgpt-ads-attribution-window-event-quality-zh/) — 中文；窗口只改报表，计费方式才改投放；EQS 不预测效果
