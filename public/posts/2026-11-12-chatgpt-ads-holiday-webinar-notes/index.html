@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ChatGPT Ads holiday session: campaign creation now starts from a URL — Stan Lu</title>
+
+  <meta name="description" content="At its Nov 4, 2026 holiday session, OpenAI demoed a ChatGPT Ads campaign flow that starts from a URL and recommends the objective, bidding and creative from the site; budget, geography and landing page are still confirmed by the advertiser. Notes on the demo, the holiday-page numbers, impression billing and Q5.">
+
+  <meta name="author" content="Stan Lu">
+  <meta name="experiment_phase" content="2">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="ChatGPT Ads holiday session: campaign creation now starts from a URL">
+  <meta property="og:description" content="OpenAI demoed ChatGPT Ads campaign creation that starts from a URL. If the system reads the site, the ad will look like the site.">
+  <meta property="og:url" content="https://potato-uu.github.io/posts/2026-11-12-chatgpt-ads-holiday-webinar-notes/">
+  <meta property="og:image" content="https://potato-uu.github.io/posts/2026-11-12-chatgpt-ads-holiday-webinar-notes/cover-linkedin-1920x1080.png">
+  <meta property="og:image:alt" content="Cover: I watched OpenAI's ChatGPT Ads holiday session twice. What was new, and what I'm still unsure about, by Stan Lu">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="zh_CN">
+  <meta property="article:published_time" content="2026-11-12T00:00:00+08:00">
+  <meta property="article:modified_time" content="2026-11-12T00:00:00+08:00">
+  <meta property="article:author" content="Stan Lu">
+  <meta property="article:section" content="ChatGPT Ads Update Explainer">
+  <meta property="article:tag" content="ChatGPT Ads">
+  <meta property="article:tag" content="Holiday advertising">
+  <meta property="article:tag" content="Campaign creation">
+  <meta property="article:tag" content="Impression billing">
+  <meta property="article:tag" content="Q5">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ChatGPT Ads holiday session: campaign creation now starts from a URL">
+  <meta name="twitter:description" content="ChatGPT Ads campaign creation now starts from a URL. Notes from OpenAI's Nov 4 holiday session.">
+  <meta name="twitter:image" content="https://potato-uu.github.io/posts/2026-11-12-chatgpt-ads-holiday-webinar-notes/cover-linkedin-1920x1080.png">
+
+  <link rel="canonical" href="https://potato-uu.github.io/posts/2026-11-12-chatgpt-ads-holiday-webinar-notes/">
+  <link rel="alternate" hreflang="en" href="https://potato-uu.github.io/posts/2026-11-12-chatgpt-ads-holiday-webinar-notes/">
+  <link rel="alternate" hreflang="zh-CN" href="https://potato-uu.github.io/posts/2026-11-12-chatgpt-ads-holiday-webinar-notes-zh/">
+  <link rel="alternate" hreflang="x-default" href="https://potato-uu.github.io/posts/2026-11-12-chatgpt-ads-holiday-webinar-notes/">
+
+  <!-- Schema.org TechArticle. No FAQ structured data (site red line #3). -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "ChatGPT Ads holiday session: campaign creation now starts from a URL",
+    "description": "At its Nov 4, 2026 holiday session, OpenAI demoed a ChatGPT Ads campaign flow that starts from a URL and recommends the objective, bidding and creative from the site; budget, geography and landing page are still confirmed by the advertiser. Notes on the demo, the holiday-page numbers, impression billing and Q5.",
+    "inLanguage": "en",
+    "image": ["https://potato-uu.github.io/posts/2026-11-12-chatgpt-ads-holiday-webinar-notes/cover-linkedin-1920x1080.png", "https://potato-uu.github.io/posts/2026-11-12-chatgpt-ads-holiday-webinar-notes/fig2-new-flow.png"],
+    "datePublished": "2026-11-12",
+    "dateModified": "2026-11-12",
+    "author": {"@type": "Person", "name": "Stan Lu", "alternateName": ["Stanlu"], "url": "https://potato-uu.github.io/"},
+    "publisher": {"@type": "Person", "name": "Stan Lu", "url": "https://potato-uu.github.io/"},
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://potato-uu.github.io/posts/2026-11-12-chatgpt-ads-holiday-webinar-notes/"},
+    "isPartOf": {"@type": "CreativeWorkSeries", "name": "ChatGPT Ads Update Explainer"},
+    "workTranslation": {"@type": "TechArticle", "@id": "https://potato-uu.github.io/posts/2026-11-12-chatgpt-ads-holiday-webinar-notes-zh/", "inLanguage": "zh-CN"},
+    "isBasedOn": [
+      "https://goldcast.ondemand.goldcast.io/on-demand/980c8f7c-cd51-44ff-b18d-43003253b728",
+      "https://ads.openai.com/holiday",
+      "https://ads.openai.com/zh-CN/holiday"
+    ],
+    "about": [
+      {"@type": "Thing", "name": "ChatGPT Ads"},
+      {"@type": "Thing", "name": "Holiday advertising"},
+      {"@type": "Thing", "name": "Campaign creation"}
+    ],
+    "mentions": [
+      {"@type": "Organization", "name": "OpenAI", "url": "https://openai.com/"},
+      {"@type": "Product", "name": "ChatGPT Ads", "url": "https://ads.openai.com/"}
+    ],
+    "keywords": "ChatGPT Ads holiday playbook, ChatGPT Ads URL-first campaign creation, intelligent campaign, ChatGPT Ads holiday page 52% 94%, conversions objective billed on impressions, view-through conversions, ChatGPT Ads Q5"
+  }
+  </script>
+
+  <style>
+    :root {
+      --fg: #1a1a1a;
+      --fg-dim: #555;
+      --bg: #fdfcf9;
+      --link: #0066cc;
+      --rule: #e8e6e0;
+      --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --fg: #e8e6e0; --fg-dim: #999; --bg: #1a1a1a; --link: #6cb6ff; --rule: #333; }
+    }
+    * { box-sizing: border-box; }
+    body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+      line-height: 1.75;
+      color: var(--fg);
+      background: var(--bg);
+      font-size: 16px;
+    }
+    nav.crumbs { font-size: .85rem; margin-bottom: 1.5rem; color: var(--fg-dim); }
+    nav.crumbs a { color: var(--fg-dim); }
+    h1 { font-size: 1.6rem; line-height: 1.4; margin: 0 0 .5rem; letter-spacing: -.01em; }
+    .lede { font-size: 1.05rem; margin: 0 0 1rem; }
+    .tldr { margin: 1rem 0; padding: .5rem 1rem; border-left: 3px solid var(--rule); background: rgba(127,127,127,.04); }
+    .tldr p { margin: .25rem 0; font-weight: 600; }
+    .tldr ul { margin: .25rem 0 .5rem; }
+    .meta { color: var(--fg-dim); font-size: .85rem; font-family: var(--mono); margin: 1rem 0 2.5rem; }
+    h2 { font-size: 1.2rem; margin: 2.5rem 0 .75rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); }
+    h3 { font-size: 1.05rem; margin: 1.75rem 0 .5rem; }
+    p { margin: 1rem 0; }
+    a { color: var(--link); text-decoration: none; border-bottom: 1px solid currentColor; overflow-wrap: anywhere; }
+    a:hover { opacity: .7; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .92rem; }
+    th, td { border: 1px solid var(--rule); padding: .5rem .75rem; text-align: left; vertical-align: top; }
+    th { background: rgba(127,127,127,.05); }
+    .table-note { color: var(--fg-dim); font-size: .85rem; margin-top: -.25rem; }
+    code { font-family: var(--mono); font-size: .9em; background: rgba(127,127,127,.1); padding: .1em .35em; border-radius: 3px; }
+    blockquote { border-left: 3px solid var(--rule); margin: 1rem 0; padding: .25rem 1rem; color: var(--fg-dim); }
+    blockquote p { margin: .5rem 0; }
+    ul, ol { padding-left: 1.5rem; }
+    li { margin: .35rem 0; }
+    figure { margin: 1.5rem 0; }
+    figure img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); }
+    figcaption { color: var(--fg-dim); font-size: .85rem; margin-top: .5rem; }
+    .citations { font-size: .9rem; }
+    .citations li { margin: .5rem 0; }
+    .footnote { color: var(--fg-dim); font-size: .85rem; margin-top: 4rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+    .number-callout { font-family: var(--mono); font-weight: 700; }
+  </style>
+</head>
+<body>
+
+<nav class="crumbs"><a href="/">Stanlu</a> / posts / 2026-11-12 · <a href="/posts/2026-11-12-chatgpt-ads-holiday-webinar-notes-zh/" hreflang="zh-CN" lang="zh-CN">中文版</a></nav>
+
+<h1>ChatGPT Ads holiday session: campaign creation now starts from a URL</h1>
+
+<p class="lede">At its Nov 4 holiday session, OpenAI demoed a ChatGPT Ads campaign flow that starts from a URL and drafts the objective, bidding and creative from the site, while the advertiser still confirms budget, geography and landing page. What stayed with me is that the ads will look like the site, so this month I'm spending my own time on product pages.</p>
+
+<div class="tldr">
+  <p>TL;DR</p>
+  <ul>
+    <li>What I saw that was actually new: OpenAI's ads team demoed campaign creation that starts with a URL and recommends the objective, bidding and creative; budget, geography and landing page are still confirmed by hand. The team said it would show up over the coming days and weeks.</li>
+    <li>What I kept thinking about: the system reads the site, so whether product pages can be crawled, say clearly what's for sale, and carry prices and stock that match the ads now shapes what it recommends.</li>
+    <li>For holiday purchases the team recommended a conversions objective billed on impressions, a check every two to three days, and planning Q5 (December 26 into early January) now; of the holiday-page numbers, the one I ended up watching was the season-long 52%, not the 94%.</li>
+  </ul>
+</div>
+
+<p class="meta">2026-11-12 · Stan Lu · ChatGPT Ads Update Explainer · OpenAI's 2026-11-04 holiday session replay and holiday page, captured 2026-11-06</p>
+
+<figure>
+  <img src="openai-webinar-new-flow-review-1104.png" width="1920" height="1080" alt="Frame from the replay of OpenAI&#x27;s Nov 4, 2026 ChatGPT Ads holiday session: the new campaign-creation flow at the Review your intelligent campaign step, after a coffee brand&#x27;s website was entered. Purchases is the recommended goal, with a Change goal option, Intelligent bidding: On, and a Continue with Purchases button; the side menu lists Website, Campaign goal, Ad creative and Review, plus Switch to manual setup. The two presenters from OpenAI&#x27;s ads team are on the right.">
+  <figcaption>Frame from OpenAI's Nov 4, 2026 session replay, captured Nov 6, 2026</figcaption>
+</figure>
+
+<p>I watched this session twice. The first time I went in for the numbers and came away thinking there wasn't much there, just OpenAI saying holiday search goes up. The second time I went back to the demo in the middle, and that's when it hit me that this is different for people selling cross-border. The demo was campaign creation, and the first screen asks for one thing: a URL. The system reads the site, works out what's for sale, who it's for and what the images look like, then fills in the objective, bidding and creative. At the end the advertiser confirms budget, locations and landing page.</p>
+
+<p>What I kept thinking about was how many independent stores I've looked at where the product page actually matches the ad account. A promo price from the last round, a hero image from last season, a separate set of images uploaded on the ads side: that's normal. It didn't matter before, because people uploaded the creative. If the system reads straight from the site, the ad will look like the site. So my own conclusion is simple. For this month, everything else can wait while I get the product pages right.</p>
+
+<p>I looked at the numbers too. The 94% on the holiday page is the eye-catching one, but it's Black Friday against matched weekdays in the prior four weeks, and it's still searches. I pay more attention to the 52%, which runs across the whole season, meaning search doesn't wait for Black Friday. That's the same thing the team meant by going live now so the system has time to learn.</p>
+
+<h2>The 130% at the start, which I didn't lean on</h2>
+
+<p>The session was <em>Your 2026 ChatGPT Ads Holiday Playbook</em>, November 4, about half an hour, run by two people from OpenAI's ads team: Julie Towns from product marketing and Michael Iselin from customer success. They opened by calling it the first holiday season for ChatGPT Ads.</p>
+
+<p>Early on they relayed Adobe's forecast that AI-referred traffic to US retail sites will grow more than 130% year over year this holiday season. I didn't lean on it much. It's Adobe's number, it covers every AI platform rather than ChatGPT alone, and the session gave no report name or date. It tells me the trend is real. I wouldn't use it to guess how much my own account could grow.</p>
+
+<h2>On the holiday page, I ended up watching the 52%</h2>
+
+<p>After the session I went through the holiday page OpenAI put up for the season (<a href="https://ads.openai.com/holiday">ads.openai.com/holiday</a>). The figures are harder than what was said out loud, with measurement periods in the footnotes, all labeled as OpenAI internal data. Retail and ecommerce conversations account for more than 1.7 billion ChatGPT prompts a week (September 2026). About 43% of shopping-related conversations involve comparing and evaluating options (September 21 to October 18). US product-search activity rose 52% over the 2025 holiday season, measured as November 1 to December 31 against weekday-matched days in October. During Cyber Five 2025, searches were up 47% on average and 94% on Black Friday, compared with matched weekdays in the prior four weeks.</p>
+
+<p>My first instinct with the 94% was to put it on a slide. Then I thought about it again. It's a single day against the four weeks before it, not a season average, and it counts searches, not orders, which is a step further away from ad results. The 52% covers the whole season. The team said searches were already rising weeks before Cyber Five, which is the same point. When they kept saying "launch now", I took the reason to be learning time for the system more than a push to spend.</p>
+
+<p>I read the 43% from the side of sellers with a catalog. Almost half of shopping conversations are people weighing options, which is exactly where feed ads with prices and ratings earn their place.</p>
+
+<p>The top banner on the page carries the ad credit: new ChatGPT Ads advertisers get $500 in credit when they spend $500, through December 31. The session described it as open to eligible new advertisers, so I'm going by the terms on the page and in the account.</p>
+
+<h2>The demo I went back for</h2>
+
+<p>The demo used a coffee brand that sells direct on its own site. The first screen is one box, for a URL. The system reads the business, products, positioning and images, then suggests an objective; for a direct-to-consumer brand it suggested purchases, which can be changed. Intelligent bidding comes on by default. For more control, manual bidding is still there, and so is a target CPA that keeps the average cost per acquisition under the line you set.</p>
+
+<p>Creative comes next. It pulls images from the site, proposes headlines and calls to action, and with creative enhancements on it keeps rewriting to fit the conversation. Only at the last step does a person come in: budget, locations and the landing page, then launch. I listened to that part again with the replay captions on, and the team's own framing was to "incorporate intelligence by default".</p>
+
+<figure>
+  <img src="fig2-new-flow.png" width="2400" height="2428" loading="lazy" alt="Comparison table: Before, you fill it in; next, the system does. Current flow versus new flow in ChatGPT Ads campaign creation. Starting point: fill in each field, versus enter a URL and the system reads the business, products and images. Objective: choose it yourself, versus recommended for the business (purchases in the direct-to-consumer demo), editable. Bidding: choose manual or automatic, versus intelligent bidding on by default with manual or target CPA available. Creative: upload images and write headlines, versus site images with suggested headlines and calls to action adjusted to conversation context. Budget, geography and landing page: still yours to confirm. Based on OpenAI&#x27;s Nov 4, 2026 oral walkthrough; the new flow was described as appearing over the coming days and weeks.">
+  <figcaption>Author's comparison based on OpenAI's Nov 4 oral walkthrough; rollout described as the coming days and weeks.</figcaption>
+</figure>
+
+<h2>I kept thinking about product pages that don't match</h2>
+
+<p>At the creative step I was picturing actual stores. The product page still shows last promotion's price, the hero image is last season's model, and the ad account runs a separate, newer set of creative. That was survivable when someone uploaded assets by hand and nobody checked them against the site. Now the system reads the site, so a stale site gives stale recommendations, and an old price goes straight into the ad.</p>
+
+<p>So this month I'm going back through the product pages, and I'm not looking at much. Can the key product and landing pages be crawled? (The team said it would share setup documentation in the chat.) Does each page say what the product is, who it's for and why someone would pick it? Are price, stock and offers in sync with the ads, given those are the three things that change fastest in December? When the flow reaches the account and the recommendations show up, I'll hold them against the product page and look at two things: whether the objective is the purchase I actually want, and whether any creative carries an old price.</p>
+
+<h2>Multilingual sites: I didn't hear an answer</h2>
+
+<p>The demo used a single English direct-to-consumer site. The session didn't say which language or market version the system reads when a store runs several, or which market it recommends for. Most cross-border stores do run several, so this is the part I most wanted to know, and I didn't hear an answer. My plan is to wait until the flow shows up in the account and try it on a multilingual store. Until then I'm not changing any site structure for it.</p>
+
+<h2>Impression billing felt wrong to me at first</h2>
+
+<p>For holiday purchase goals the team recommended a conversions objective billed on impressions (the automatic captions say "build on impressions"). My first reaction was resistance: performance people like paying per click because the math is easier, and paying per impression sounds like the risk moves to the advertiser. The reasoning held up once I heard it. Billing on impressions lets the system optimize for both click-through and view-through conversions, the second being someone who sees the ad, keeps comparing elsewhere, and comes back to buy without ever clicking.</p>
+
+<p>The team added that more than half of eligible view-through conversions happen within the first hour. That was said orally with no measurement period, and the base is eligible view-through conversions, not all purchases. What I take from it is that click-only reporting misses a chunk of people who bought soon after seeing the ad. Whether the ad caused those sales, it doesn't say.</p>
+
+<h2>Five practices, and only two new lines</h2>
+
+<p>The team walked through five practices. Build the foundation: website, conversion signals (pixel or Conversions API) and a product feed. Allow learning time, because last year product searches were already up in the weeks before Cyber Five. Let intelligence work, meaning automatic bidding, creative enhancements and the previewed flow. Measure, learn and adjust, with a review every two to three days. And plan for Q5. Most of it is already in the help center.</p>
+
+<p>What was new were two spoken claims. Advertisers with higher Event Quality Scores (EQS, scored 1 to 10 and updated daily) had lower measured cost per acquisition than their peers, and advertisers running product feed campaigns saw better click-through rates than those without. Both come from OpenAI's own analysis, stated out loud with no magnitude, so I can read a direction from them but not how much an account would move. There's no published passing score for EQS either, so I'm not chasing a number. I'd rather work through the improvement items the account shows before adding budget. For SKUs, a feed can start as a CSV and move to a hosted URL or SFTP as it grows.</p>
+
+<p>The team framed the two-to-three-day review as a checking cadence, not an editing cadence. When I check, I look at three things. Are ads delivering? If delivery is limited, I look at eligibility, review status, campaign dates, budget and bids. Are results where I expected? If not, conversion measurement comes first, then EQS and its suggestions. Where is it working? Campaigns beating their goal get budget raised gradually, with an eye on efficiency. If nothing's wrong I leave it alone. The system is still learning, and moving bids every other day just gives it a new target to chase.</p>
+
+<h2>Q5, and what I'm doing next</h2>
+
+<p>Cyber Five this year runs from Thanksgiving, November 26, through November 30. Q5 is the stretch the team singled out: December 26 into early January, when the peak is over but people come to ChatGPT for New Year goals, new routines and post-holiday offers. Their examples were a coffee brand pitching a new morning routine and a home brand pitching a space that works better for the year ahead. Their line was that there's no need to reinvent the campaign at the end of December; carry what it learned forward.</p>
+
+<p>Here's roughly what I'm doing next. Product pages get a pass this month. On running campaigns I'm checking that the objective is conversions billed on impressions, and looking at how big the view-through column is in the category. Q5 creative for New Year and new routines gets built now and swapped into the existing campaigns on December 26, with the campaigns left intact, because a rebuild throws away what they've learned. When the URL-first flow appears in my Ads Manager, I'll let it draft one campaign and check what it proposes against the site.</p>
+
+<h2>FAQ</h2>
+
+<h3>When will the URL-first ChatGPT Ads campaign flow launch?</h3>
+<p>The team said it would appear over the coming days and weeks, without a specific date. I'm treating it as live when it shows up in my own Ads Manager.</p>
+
+<h3>Will entering a URL let ChatGPT Ads decide every setting?</h3>
+<p>No. It recommends an objective, bidding and creative; budget, geography and landing page are still confirmed by the advertiser. The objective can be changed, and bidding can switch to manual or a target CPA.</p>
+
+<h3>Does "more than half within the first hour" cover all purchases?</h3>
+<p>No. It covers eligible view-through conversions, not all purchases, and OpenAI gave the share orally without a measurement period.</p>
+
+<h3>What does the 94% on OpenAI's holiday page mean?</h3>
+<p>On Black Friday 2025, US product-search activity on ChatGPT was 94% higher than on matched weekdays in the prior four weeks; across Cyber Five the average was 47%. It measures searches, not orders or ad results.</p>
+
+<h3>When is Q5 for ChatGPT Ads holiday planning?</h3>
+<p>December 26 into early January. The team's line was to carry holiday learning forward rather than rebuild campaigns at the end of December.</p>
+
+<h2>Sources</h2>
+
+<ul class="citations">
+  <li>OpenAI, <em>Your 2026 ChatGPT Ads Holiday Playbook</em>, November 4, 2026, 17:00 UTC; Julie Towns and Michael Iselin. Replay and automatic captions, captured November 6, 2026: <a href="https://goldcast.ondemand.goldcast.io/on-demand/980c8f7c-cd51-44ff-b18d-43003253b728">https://goldcast.ondemand.goldcast.io/on-demand/980c8f7c-cd51-44ff-b18d-43003253b728</a></li>
+  <li>OpenAI, ChatGPT Ads holiday page: <a href="https://ads.openai.com/holiday">https://ads.openai.com/holiday</a> (Chinese version at <a href="https://ads.openai.com/zh-CN/holiday">/zh-CN/holiday</a>), captured November 6, 2026; measurement periods for the four figures are in the page's footnotes 1–4.</li>
+  <li>Adobe's forecast is relayed by the team, not independently sourced here. Putting product pages first and the multilingual caveat are my own reading of the session.</li>
+</ul>
+
+<p class="footnote">
+Stan Lu · ChatGPT Ads · Going Global. Series: ChatGPT Ads Update Explainer.<br>
+Previous: <a href="/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check/">Weekly performance emails and the Conversions overview</a> · <a href="/posts/2026-11-12-chatgpt-ads-holiday-webinar-notes-zh/" hreflang="zh-CN" lang="zh-CN">中文版</a><br>
+Published 2026-11-12 · Last updated: 2026-11-12
+</p>
+
+<script data-goatcounter="https://potato-uu.goatcounter.com/count" async src="/js/count.js"></script>
+</body>
+</html>

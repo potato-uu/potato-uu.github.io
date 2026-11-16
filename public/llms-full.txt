@@ -78,6 +78,25 @@ URL (中文): https://potato-uu.github.io/posts/2026-11-16-chatgpt-ads-dress-pro
 - https://owlclaw.com/benchmarks/google-shopping-benchmarks/
 - https://lebesgue.io/facebook-ads/meta-ads-benchmarks-by-industry-and-aov
 
+### 2026-11-12: ChatGPT Ads holiday session: campaign creation now starts from a URL
+
+URL (English, x-default): https://potato-uu.github.io/posts/2026-11-12-chatgpt-ads-holiday-webinar-notes/
+URL (中文): https://potato-uu.github.io/posts/2026-11-12-chatgpt-ads-holiday-webinar-notes-zh/
+
+**Direct answer**: At its 2026-11-04 holiday session, OpenAI demoed a ChatGPT Ads campaign flow that starts from a URL: the system reads the site and recommends the objective, bidding and creative, while budget, geography and landing page are still confirmed by the advertiser. The team said it would appear over the coming days and weeks, without a specific date.
+
+**Key facts (OpenAI session of 2026-11-04 and holiday page, both captured 2026-11-06)**:
+- In the demo, a direct-to-consumer coffee brand got purchases as the suggested objective, which can be changed; intelligent bidding is on by default, and manual bidding and target CPA are still available (session).
+- Creative pulls images from the site and proposes headlines and calls to action; with creative enhancements on, it keeps rewriting to fit the conversation (session).
+- For holiday purchase goals the team recommended a conversions objective billed on impressions, which optimizes for click-through and view-through conversions; more than half of eligible view-through conversions happen within the first hour (stated orally, no measurement period; base is eligible view-through conversions, not all purchases) (session).
+- The team framed a review every two to three days as a checking cadence, not an editing cadence (session).
+- Holiday page, OpenAI internal data: US product-search activity on ChatGPT rose 52% over the 2025 holiday season (Nov 1 to Dec 31 against weekday-matched days in October); during Cyber Five 2025 searches were up 47% on average and 94% on Black Friday, against matched weekdays in the prior four weeks. These measure searches, not orders or ad results.
+- Cyber Five 2026 runs November 26 to 30. Q5 is December 26 into early January; the team's line was to carry holiday learning forward rather than rebuild campaigns at the end of December (session).
+
+**Primary sources**:
+- https://goldcast.ondemand.goldcast.io/on-demand/980c8f7c-cd51-44ff-b18d-43003253b728 (session replay and automatic captions)
+- https://ads.openai.com/holiday (holiday page; Chinese version https://ads.openai.com/zh-CN/holiday; measurement periods in footnotes 1-4)
+
 ### 2026-10-29: ChatGPT Ads weekly performance emails and the new Conversions overview
 
 URL (English, x-default): https://potato-uu.github.io/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check/
