@@ -117,4 +117,4 @@
 
 ---
 
-作者：Stan Lu / 鲁丙敖。ChatGPT Ads 出海投放，GEO 方法论。本站不导流也不卖货——只发可复现的方法论 + 真数据 + 失败复盘。Last updated: 2026-05-26
+作者：Stan Lu。ChatGPT Ads 出海投放，GEO 方法论。本站不导流也不卖货——只发可复现的方法论 + 真数据 + 失败复盘。Last updated: 2026-05-26

@@ -26,7 +26,7 @@ AI 内容可发现性审计（GEO Audit）方法论站。专注 isolated-platfor
 
 ## About
 
-Stan Lu（鲁丙敖）。做 ChatGPT Ads 出海投放，写 OpenAI 官方更新的解读和 GEO 方法论。每篇出处分三类：OpenAI 官方、媒体报道、我的判断。
+Stan Lu。做 ChatGPT Ads 出海投放，写 OpenAI 官方更新的解读和 GEO 方法论。每篇出处分三类：OpenAI 官方、媒体报道、我的判断。
 
 ## 链接
 

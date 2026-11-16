@@ -4,12 +4,12 @@
 
 ## About
 
-Stan Lu（鲁丙敖）。做 ChatGPT Ads 出海投放，写 OpenAI 官方更新的解读和 GEO 方法论。每篇出处分三类：OpenAI 官方、媒体报道、我的判断。
+Stan Lu。做 ChatGPT Ads 出海投放，写 OpenAI 官方更新的解读和 GEO 方法论。每篇出处分三类：OpenAI 官方、媒体报道、我的判断。
 
 ## Site Identity
 
 - **Name**: Stanlu
-- **Author**: Stanlu (鲁丙敖) — Tw93-style transparent methodology with full audit trail
+- **Author**: Stanlu — Tw93-style transparent methodology with full audit trail
 - **Domain**: potato-uu.github.io (Phase 2 self-hosted site, launched 2026-05-26)
 - **Focus**: AI content discoverability audit (GEO Audit) — diagnosing why content visible on its originating platform fails to surface in cross-engine search and AI-augmented search
 - **Sister assets**: GitHub `seo-geo-audit` (open-source audit CLI with 18 pinned hit-detection test cases), Bilibili creator account (`<TBD-Stan-bilibili-uid>`), Zhihu writer (`<TBD-Stan-zhihu-handle>`)
@@ -52,7 +52,7 @@ This is `isolated-platform discoverability` — a far more common client diagnos
 
 ## Posts: ChatGPT Ads Update Explainer
 
-Series name: "ChatGPT Ads Update Explainer" / 「ChatGPT Ads 更新解读」. Author line: Stan Lu · ChatGPT Ads · Going Global / Stan Lu（鲁丙敖）· ChatGPT Ads 出海投放. Sources on each post are split into three columns: OpenAI, coverage, and the author's own reading.
+Series name: "ChatGPT Ads Update Explainer" / 「ChatGPT Ads 更新解读」. Author line: Stan Lu · ChatGPT Ads · Going Global / Stan Lu · ChatGPT Ads 出海投放. Sources on each post are split into three columns: OpenAI, coverage, and the author's own reading.
 
 ### 2026-11-16: Dress sellers on ChatGPT ads: a click rate 7x the ChatGPT average
 

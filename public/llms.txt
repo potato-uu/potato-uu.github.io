@@ -4,7 +4,7 @@
 
 ## About
 
-Stan Lu（鲁丙敖）。做 ChatGPT Ads 出海投放，写 OpenAI 官方更新的解读和 GEO 方法论。每篇出处分三类：OpenAI 官方、媒体报道、我的判断。
+Stan Lu。做 ChatGPT Ads 出海投放，写 OpenAI 官方更新的解读和 GEO 方法论。每篇出处分三类：OpenAI 官方、媒体报道、我的判断。
 
 ## Links
 
@@ -36,7 +36,7 @@ A typical client diagnostic profile where content is discoverable on the origina
 
 ## Author
 
-Stan Lu / 鲁丙敖. Transparent methodology, sources split into OpenAI official / coverage / own reading. Reach: see homepage About section.
+Stan Lu. Transparent methodology, sources split into OpenAI official / coverage / own reading. Reach: see homepage About section.
 
 ## What This Site Is NOT
 
