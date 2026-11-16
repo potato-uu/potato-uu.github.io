@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ChatGPT 广告商品 feed 活动：上传前的五道检查 — Stan Lu</title>
+
+  <meta name="description" content="ChatGPT Ads 支持零售广告主用商品 feed 生成广告，9 月底起可用一张表格批量建 feed 活动。feed 条目两周后过期，要当成一直跑着的管道，不是传一次的文件：第一次上传前的五道检查。">
+
+  <meta name="author" content="Stan Lu">
+  <meta name="experiment_phase" content="2">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="ChatGPT 广告商品 feed 活动：上传前的五道检查">
+  <meta property="og:description" content="ChatGPT Ads 的商品 feed 是管道，不是文件。9 月 30 日官方宣布了什么，以及第一次上传前的五道检查。">
+  <meta property="og:url" content="https://potato-uu.github.io/posts/2026-11-05-chatgpt-ads-product-feed-checklist-zh/">
+  <meta property="og:image" content="https://potato-uu.github.io/posts/2026-11-05-chatgpt-ads-product-feed-checklist-zh/fig2-five-checks-zh.png">
+  <meta property="og:image:alt" content="流程图：ChatGPT Ads 商品 feed 上传前的五道检查，依据 OpenAI 邮件、帮助中心与开发者文档整理">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="article:published_time" content="2026-11-05T00:00:00+08:00">
+  <meta property="article:modified_time" content="2026-11-05T00:00:00+08:00">
+  <meta property="article:author" content="Stan Lu">
+  <meta property="article:section" content="ChatGPT Ads 更新解读">
+  <meta property="article:tag" content="ChatGPT 广告">
+  <meta property="article:tag" content="ChatGPT Ads">
+  <meta property="article:tag" content="商品 feed">
+  <meta property="article:tag" content="批量创建">
+  <meta property="article:tag" content="Products 页">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ChatGPT 广告商品 feed 活动：上传前的五道检查">
+  <meta name="twitter:description" content="ChatGPT Ads 的商品 feed 是管道，不是文件。上传前的五道检查。">
+  <meta name="twitter:image" content="https://potato-uu.github.io/posts/2026-11-05-chatgpt-ads-product-feed-checklist-zh/fig2-five-checks-zh.png">
+
+  <link rel="canonical" href="https://potato-uu.github.io/posts/2026-11-05-chatgpt-ads-product-feed-checklist-zh/">
+  <link rel="alternate" hreflang="en" href="https://potato-uu.github.io/posts/2026-11-05-chatgpt-ads-product-feed-checklist/">
+  <link rel="alternate" hreflang="zh-CN" href="https://potato-uu.github.io/posts/2026-11-05-chatgpt-ads-product-feed-checklist-zh/">
+  <link rel="alternate" hreflang="x-default" href="https://potato-uu.github.io/posts/2026-11-05-chatgpt-ads-product-feed-checklist/">
+
+  <!-- Schema.org TechArticle. No FAQ structured data (site red line #3). -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "ChatGPT 广告商品 feed 活动：上传前的五道检查",
+    "description": "ChatGPT Ads 支持零售广告主用商品 feed 生成广告，9 月底起可用一张表格批量建 feed 活动。feed 条目两周后过期，要当成一直跑着的管道，不是传一次的文件：第一次上传前的五道检查。",
+    "inLanguage": "zh-CN",
+    "image": ["https://potato-uu.github.io/posts/2026-11-05-chatgpt-ads-product-feed-checklist-zh/fig2-five-checks-zh.png", "https://potato-uu.github.io/posts/2026-11-05-chatgpt-ads-product-feed-checklist-zh/fig2-five-checks-zh.png"],
+    "datePublished": "2026-11-05",
+    "dateModified": "2026-11-05",
+    "author": {"@type": "Person", "name": "Stan Lu", "alternateName": ["Stanlu"], "url": "https://potato-uu.github.io/"},
+    "publisher": {"@type": "Person", "name": "Stan Lu", "url": "https://potato-uu.github.io/"},
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://potato-uu.github.io/posts/2026-11-05-chatgpt-ads-product-feed-checklist-zh/"},
+    "isPartOf": {"@type": "CreativeWorkSeries", "name": "ChatGPT Ads Update Explainer"},
+    "workTranslation": {"@type": "TechArticle", "@id": "https://potato-uu.github.io/posts/2026-11-05-chatgpt-ads-product-feed-checklist/", "inLanguage": "en"},
+    "isBasedOn": [
+      "https://help.openai.com/en/articles/20001268-create-campaigns-from-product-feeds",
+      "https://help.openai.com/en/articles/20001245-ads-manager-availability",
+      "https://developers.openai.com/ads/product-feeds",
+      "https://developers.openai.com/commerce/specs/file-upload/overview",
+      "https://www.seroundtable.com/openai-chatgpt-ads-updates-42194.html"
+    ],
+    "about": [
+      {"@type": "Thing", "name": "ChatGPT 广告"},
+      {"@type": "Thing", "name": "商品 feed 广告"},
+      {"@type": "Thing", "name": "零售广告"}
+    ],
+    "mentions": [
+      {"@type": "Organization", "name": "OpenAI", "url": "https://openai.com/"},
+      {"@type": "Product", "name": "ChatGPT Ads", "url": "https://ads.openai.com/"}
+    ],
+    "keywords": "ChatGPT 广告 商品 feed, 商品 feed 活动, 批量创建 Bulk sheet, Products 页 空, feed 条目 过期, 托管 URL SFTP 刷新, 活动目标 不能改"
+  }
+  </script>
+
+  <style>
+    :root {
+      --fg: #1a1a1a;
+      --fg-dim: #555;
+      --bg: #fdfcf9;
+      --link: #0066cc;
+      --rule: #e8e6e0;
+      --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --fg: #e8e6e0; --fg-dim: #999; --bg: #1a1a1a; --link: #6cb6ff; --rule: #333; }
+    }
+    * { box-sizing: border-box; }
+    body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+      line-height: 1.75;
+      color: var(--fg);
+      background: var(--bg);
+      font-size: 16px;
+    }
+    nav.crumbs { font-size: .85rem; margin-bottom: 1.5rem; color: var(--fg-dim); }
+    nav.crumbs a { color: var(--fg-dim); }
+    h1 { font-size: 1.6rem; line-height: 1.4; margin: 0 0 .5rem; letter-spacing: -.01em; }
+    .lede { font-size: 1.05rem; margin: 0 0 1rem; }
+    .tldr { margin: 1rem 0; padding: .5rem 1rem; border-left: 3px solid var(--rule); background: rgba(127,127,127,.04); }
+    .tldr p { margin: .25rem 0; font-weight: 600; }
+    .tldr ul { margin: .25rem 0 .5rem; }
+    .meta { color: var(--fg-dim); font-size: .85rem; font-family: var(--mono); margin: 1rem 0 2.5rem; }
+    h2 { font-size: 1.2rem; margin: 2.5rem 0 .75rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); }
+    h3 { font-size: 1.05rem; margin: 1.75rem 0 .5rem; }
+    p { margin: 1rem 0; }
+    a { color: var(--link); text-decoration: none; border-bottom: 1px solid currentColor; overflow-wrap: anywhere; }
+    a:hover { opacity: .7; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .92rem; }
+    th, td { border: 1px solid var(--rule); padding: .5rem .75rem; text-align: left; vertical-align: top; }
+    th { background: rgba(127,127,127,.05); }
+    .table-note { color: var(--fg-dim); font-size: .85rem; margin-top: -.25rem; }
+    code { font-family: var(--mono); font-size: .9em; background: rgba(127,127,127,.1); padding: .1em .35em; border-radius: 3px; }
+    blockquote { border-left: 3px solid var(--rule); margin: 1rem 0; padding: .25rem 1rem; color: var(--fg-dim); }
+    blockquote p { margin: .5rem 0; }
+    ul, ol { padding-left: 1.5rem; }
+    li { margin: .35rem 0; }
+    figure { margin: 1.5rem 0; }
+    figure img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); }
+    figcaption { color: var(--fg-dim); font-size: .85rem; margin-top: .5rem; }
+    .citations { font-size: .9rem; }
+    .citations li { margin: .5rem 0; }
+    .footnote { color: var(--fg-dim); font-size: .85rem; margin-top: 4rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+    .number-callout { font-family: var(--mono); font-weight: 700; }
+  </style>
+</head>
+<body>
+
+<nav class="crumbs"><a href="/">Stanlu</a> / posts / 2026-11-05 · <a href="/posts/2026-11-05-chatgpt-ads-product-feed-checklist/" hreflang="en" lang="en">English</a></nav>
+
+<h1>ChatGPT 广告商品 feed 活动：上传前的五道检查</h1>
+
+<div class="tldr">
+  <p>三句话版</p>
+  <ul>
+    <li>ChatGPT Ads 支持零售广告主用商品 feed 生成广告。9 月底起，可以用一张表格批量建 feed 活动和广告组，Products 页也能看商品审核状态。测试期内 feed 里的商品只用于广告，不会出现在 ChatGPT 的自然回答里。</li>
+    <li>feed 里的条目两周后过期。官方建议用托管 URL 或 SFTP，至少每天全量刷新一次，否则商品会从广告里一点点流失。</li>
+    <li>上传前查五件事：先传 100 条样品、定好刷新方式、读懂计数、建活动前定好三项改不了的设置、Products 页空着不等于上传失败。</li>
+  </ul>
+</div>
+
+<p class="meta">2026-11-05 · Stan Lu · ChatGPT Ads 更新解读 · OpenAI 2026-09-30 邮件与 2026-10-21 抓取的帮助中心、开发者文档</p>
+
+<p class="lede">ChatGPT Ads 的商品 feed 是一条要一直跑着的管道，不是传一次就完事的文件。大部分功夫花在第一条广告出来之前。</p>
+
+<p>上周第三篇讲了<a href="/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check-zh/">每周表现邮件</a>。这周写给手上有商品目录的零售团队：9 月 30 日前后，OpenAI 给广告主发了一封更新邮件，其中两项和商品 feed 有关，一是批量创建 feed 活动，二是商品审核状态。本文只用这封邮件，以及 10 月 21 日抓取的帮助中心和开发者文档原文，不用我们自有投放的数字。</p>
+
+<p>已在投的，看完知道让商品目录来写广告时有什么不一样；准备投的，知道先做哪件、后做哪件。</p>
+
+<figure>
+  <img src="openai-advertiser-email-0930.jpg" width="1402" height="1960" alt="OpenAI 约 2026-09-30 发给广告主的「ChatGPT Ads Product Update」邮件原图：商品 feed 活动批量创建、商品审核状态、通过 API 报告目标之外的转化、账户名品牌名法律主体名分开管理、东南亚等市场开投。">
+  <figcaption>OpenAI 发给广告主的「ChatGPT Ads Product Update」邮件原图，未改。约 2026-09-30 发出；图片取自 Search Engine Roundtable 2026-09-30 转载。</figcaption>
+</figure>
+
+<h2>一、这次官方宣布了什么</h2>
+
+<p>邮件里有五项，其中两项和商品 feed 有关：</p>
+
+<ul>
+  <li><strong>批量创建。</strong> 官方原话："You can now create multiple product feed campaigns and ad groups from a spreadsheet in Ads Manager, with ad templates generated automatically." 入口是 Campaigns → Bulk uploads，选 Bulk sheet，下载 Product feed 模板。</li>
+  <li><strong>商品审核状态。</strong> 已经建了 feed 活动的，可以在 Products 页看商品审核状态，跟踪审核进度，看哪些商品被拒、为什么被拒。</li>
+</ul>
+<p>另外三项：通过 API 报告活动目标之外的转化；账户名、品牌名、法律主体名分开管理；在印尼、马来西亚、菲律宾、新加坡、泰国、越南及中国台湾地区开投。</p>
+
+<p>帮助中心的商品 feed 页交代了背景：这类活动是给"商品目录宽、或者变动频繁"的零售广告主设计的。官方说 feed 生成的广告"have been among the strongest-performing ads in our program to date"，但没公布数字。</p>
+
+<p>广告是用你的数据拼出来的：商品图、标题、星级、价格、促销价、品牌。广告模板目前只能选用哪个图片字段。<strong>feed 里的标题和描述，就是你的广告文案。</strong></p>
+
+<h2>二、为什么说 feed 是管道</h2>
+
+<p>官方文档里有三条事实：</p>
+
+<ul>
+  <li><strong>条目会过期。</strong> 帮助中心原话："Items expire after 2 weeks." 手动传一次的 CSV，两周后就从广告里消失，除非你再传。</li>
+  <li><strong>每次上传都是整个目录。</strong> 开发者规范把 feed 当作"full snapshot"（全量快照），建议频率"at least daily"。某个商品不在新快照里，系统最多再留 <strong>14 天</strong>，然后下线。</li>
+  <li><strong>价格和库存要一直准。</strong> 想停掉一个缺货商品，要把 availability 明确设成 out_of_stock，删掉那一行不等于暂停。价格和库存变动也可以走 Delta API，不必整份重传。</li>
+</ul>
+<h2>三、上传前的五道检查</h2>
+
+<p>OpenAI 给的是七步建活动流程。下面五道检查是我按帮助中心和开发者文档整理的，是第一次上传前我会逐项确认的地方。</p>
+
+<figure>
+  <img src="fig2-five-checks-zh.png" width="2400" height="1630" loading="lazy" alt="流程图：ChatGPT Ads 商品 feed 上传前的五道检查，画成一条管道。先传 100 条样品、先定刷新方式（托管 URL 或 SFTP）、计数按记录读、建活动前定好三项改不了的设置、Products 页空着不等于上传失败。依据 OpenAI 2026-09-30 邮件与 2026-10-21 抓取的帮助中心、开发者文档。">
+  <figcaption>我的五道检查，依据 OpenAI 2026-09-30 邮件与 2026-10-21 抓取的帮助中心、开发者文档。</figcaption>
+</figure>
+
+<p><strong>1. 先传 100 条样品。</strong> 官方规范原话："Start with a small sample (around 100 items)"，每一行样品都要带齐必填字段；第一份全量快照要先做质检，再转自动化。规范列的常见失败是三种：缺必填字段、字段名过时或不合规范、字段值格式不对。商品页和图片必须是公开的 HTTPS 链接；CSV 里的价格要带币种，比如"79.99 USD"。</p>
+
+<p><strong>2. 先定刷新方式，再定传什么。</strong> 后台提供三种导入：CSV 或 TXT 上传、托管 URL、SFTP。因为条目会过期，帮助中心推荐托管 URL 或自动 SFTP。文件名保持不变、每次覆盖；系统按 item_id 匹配商品，所以商品 ID 不能每次变。</p>
+
+<p><strong>3. 计数是"记录"，不是"商品"。</strong> Feed Connection 的提示框里有 Ingested、Processed、Not approved、Ready 四个数。官方说这些数"describe offer records rather than unique products"，两两相减"may not give an accurate missing-product total"。Not approved 只是总数，没有明细、没有原因；审核通过也不等于能投。<strong>建活动时真正该看的，是建广告组那一步显示的商品数</strong>：传上去、能投、又通过你筛选条件的有多少。走 API 的话，上传记录会按字段给诊断，比如哪个字段的价格值不合法、影响了几行。</p>
+
+<p><strong>4. 建活动前，定好三项改不了的设置。</strong> 开发者文档原话："The campaign's mode, objective, and linked feed cannot be changed after creation." 活动类型、目标、绑定哪个 feed，先想好再点创建。旁边还有三条限制：</p>
+
+<ul>
+  <li>新的 feed 活动，地域定向和排除只能到国家一级。</li>
+  <li>ads_metadata 里的自定义标签（比如 custom_label_0）是挑商品用的，不是挑人用的。官方举例：标签写 WA，"does not restrict delivery to users in Washington"。</li>
+  <li>每个广告组只有一个广告模板。要按转化优化，建活动时必须挂上恰好一个有效的标准转化事件。</li>
+</ul>
+<p><strong>5. Products 页空着，不等于上传失败。</strong> 帮助中心说 Products 页是"a reporting view"（报表视图），商品有了投放数据才会出现；开始投放后，第一批商品最多要等 <strong>7 小时</strong>才显示。9 月 30 日的邮件说这个页面现在也显示审核状态，而 10 月 21 日抓取的帮助中心页仍只说它是投放报表。两边说法对上之前，先看广告组里的商品数。活动已经投出去、商品还是没出现，再找客服，带上广告账户 ID、feed ID、活动和广告组名、日期范围和时区、几个商品 ID 样例和 Products 页截图。</p>
+
+<h2>四、这次不意味着的三件事</h2>
+
+<p><strong>传了 feed，商品不会进 ChatGPT 的回答。</strong> 测试期内 feed 商品只用于广告。官方说以后可能开放自然展示，没给时间。</p>
+
+<p><strong>Ready 不等于在投。</strong> 官方文档换着说法讲了两遍：审核通过不代表能投，符合筛选条件也不代表一定有曝光。预算、出价、审核和库存都还在起作用。</p>
+
+<p><strong>"表现最好之一"是官方说法，不是行业基准。</strong> 官方没公布背后的数字。feed 活动好不好，用你自己的转化数据判断，按前两篇讲的方式量。这条是我的判断，不是官方说法。</p>
+
+<h2>五、按阶段该做什么</h2>
+
+<p><strong>已在投的，这周开始：</strong></p>
+
+<ol>
+  <li>挑一个品类的 100 个商品，逐个核对必填字段。</li>
+  <li>定下用托管 URL 还是 SFTP，指定一个人负责每天刷新。</li>
+  <li>第一个 feed 活动的 feed、目标和活动类型，先写下来再建。</li>
+</ol>
+<p><strong>准备投的：</strong> 先确认投广告、付款的法律主体所在国家在自助开户名单里。然后清理商品目录：标题和描述会变成广告文案，价格和库存必须是当下的。</p>
+
+<p><strong>观望的：</strong> 现在不用动。如果你已经在给别的广告平台供商品 feed，注意 OpenAI 的商品文件规范有自己的字段名，比如 item_id、image_url、is_ads_eligible，传样品前先做一遍字段映射。</p>
+
+<h2>六、这周做一件事</h2>
+
+<p>从一个品类导出 100 个商品，对着 OpenAI 的商品文件规范核三样：商品页和图片是公开 HTTPS 链接、价格带币种、商品 ID 以后不会变。</p>
+
+<p>留个问题：你的商品目录里，哪个字段最需要先清理才能当广告文案用，标题、描述还是图片？评论区报一下你的品类，我下一篇对比不同品类卡在哪。</p>
+
+<h2>常见问题</h2>
+
+<h3>ChatGPT Ads 的商品 feed 活动是什么？</h3>
+<p>Ads Manager 里的一种活动类型，用上传的商品目录生成广告。广告展示商品图、标题、星级、价格、促销价和品牌。官方说它是给商品目录宽或变动频繁的零售广告主设计的。</p>
+
+<h3>ChatGPT Ads 的 feed 商品会出现在 ChatGPT 自然回答里吗？</h3>
+<p>不会。测试期内 feed 商品只用于广告。官方说以后可能开放。</p>
+
+<h3>ChatGPT Ads 的商品 feed 多久更新一次？</h3>
+<p>至少每天一次，每次传全量快照。feed 里的条目两周后过期，所以官方推荐用托管 URL 或自动 SFTP，而不是手动传 CSV。</p>
+
+<h3>ChatGPT Ads 的 Products 页为什么是空的？</h3>
+<p>它是报表视图，商品有了投放数据才会出现，开始投放后最多要等 7 小时。想知道有多少商品能投，看建广告组那一步显示的商品数。</p>
+
+<h3>ChatGPT Ads 的商品 feed 活动建好后能改 feed 或目标吗？</h3>
+<p>不能。活动类型、目标和绑定的 feed 建好后都不能改。新 feed 活动的地域定向只能到国家一级。</p>
+
+<h3>ChatGPT Ads 怎么一次建多个商品 feed 活动？</h3>
+<p>后台 Campaigns → Bulk uploads，选 Bulk sheet，下载 Product feed 模板，广告模板会自动生成。</p>
+
+<h2>出处</h2>
+
+<h3>OpenAI 邮件</h3>
+
+<ul class="citations">
+  <li>ChatGPT Ads Product Update，约 2026-09-30 发给广告主。图片取自 Search Engine Roundtable（<a href="https://www.seroundtable.com/openai-chatgpt-ads-updates-42194.html">seroundtable.com</a>）2026-09-30 转载。</li>
+</ul>
+<h3>OpenAI 帮助中心（均为 2026-10-21 抓取）</h3>
+
+<ul class="citations">
+  <li>Create Campaigns from Product Feeds：<a href="https://help.openai.com/en/articles/20001268-create-campaigns-from-product-feeds">https://help.openai.com/en/articles/20001268-create-campaigns-from-product-feeds</a></li>
+  <li>Ads Manager Availability：<a href="https://help.openai.com/en/articles/20001245-ads-manager-availability">https://help.openai.com/en/articles/20001245-ads-manager-availability</a></li>
+</ul>
+<h3>OpenAI 开发者文档（均为 2026-10-21 抓取）</h3>
+
+<ul class="citations">
+  <li>Product Feeds：<a href="https://developers.openai.com/ads/product-feeds">https://developers.openai.com/ads/product-feeds</a></li>
+  <li>File upload overview：<a href="https://developers.openai.com/commerce/specs/file-upload/overview">https://developers.openai.com/commerce/specs/file-upload/overview</a></li>
+</ul>
+<h3>推断</h3>
+
+<ul class="citations">
+  <li>开头的判断、五道检查及顺序、分阶段建议、三个"不意味着"是我的解读，不是 OpenAI 原文。9 月 30 日邮件和帮助中心对 Products 页的说法不一致，两边原话都引了。</li>
+</ul>
+
+<p class="footnote">
+Stan Lu · ChatGPT Ads 出海投放。写 ChatGPT 广告官方更新的中文解读，只用官方原文、报道、推断三栏出处。<br>
+栏目：ChatGPT Ads 更新解读 · 上一篇：<a href="/posts/2026-11-12-chatgpt-ads-holiday-webinar-notes-zh/">ChatGPT 广告节日分享：建活动第一步改成填网址</a> · <a href="/posts/2026-11-05-chatgpt-ads-product-feed-checklist/" hreflang="en" lang="en">English</a><br>
+发布 2026-11-05 · 最后更新：2026-11-05
+</p>
+
+<script data-goatcounter="https://potato-uu.goatcounter.com/count" async src="/js/count.js"></script>
+</body>
+</html>

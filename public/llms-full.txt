@@ -97,6 +97,29 @@ URL (中文): https://potato-uu.github.io/posts/2026-11-12-chatgpt-ads-holiday-w
 - https://goldcast.ondemand.goldcast.io/on-demand/980c8f7c-cd51-44ff-b18d-43003253b728 (session replay and automatic captions)
 - https://ads.openai.com/holiday (holiday page; Chinese version https://ads.openai.com/zh-CN/holiday; measurement periods in footnotes 1-4)
 
+### 2026-11-05: ChatGPT Ads product feed campaigns: 5 checks before you upload
+
+URL (English, x-default): https://potato-uu.github.io/posts/2026-11-05-chatgpt-ads-product-feed-checklist/
+URL (中文): https://potato-uu.github.io/posts/2026-11-05-chatgpt-ads-product-feed-checklist-zh/
+
+**Direct answer**: ChatGPT Ads lets retail advertisers build ads from a product feed, and since about 2026-09-30 feed campaigns and ad groups can be created in bulk from one spreadsheet. Feed items expire after two weeks, so a feed is a pipeline you keep refreshing, not a file you upload once. During the beta, feed products appear in ads only, not in organic ChatGPT answers.
+
+**Key facts (OpenAI email of about 2026-09-30; Help Center and developer docs captured 2026-10-21)**:
+- "You can now create multiple product feed campaigns and ad groups from a spreadsheet in Ads Manager, with ad templates generated automatically." Path: Campaigns, Bulk uploads, Bulk sheet, Product feed template (OpenAI email).
+- Advertisers with feed campaigns can view product review status in the Products tab (OpenAI email). The Help Center still calls the Products tab "a reporting view": products appear only after delivery data; allow up to seven hours after delivery begins.
+- "Items expire after 2 weeks." OpenAI recommends a hosted URL or automated SFTP (Create Campaigns from Product Feeds).
+- A feed upload is a "full snapshot", refreshed "at least daily"; a product left out of a snapshot is kept for up to 14 days (File upload overview). To stop serving an unavailable product, explicitly set availability to out_of_stock (Product Feeds developer docs).
+- "The campaign's mode, objective, and linked feed cannot be changed after creation." Geographic targeting for new feed campaigns is country-level only (Product Feeds developer docs; Help Center).
+- Feed Connection counts "describe offer records rather than unique products"; the product count in the ad-group step shows how many uploaded products are ready and pass the filters (Create Campaigns from Product Feeds).
+- Start with "a small sample (around 100 items)" that includes every required field (File upload overview).
+
+**Primary sources**:
+- https://help.openai.com/en/articles/20001268-create-campaigns-from-product-feeds
+- https://help.openai.com/en/articles/20001245-ads-manager-availability
+- https://developers.openai.com/ads/product-feeds
+- https://developers.openai.com/commerce/specs/file-upload/overview
+- https://www.seroundtable.com/openai-chatgpt-ads-updates-42194.html (coverage, 2026-09-30; source of the email image)
+
 ### 2026-10-29: ChatGPT Ads weekly performance emails and the new Conversions overview
 
 URL (English, x-default): https://potato-uu.github.io/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check/

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ChatGPT Ads product feed campaigns: 5 checks before you upload — Stan Lu</title>
+
+  <meta name="description" content="ChatGPT Ads lets retail advertisers build ads from a product feed, and since late September feed campaigns can be created in bulk from one spreadsheet. Feed items expire after two weeks, so treat the feed as a pipeline, not a file: five checks before the first upload.">
+
+  <meta name="author" content="Stan Lu">
+  <meta name="experiment_phase" content="2">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="ChatGPT Ads product feed campaigns: 5 checks before you upload">
+  <meta property="og:description" content="A ChatGPT Ads product feed is a pipeline, not a file. What OpenAI announced on September 30, and five checks before your first upload.">
+  <meta property="og:url" content="https://potato-uu.github.io/posts/2026-11-05-chatgpt-ads-product-feed-checklist/">
+  <meta property="og:image" content="https://potato-uu.github.io/posts/2026-11-05-chatgpt-ads-product-feed-checklist/cover-linkedin-1920x1080.png">
+  <meta property="og:image:alt" content="Cover: Your product feed is a pipeline, not a file. ChatGPT Ads product feeds, October 2026, by Stan Lu">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="zh_CN">
+  <meta property="article:published_time" content="2026-11-05T00:00:00+08:00">
+  <meta property="article:modified_time" content="2026-11-05T00:00:00+08:00">
+  <meta property="article:author" content="Stan Lu">
+  <meta property="article:section" content="ChatGPT Ads Update Explainer">
+  <meta property="article:tag" content="ChatGPT Ads">
+  <meta property="article:tag" content="Product feed campaigns">
+  <meta property="article:tag" content="Bulk upload">
+  <meta property="article:tag" content="Products tab">
+  <meta property="article:tag" content="Shopping ads">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ChatGPT Ads product feed campaigns: 5 checks before you upload">
+  <meta name="twitter:description" content="A ChatGPT Ads product feed is a pipeline, not a file. Five checks before your first upload.">
+  <meta name="twitter:image" content="https://potato-uu.github.io/posts/2026-11-05-chatgpt-ads-product-feed-checklist/cover-linkedin-1920x1080.png">
+
+  <link rel="canonical" href="https://potato-uu.github.io/posts/2026-11-05-chatgpt-ads-product-feed-checklist/">
+  <link rel="alternate" hreflang="en" href="https://potato-uu.github.io/posts/2026-11-05-chatgpt-ads-product-feed-checklist/">
+  <link rel="alternate" hreflang="zh-CN" href="https://potato-uu.github.io/posts/2026-11-05-chatgpt-ads-product-feed-checklist-zh/">
+  <link rel="alternate" hreflang="x-default" href="https://potato-uu.github.io/posts/2026-11-05-chatgpt-ads-product-feed-checklist/">
+
+  <!-- Schema.org TechArticle. No FAQ structured data (site red line #3). -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "ChatGPT Ads product feed campaigns: 5 checks before you upload",
+    "description": "ChatGPT Ads lets retail advertisers build ads from a product feed, and since late September feed campaigns can be created in bulk from one spreadsheet. Feed items expire after two weeks, so treat the feed as a pipeline, not a file: five checks before the first upload.",
+    "inLanguage": "en",
+    "image": ["https://potato-uu.github.io/posts/2026-11-05-chatgpt-ads-product-feed-checklist/cover-linkedin-1920x1080.png", "https://potato-uu.github.io/posts/2026-11-05-chatgpt-ads-product-feed-checklist/fig2-five-checks.png"],
+    "datePublished": "2026-11-05",
+    "dateModified": "2026-11-05",
+    "author": {"@type": "Person", "name": "Stan Lu", "alternateName": ["Stanlu"], "url": "https://potato-uu.github.io/"},
+    "publisher": {"@type": "Person", "name": "Stan Lu", "url": "https://potato-uu.github.io/"},
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://potato-uu.github.io/posts/2026-11-05-chatgpt-ads-product-feed-checklist/"},
+    "isPartOf": {"@type": "CreativeWorkSeries", "name": "ChatGPT Ads Update Explainer"},
+    "workTranslation": {"@type": "TechArticle", "@id": "https://potato-uu.github.io/posts/2026-11-05-chatgpt-ads-product-feed-checklist-zh/", "inLanguage": "zh-CN"},
+    "isBasedOn": [
+      "https://help.openai.com/en/articles/20001268-create-campaigns-from-product-feeds",
+      "https://help.openai.com/en/articles/20001245-ads-manager-availability",
+      "https://developers.openai.com/ads/product-feeds",
+      "https://developers.openai.com/commerce/specs/file-upload/overview",
+      "https://www.seroundtable.com/openai-chatgpt-ads-updates-42194.html"
+    ],
+    "about": [
+      {"@type": "Thing", "name": "ChatGPT Ads"},
+      {"@type": "Thing", "name": "Product feed advertising"},
+      {"@type": "Thing", "name": "Retail advertising"}
+    ],
+    "mentions": [
+      {"@type": "Organization", "name": "OpenAI", "url": "https://openai.com/"},
+      {"@type": "Product", "name": "ChatGPT Ads", "url": "https://ads.openai.com/"}
+    ],
+    "keywords": "ChatGPT Ads product feed, product feed campaigns, bulk sheet product feed template, Products tab empty, feed items expire, hosted URL SFTP feed refresh, campaign objective cannot be changed"
+  }
+  </script>
+
+  <style>
+    :root {
+      --fg: #1a1a1a;
+      --fg-dim: #555;
+      --bg: #fdfcf9;
+      --link: #0066cc;
+      --rule: #e8e6e0;
+      --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --fg: #e8e6e0; --fg-dim: #999; --bg: #1a1a1a; --link: #6cb6ff; --rule: #333; }
+    }
+    * { box-sizing: border-box; }
+    body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+      line-height: 1.75;
+      color: var(--fg);
+      background: var(--bg);
+      font-size: 16px;
+    }
+    nav.crumbs { font-size: .85rem; margin-bottom: 1.5rem; color: var(--fg-dim); }
+    nav.crumbs a { color: var(--fg-dim); }
+    h1 { font-size: 1.6rem; line-height: 1.4; margin: 0 0 .5rem; letter-spacing: -.01em; }
+    .lede { font-size: 1.05rem; margin: 0 0 1rem; }
+    .tldr { margin: 1rem 0; padding: .5rem 1rem; border-left: 3px solid var(--rule); background: rgba(127,127,127,.04); }
+    .tldr p { margin: .25rem 0; font-weight: 600; }
+    .tldr ul { margin: .25rem 0 .5rem; }
+    .meta { color: var(--fg-dim); font-size: .85rem; font-family: var(--mono); margin: 1rem 0 2.5rem; }
+    h2 { font-size: 1.2rem; margin: 2.5rem 0 .75rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); }
+    h3 { font-size: 1.05rem; margin: 1.75rem 0 .5rem; }
+    p { margin: 1rem 0; }
+    a { color: var(--link); text-decoration: none; border-bottom: 1px solid currentColor; overflow-wrap: anywhere; }
+    a:hover { opacity: .7; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .92rem; }
+    th, td { border: 1px solid var(--rule); padding: .5rem .75rem; text-align: left; vertical-align: top; }
+    th { background: rgba(127,127,127,.05); }
+    .table-note { color: var(--fg-dim); font-size: .85rem; margin-top: -.25rem; }
+    code { font-family: var(--mono); font-size: .9em; background: rgba(127,127,127,.1); padding: .1em .35em; border-radius: 3px; }
+    blockquote { border-left: 3px solid var(--rule); margin: 1rem 0; padding: .25rem 1rem; color: var(--fg-dim); }
+    blockquote p { margin: .5rem 0; }
+    ul, ol { padding-left: 1.5rem; }
+    li { margin: .35rem 0; }
+    figure { margin: 1.5rem 0; }
+    figure img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); }
+    figcaption { color: var(--fg-dim); font-size: .85rem; margin-top: .5rem; }
+    .citations { font-size: .9rem; }
+    .citations li { margin: .5rem 0; }
+    .footnote { color: var(--fg-dim); font-size: .85rem; margin-top: 4rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+    .number-callout { font-family: var(--mono); font-weight: 700; }
+  </style>
+</head>
+<body>
+
+<nav class="crumbs"><a href="/">Stanlu</a> / posts / 2026-11-05 · <a href="/posts/2026-11-05-chatgpt-ads-product-feed-checklist-zh/" hreflang="zh-CN" lang="zh-CN">中文版</a></nav>
+
+<h1>ChatGPT Ads product feed campaigns: 5 checks before you upload</h1>
+
+<div class="tldr">
+  <p>TL;DR</p>
+  <ul>
+    <li>ChatGPT Ads lets retail advertisers build ads from a product feed. Since late September you can create many feed campaigns and ad groups from one spreadsheet, and the Products tab shows review status. During the beta, feed products appear in ads only, not in organic ChatGPT answers.</li>
+    <li>Items uploaded to a feed expire after two weeks. OpenAI recommends a hosted URL or SFTP and a full refresh at least daily, or the catalog drains out of your ads.</li>
+    <li>Five checks before you upload: a 100-item sample, a refresh route, how to read the counts, the three campaign settings you cannot change later, and what an empty Products tab means.</li>
+  </ul>
+</div>
+
+<p class="meta">2026-11-05 · Stan Lu · ChatGPT Ads Update Explainer · OpenAI email of 2026-09-30, Help Center and developer docs captured 2026-10-21</p>
+
+<p class="lede">A product feed in ChatGPT Ads is a pipeline you keep running, not a file you upload once. Most of the work happens before the first ad shows.</p>
+
+<p>Last week I covered <a href="/posts/2026-10-29-chatgpt-ads-weekly-email-conversions-check/">the weekly performance email</a>. This week is for retail teams with a catalog. On September 30 OpenAI emailed advertisers about bulk creation for product feed campaigns and a review status for products. This piece uses that email, OpenAI's Help Center and its developer docs, captured October 21. It uses no numbers from any ad account I work on.</p>
+
+<p>If you already run ChatGPT Ads campaigns by hand, this tells you what changes when the catalog writes the ads. If you are getting ready, it gives you the order to do things in.</p>
+
+<h2>What OpenAI announced</h2>
+
+<figure>
+  <img src="openai-advertiser-email-0930.jpg" width="1402" height="1960" alt="OpenAI email to advertisers titled ChatGPT Ads Product Update, sent around 2026-09-30: bulk creation for product feed campaigns, product review status, conversions beyond the campaign goal through the API, separate account, brand and legal names, and launch in Southeast Asia and Taiwan.">
+  <figcaption>OpenAI's ChatGPT Ads Product Update email to advertisers, unedited. Sent around 2026-09-30; image as republished by Search Engine Roundtable on 2026-09-30.</figcaption>
+</figure>
+
+<p>Two of the five items in the email are about product feeds.</p>
+
+<ul>
+  <li><strong>Bulk creation.</strong> "You can now create multiple product feed campaigns and ad groups from a spreadsheet in Ads Manager, with ad templates generated automatically." Go to Campaigns, then Bulk uploads, choose Bulk sheet and download the Product feed template.</li>
+  <li><strong>Product review status.</strong> Advertisers with feed campaigns "can now view product review status in the Products tab," to track products through review and see why some were rejected.</li>
+</ul>
+<p>The other three are conversion reporting beyond the campaign goal through the API, separate account, brand and legal names, and launch in Indonesia, Malaysia, the Philippines, Singapore, Thailand, Vietnam and Taiwan.</p>
+
+<p>OpenAI's Help Center page on feed campaigns gives the context. They are "designed for retail advertisers with broad or frequently changing product catalogs." OpenAI says ads built from feeds "have been among the strongest-performing ads in our program to date." It does not publish numbers for that.</p>
+
+<p>The ad is built from your data. Product ads show images, titles, stars, prices, sale prices and your brand. The ad template only lets you choose which image field to use. The title and description in your feed are your ad copy.</p>
+
+<h2>Why a feed is a pipeline</h2>
+
+<p>Three facts from OpenAI's docs explain it.</p>
+
+<ul>
+  <li><strong>Items expire.</strong> The Help Center says: "Items expire after 2 weeks." A CSV you upload once is gone from your ads two weeks later unless you upload it again.</li>
+  <li><strong>Every upload is the whole catalog.</strong> The developer spec treats a feed as a "full snapshot" and recommends a cadence of "at least daily." A product left out of a snapshot is kept for up to 14 days, then drops.</li>
+  <li><strong>Prices and stock have to stay current.</strong> To stop an unavailable product, set its availability to out_of_stock. Removing the row is not a pause button. Price and availability changes can also go through a Delta API without a full upload.</li>
+</ul>
+<h2>Five checks before you upload</h2>
+
+<p>OpenAI publishes a seven-step setup. These five checks are mine, built from the Help Center and the developer docs. They are the points I would confirm before the first upload.</p>
+
+<figure>
+  <img src="fig2-five-checks.png" width="2400" height="1674" loading="lazy" alt="Diagram: five checks before you upload a ChatGPT Ads product feed, drawn as a pipeline. Start with about 100 products, pick the refresh route (hosted URL or SFTP), read the counts as records, lock the three settings you cannot change later, and do not read an empty Products tab as a failed upload. Built from OpenAI&#x27;s 2026-09-30 email, Help Center and developer docs captured 2026-10-21.">
+  <figcaption>My five checks, drawn from OpenAI's 2026-09-30 email, Help Center and developer docs captured 2026-10-21.</figcaption>
+</figure>
+
+<p><strong>1. Start with about 100 products.</strong> OpenAI's feed spec says to "Start with a small sample (around 100 items)" and to include every required field in each sample row. Run QA on the first full snapshot before you automate. The common failures it lists are missing required fields, outdated field names and malformed values. Product pages and images must be public HTTPS links. In the CSV, a price carries its currency code, such as "79.99 USD".</p>
+
+<p><strong>2. Choose how the feed refreshes before you choose what goes in it.</strong> Ads Manager offers three imports: a CSV or TXT upload, a hosted URL, or SFTP. Because items expire, the Help Center recommends a hosted URL or automated SFTP. Keep file names stable and overwrite them on each update. OpenAI matches products by item_id, so keep IDs stable across uploads.</p>
+
+<p><strong>3. Read the counts as records, not products.</strong> The Feed Connection tooltip shows Ingested, Processed, Not approved and Ready. OpenAI says these "describe offer records rather than unique products," and subtracting them "may not give an accurate missing-product total." Not approved is a total, with no item list and no reasons. Approval also does not mean an item is ready to serve. During setup, the number to trust is the product count in the ad-group step: how many uploaded products are ready and pass your filters. Through the API, upload history adds diagnostics by field, such as an invalid price value and the number of rows affected.</p>
+
+<p><strong>4. Decide the three settings you cannot change later.</strong> From the developer guide: "The campaign's mode, objective, and linked feed cannot be changed after creation." Pick the feed, the goal and the campaign type first. Three more limits sit next to these.</p>
+
+<ul>
+  <li>Geographic targeting and exclusions are country-level only for new feed campaigns.</li>
+  <li>Custom labels in ads_metadata, such as custom_label_0, choose which products an ad group uses. They do not target people. OpenAI's example: a label of WA "does not restrict delivery to users in Washington."</li>
+  <li>Each ad group has one ad template. To optimize for conversions, the campaign needs exactly one active standard conversion event attached when you create it.</li>
+</ul>
+<p><strong>5. Do not read an empty Products tab as a failed upload.</strong> The Help Center calls the Products tab "a reporting view." A product appears there only after it has delivery data. After delivery starts, allow up to seven hours for the first rows. The September 30 email says the tab now shows review status as well, while the Help Center page captured October 21 still describes it as delivery reporting. Until the two line up, check the ad-group product count first. If products are still missing after the campaign has delivered, contact support with your ad account ID, feed ID, campaign and ad-group names, date range and time zone, example product IDs and a screenshot of the Products tab.</p>
+
+<h2>Three things this update does not mean</h2>
+
+<p><strong>A feed does not put your products into ChatGPT's answers.</strong> During the beta, feed products are eligible for ads only. OpenAI says it may offer organic use later. It has not given a date.</p>
+
+<p><strong>Ready is not serving.</strong> OpenAI's docs say this twice in different words: approval does not mean an item is ready to serve, and matching a filter does not mean a product will get impressions. Budget, bids, reviews and stock still apply.</p>
+
+<p><strong>"Strongest-performing" is OpenAI's claim, not a benchmark.</strong> It has not published the numbers behind it. Judge feed campaigns on your own conversion data, measured the way the last two pieces describe. That is my reading, not OpenAI's.</p>
+
+<h2>What to do, by stage</h2>
+
+<p><strong>Already spending.</strong> Start this week:</p>
+
+<ol>
+  <li>Pick 100 products from one category and check every required field.</li>
+  <li>Decide hosted URL or SFTP, and name the person who owns the daily refresh.</li>
+  <li>Write down the feed, objective and campaign type for the first feed campaign before you create it.</li>
+</ol>
+<p><strong>Getting ready.</strong> Check that the legal entity that will advertise and be billed is based in a country where self-serve Ads Manager is available. Then clean the catalog: titles and descriptions become ad copy, and prices and stock must be current.</p>
+
+<p><strong>Watching.</strong> Nothing to do yet. If you already send a product feed to another ads platform, note that OpenAI's product file schema uses its own field names, such as item_id, image_url and is_ads_eligible. Map your feed to it before the first sample.</p>
+
+<h2>One thing to do this week</h2>
+
+<p>Export 100 products from one category and check them against OpenAI's product file schema: public HTTPS page and image links, a price with a currency code, and an item ID that will not change.</p>
+
+<p>A question for the comments: which field in your catalog needs the most cleanup before it can work as ad copy, titles, descriptions or images? Tell me your category and I will compare what different categories struggle with in a later piece.</p>
+
+<h2>FAQ</h2>
+
+<h3>What are product feed campaigns in ChatGPT Ads?</h3>
+<p>A campaign type in Ads Manager that builds ads from an uploaded product catalog. The ads show product images, titles, stars, prices, sale prices and the brand. OpenAI designed them for retail advertisers with broad or frequently changing catalogs.</p>
+
+<h3>Do products from a ChatGPT Ads feed appear in organic ChatGPT answers?</h3>
+<p>No. During the beta, feed products are eligible for ads only. OpenAI says it may offer organic use in the future.</p>
+
+<h3>How often should I update a ChatGPT Ads product feed?</h3>
+<p>At least daily, as a full snapshot. Items in a feed expire after two weeks, so OpenAI recommends a hosted URL or automated SFTP over manual CSV uploads.</p>
+
+<h3>Why is my ChatGPT Ads Products tab empty?</h3>
+<p>It is a reporting view. Products appear only after they have delivery data, up to seven hours after delivery begins. Use the product count in the ad-group setup to see how many products are ready.</p>
+
+<h3>Can I change the feed or objective of a ChatGPT Ads product feed campaign?</h3>
+<p>No. A campaign's mode, objective and linked feed cannot be changed after creation. Geographic targeting for new feed campaigns is country-level only.</p>
+
+<h3>How do I create many product feed campaigns at once in ChatGPT Ads?</h3>
+<p>In Ads Manager, go to Campaigns, then Bulk uploads, choose Bulk sheet and download the Product feed template. Ad templates are generated automatically.</p>
+
+<h2>Sources</h2>
+
+<h3>OpenAI email</h3>
+
+<ul class="citations">
+  <li>ChatGPT Ads Product Update, sent to advertisers around 2026-09-30. Image as republished by Search Engine Roundtable, <a href="https://www.seroundtable.com/openai-chatgpt-ads-updates-42194.html">seroundtable.com</a>, 2026-09-30.</li>
+</ul>
+<h3>OpenAI Help Center (captured 2026-10-21)</h3>
+
+<ul class="citations">
+  <li>Create Campaigns from Product Feeds: <a href="https://help.openai.com/en/articles/20001268-create-campaigns-from-product-feeds">https://help.openai.com/en/articles/20001268-create-campaigns-from-product-feeds</a></li>
+  <li>Ads Manager Availability: <a href="https://help.openai.com/en/articles/20001245-ads-manager-availability">https://help.openai.com/en/articles/20001245-ads-manager-availability</a></li>
+</ul>
+<h3>OpenAI developer docs (captured 2026-10-21)</h3>
+
+<ul class="citations">
+  <li>Product Feeds: <a href="https://developers.openai.com/ads/product-feeds">https://developers.openai.com/ads/product-feeds</a></li>
+  <li>File upload overview: <a href="https://developers.openai.com/commerce/specs/file-upload/overview">https://developers.openai.com/commerce/specs/file-upload/overview</a></li>
+</ul>
+<h3>My reading</h3>
+
+<ul class="citations">
+  <li>The opening judgment, the five checks and their order, the advice by stage and the three "does not mean" points are my reading, not OpenAI's wording. The 2026-09-30 email and the Help Center page describe the Products tab differently; I quote both.</li>
+</ul>
+
+<p class="footnote">
+Stan Lu · ChatGPT Ads · Going Global. I write explainers on official ChatGPT Ads updates, with sources split into OpenAI, coverage, and my own reading.<br>
+Series: ChatGPT Ads Update Explainer · Previous: <a href="/posts/2026-11-12-chatgpt-ads-holiday-webinar-notes/">ChatGPT Ads holiday session: campaign creation now starts from a URL</a> · <a href="/posts/2026-11-05-chatgpt-ads-product-feed-checklist-zh/" hreflang="zh-CN" lang="zh-CN">中文版</a><br>
+Published 2026-11-05 · Last updated: 2026-11-05
+</p>
+
+<script data-goatcounter="https://potato-uu.goatcounter.com/count" async src="/js/count.js"></script>
+</body>
+</html>
